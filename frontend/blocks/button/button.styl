@@ -1,0 +1,54 @@
+primaryColor = #4eb7a8
+errorColor = #e75735 
+
+raised-box-shadow(color)
+    box-shadow 0 3px 0 0 color
+
+theme-outline(color)
+    border 1px solid
+    border-bottom-width 3px
+    background-color white
+    border-color color  
+    color color
+
+.button 
+    border none
+    border-radius 3px
+    background none
+    text-transform uppercase
+    color white
+    font-family LatoBlack
+
+    &_theme_primary
+        background-color primaryColor
+
+    &_theme_error
+        background-color errorColor 
+
+    &_size_small
+        height 22px
+        width 78px
+        font-size 0.6em
+
+    &_size_big
+        height 32px
+        width 118px
+
+    &_type_outline
+        border 1px solid
+        border-bottom-width 3px
+        background-color white
+
+    &_theme_primary&_type_outline
+        border-color primaryColor  
+        color primaryColor
+
+    &_theme_error&_type_outline
+        border-color errorColor  
+        color errorColor
+
+    &_theme_primary&_type_raised
+        raised-box-shadow(#28a290)
+
+    &_theme_error&_type_raised
+        raised-box-shadow(#bf3e1f) 

@@ -1,4 +1,12 @@
+include blocks/button/button
+include blocks/arrow-button/arrow-button
+include blocks/tick-box/tick-box
+
 html 
-    title FlatUI
+    title FlatUI 
     body
-        div.hello-world Hello world
+        +tick-box({ enabled: true })
+        br
+        br
+        +tick-box({ enabled: false })
+        
