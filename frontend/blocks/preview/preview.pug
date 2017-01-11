@@ -1,0 +1,9 @@
+mixin preview({ image, blockName })
+    .preview(class=blockName)
+        .preview__column.preview__column_left
+            img.preview__img(
+                src = require(`./blocks/${blockName}/img/${image}`),
+                alt = 'news image'
+            )
+        .preview__column.preview__column_right(class = `${blockName}__description`)
+            block

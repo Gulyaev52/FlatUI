@@ -1,54 +1,55 @@
 primaryColor = #4eb7a8
 errorColor = #e75735 
+primaryBorderBottomColor = #28a290
+errorBorderBottomColor = #bf3e1f
 
-raised-box-shadow(color)
+border-bottom-color(color)
     box-shadow 0 3px 0 0 color
 
-theme-outline(color)
-    border 1px solid
-    border-bottom-width 3px
-    background-color white
-    border-color color  
-    color color
+type-outline(color-bottom-border, color-font)
+    border-bottom-color(color-bottom-border)
+    color color-font
+    border-bottom-style none
 
 .button 
+    padding 0px 15px
     border none
     border-radius 3px
     background none
     text-transform uppercase
     color white
     font-family LatoBlack
+    text-align center
 
     &_theme_primary
         background-color primaryColor
+        border-color primaryColor
 
     &_theme_error
         background-color errorColor 
+        border-color errorColor
 
     &_size_small
-        height 22px
-        width 78px
+        min-height 22px
+        min-width 78px
         font-size 0.6em
 
     &_size_big
-        height 32px
-        width 118px
+        min-height 32px
+        min-width 118px
 
     &_type_outline
-        border 1px solid
-        border-bottom-width 3px
+        border 1px solid  
         background-color white
 
-    &_theme_primary&_type_outline
-        border-color primaryColor  
-        color primaryColor
+    &_theme_primary&_type_outline  
+        type-outline(primaryBorderBottomColor, primaryColor)
 
-    &_theme_error&_type_outline
-        border-color errorColor  
-        color errorColor
+    &_theme_error&_type_outline  
+        type-outline(errorBorderBottomColor, errorColor)
 
     &_theme_primary&_type_raised
-        raised-box-shadow(#28a290)
+        border-bottom-color(primaryBorderBottomColor)
 
     &_theme_error&_type_raised
-        raised-box-shadow(#bf3e1f) 
+        border-bottom-color(errorBorderBottomColor) 
