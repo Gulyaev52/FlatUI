@@ -1,0 +1,45 @@
+arrowOffset = -0.25em 
+
+.tooltip   
+    position relative  
+    display inline-flex 
+    width 100%
+    flex-direction column
+    padding 6px 
+    border-radius 5px
+    justify-content center
+    align-items center  
+    font-family LatoBlack
+
+    &_user-profile
+        padding 10px 37px
+
+    &_theme_default
+        background-color #4eb7a8
+        color white
+
+    &_theme_gray
+        background-color #e5e5e5
+        color black 
+
+    &:before
+        content ''
+        position absolute 
+        display block
+        width 0.5rem
+        height 0.5rem
+        transform rotate(45deg)
+        border-bottom-left-radius 2px
+        background-color inherit
+
+    &_arrow-located_top&:before
+        top arrowOffset
+
+    &_arrow-located_right&:before
+        right arrowOffset
+
+    &_arrow-located_bottom&:before
+        bottom arrowOffset
+
+    &_arrow-located_left&:before
+        left arrowOffset

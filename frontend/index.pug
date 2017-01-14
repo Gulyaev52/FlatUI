@@ -3,22 +3,24 @@ include blocks/arrow-button/arrow-button
 include blocks/tick-box/tick-box
 include blocks/news/news
 include blocks/event/event
+include blocks/tooltip/tooltip
+include blocks/user-profile/user-profile
+include blocks/social/social
 
 html 
     title FlatUI 
     body
-        +news({  
-            image: "news-img.png",
-            title: "It’s all going downhill",
-            date: "24 august 2013",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
-        })
+        +user-profile({ 
+            theme: "default",
+            name: "Sarah Brown",
+            profession: "developer",
+            photo: "sarah.png"  })
         br
         br
-        +event({
-            image: "event-img.png",
-            day: "24",
-            month: "august",
-            title: "this is the title",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        })
+        +user-profile({ 
+            theme: "gray",
+            name: "John Smith",
+            profession: "ux designer",
+            photo: "john.png"  })
+        br
+        br 

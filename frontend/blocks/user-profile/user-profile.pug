@@ -1,0 +1,18 @@
+include ../social/social
+
+mixin user-profile({ name, profession, theme="default", photo="user-icon.png" })
+    .user-profile
+        img.user-profile__photo(
+            src = require(`./blocks/user-profile/user-photos/${photo}`),
+            alt = 'news image')
+        .user-profile__tooltip
+            +tooltip({ theme, arrowLocated: "left" })(class = "tooltip_user-profile")
+                -const nameTheme = `user-profile__name_theme_${theme}`
+                -const professionTheme = `user-profile__profession_theme_${theme}`
+                -const socialNames = ["facebook", "twitter", "dribble"]
+                -const socialTheme = `user-profile__social_theme_${theme}`
+                .user-profile__name(class = nameTheme)= name
+                .user-profile__profession(class = professionTheme)= profession
+                .user-profile__socials
+                    each name in socialNames
+                        +social({ name }).user-profile__social(class = socialTheme)
