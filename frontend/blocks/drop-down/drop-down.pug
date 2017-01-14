@@ -1,0 +1,5 @@
+mixin drop-down({ values, name })
+    div.drop-down
+        select.drop-down__select.input(name = name)
+            each value in values
+                option.drop-down__item= value

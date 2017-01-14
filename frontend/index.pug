@@ -6,6 +6,8 @@ include blocks/event/event
 include blocks/tooltip/tooltip
 include blocks/user-profile/user-profile
 include blocks/social/social
+include blocks/drop-down/drop-down
+include blocks/search/search
 
 html 
     title FlatUI 
@@ -24,3 +26,8 @@ html
             photo: "john.png"  })
         br
         br 
+        -dropDownValues = ["choose an option", "first option", "two", "three"]
+        +drop-down({ values: dropDownValues })
+        br
+        br
+        +search({ placeholder: "Search" })
