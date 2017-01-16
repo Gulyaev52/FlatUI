@@ -10,12 +10,12 @@
         margin-right 10px
         border 4px solid themeColor3
 
-    &__photo:hover + &__tooltip
-        visibility visible
-
-    &__tooltip 
-        visibility hidden
+    &__tooltip  
+        padding 10px 37px
         min-width 175px
+
+    &__photo:hover ~ &__tooltip
+        display inline-flex
 
     &__name
         font-size 18px

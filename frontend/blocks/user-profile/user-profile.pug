@@ -5,8 +5,7 @@ mixin user-profile({ name, profession, theme="default", photo="user-icon.png" })
         img.user-profile__photo(
             src = require(`./blocks/user-profile/user-photos/${photo}`),
             alt = 'news image')
-        .user-profile__tooltip
-            +tooltip({ theme, arrowLocated: "left" })(class = "tooltip_user-profile")
+        +tooltip({ theme, arrowLocated: "left" })(class = "user-profile__tooltip")
                 -const nameTheme = `user-profile__name_theme_${theme}`
                 -const professionTheme = `user-profile__profession_theme_${theme}`
                 -const socialNames = ["facebook", "twitter", "dribble"]

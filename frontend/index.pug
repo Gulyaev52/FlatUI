@@ -10,25 +10,12 @@ include blocks/drop-down/drop-down
 include blocks/search/search
 include blocks/feedback/feedback
 include blocks/text-input/text-input
+include blocks/validation-input/validation-input
 
 html 
     title FlatUI 
-    body
-        br
-        +tooltip({ theme: "default", arrowLocated: "left" })
-            p 42
-        br
-        br
-        +tooltip({ theme: "default", arrowLocated: "top" })
-            p 42
-        br
-        br
-        +tooltip({ theme: "default", arrowLocated: "right" })
-            p 42
-        br
-        br
-        +tooltip({ theme: "default", arrowLocated: "bottom" })
-            p 42
+    body 
+        +feedback()
         br
         br
         +user-profile({ 
