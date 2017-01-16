@@ -14,6 +14,23 @@ include blocks/text-input/text-input
 html 
     title FlatUI 
     body
+        br
+        +tooltip({ theme: "default", arrowLocated: "left" })
+            p 42
+        br
+        br
+        +tooltip({ theme: "default", arrowLocated: "top" })
+            p 42
+        br
+        br
+        +tooltip({ theme: "default", arrowLocated: "right" })
+            p 42
+        br
+        br
+        +tooltip({ theme: "default", arrowLocated: "bottom" })
+            p 42
+        br
+        br
         +user-profile({ 
             theme: "default",
             name: "Sarah Brown",
@@ -172,18 +189,3 @@ html
         br
         +tick-box({ enabled: false })
         br
-        br
-        +tooltip({ theme: "default", arrowLocated: "left" })
-            p 42
-        br
-        br
-        +tooltip({ theme: "default", arrowLocated: "top" })
-            p 42
-        br
-        br
-        +tooltip({ theme: "default", arrowLocated: "right" })
-            p 42
-        br
-        br
-        +tooltip({ theme: "default", arrowLocated: "bottom" })
-            p 42
