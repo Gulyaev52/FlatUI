@@ -10,28 +10,13 @@ include blocks/drop-down/drop-down
 include blocks/search/search
 include blocks/feedback/feedback 
 include blocks/validation-input/validation-input
-include blocks/messager/messager
+include blocks/messenger/messenger
 include blocks/chat/chat
 include blocks/message/message
 
 html 
     title FlatUI 
-    body 
-        br
-        br
-        div(style = "padding: 50px; background-color: #f2f2f2")
-            +message({ 
-                text: "Hey! So are we cool to meet at the art gallery? Say 8pm", 
-                type: "incomming"
-            })
-            br
-            br
-            +message({ 
-                text: "Yeah that sounds great. See you then.", 
-                type: "outgoing"
-            })
-        br
-        br
+    body  
         -
             messages = [{ 
                 text: "Hey! So are we cool to meet at the art gallery? Say 8pm", 
@@ -41,9 +26,15 @@ html
                 text: "Yeah that sounds great. See you then.", 
                 type: "outgoing"
             }]
-        +chat({ messages })
+        -
+            user = {  
+                name: "Sarah Brown",
+                profession: "developer",
+                photo: "sarah.png"  
+            }
+        +messenger({ messages, user })
         br
-        br
+        br 
         +feedback()
         br
         br

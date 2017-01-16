@@ -1,9 +1,12 @@
 messageMargin = 20px 
 
+codeMessage = '\f075'
+codePhoto = '\f030'
+
 .chat
     display inline-block
-    width 288px
-    padding 10px
+    width 288px 
+    padding 10px 25px 25px 25px
     background-color #f2f2f2
 
     &__item
@@ -17,6 +20,21 @@ messageMargin = 20px
 
         &_outgoing
             margin-left messageMargin
+
+    &__links
+        display flex
+        justify-content space-between
+
+    &__link
+        font-size 23px
+        font-family FontAwesome
+        color #8e8d8d
+
+        &_message:before
+            content codeMessage
+
+        &_photo:before
+            content codePhoto
 
     &__input 
         padding 15px 24px 15px 20px
