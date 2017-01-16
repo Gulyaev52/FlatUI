@@ -8,13 +8,42 @@ include blocks/user-profile/user-profile
 include blocks/social/social
 include blocks/drop-down/drop-down
 include blocks/search/search
-include blocks/feedback/feedback
-include blocks/text-input/text-input
+include blocks/feedback/feedback 
 include blocks/validation-input/validation-input
+include blocks/messager/messager
+include blocks/chat/chat
+include blocks/message/message
 
 html 
     title FlatUI 
     body 
+        br
+        br
+        div(style = "padding: 50px; background-color: #f2f2f2")
+            +message({ 
+                text: "Hey! So are we cool to meet at the art gallery? Say 8pm", 
+                type: "incomming"
+            })
+            br
+            br
+            +message({ 
+                text: "Yeah that sounds great. See you then.", 
+                type: "outgoing"
+            })
+        br
+        br
+        -
+            messages = [{ 
+                text: "Hey! So are we cool to meet at the art gallery? Say 8pm", 
+                type: "incomming"
+            },
+            { 
+                text: "Yeah that sounds great. See you then.", 
+                type: "outgoing"
+            }]
+        +chat({ messages })
+        br
+        br
         +feedback()
         br
         br
@@ -36,10 +65,7 @@ html
         +drop-down({ values: dropDownValues })
         br
         br
-        +search({ placeholder: "Search" })
-        br
-        br
-        +text-input({ placeholder: "your name" })
+        +search({ placeholder: "Search" }) 
         br
         br
         +arrow-button({ direction: "left", type: "default" })

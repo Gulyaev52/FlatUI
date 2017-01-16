@@ -1,0 +1,31 @@
+include ../button/button
+
+mixin messager({})
+    .messager
+        .messager__header
+            .messager__friend-name
+            .messager__friend-avatar
+        .messager__body
+            .messager__links
+                .messager__link.messager__link_message
+                .messager__link.messager__link_photo
+            .messager__chat
+                .messager__message_friend
+                .messager__message_self
+            .messager__reply-btn
+
+mixin messager({})
+    .messager
+        .messager__header
+            .messager__friend-name
+            .messager__friend-avatar
+        .messager__body
+            .messager__links
+                .messager__link.messager__link_message
+                .messager__link.messager__link_photo
+            .messager__chat
+                .chat
+                    .chat__message-list
+                        .chat__message_friend
+                        .chat__message_self
+
