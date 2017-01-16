@@ -1,3 +1,8 @@
+@require '../../mixins'
+@require '../../colors'
+
+codeCheck = '\f00c'
+
 .tick-box
     display flex
     circle(23px) 
@@ -7,12 +12,12 @@
     font-size 0.8em
 
     &:before 
-        content '\f00c'
+        content codeCheck
 
     &_enabled_true
-        background-color #4eb7a8
+        background-color themeColor1
         color white
 
     &_enabled_false
-        background-color #e5e5e5
+        background-color themeColor3
         color #c0c0c0

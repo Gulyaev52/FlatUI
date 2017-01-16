@@ -1,26 +1,31 @@
+@require '../../colors'
+
 arrowOffset = -0.25em 
 
 .tooltip   
     position relative  
     display inline-flex 
-    width 100%
     flex-direction column
     padding 6px 
     border-radius 5px
     justify-content center
     align-items center  
-    font-family LatoBlack
+    font-family LatoBlack 
 
     &_user-profile
         padding 10px 37px
 
     &_theme_default
-        background-color #4eb7a8
+        background-color themeColor1
         color white
 
     &_theme_gray
-        background-color #e5e5e5
+        background-color themeColor3
         color black 
+
+    &_theme_warning
+        background-color themeColor2
+        color white
 
     &:before
         content ''

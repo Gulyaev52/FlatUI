@@ -1,6 +1,10 @@
-defaultColor = #4eb7a8
-disabledColor = #e5e5e5
-primaryColor = defaultColor
+@require '../../mixins'
+@require '../../colors'
+
+primaryColor = themeColor1
+disabledColor = themeColor3
+codeAngelLeft = "\f104"
+codeAngelRight = "\f105"
 
 .arrow-button
     display flex  
@@ -13,16 +17,16 @@ primaryColor = defaultColor
     &_left:before
         display inline-block
         padding-right 5px
-        content "\f104"
+        content codeAngelLeft
 
     &_right:before
         display inline-block
         padding-left 5px
-        content "\f105"
+        content codeAngelRight
 
     &_default
-        border: 3px solid defaultColor
-        color defaultColor
+        border: 3px solid primaryColor
+        color primaryColor
 
     &_disabled
         background-color disabledColor

@@ -1,3 +1,6 @@
+@require '../../mixins'
+@require '../../colors'
+
 .user-profile   
     display flex  
     align-items center
@@ -5,7 +8,7 @@
     &__photo
         circle(92px)
         margin-right 10px
-        border 4px solid #e5e5e5 
+        border 4px solid themeColor3
 
     &__photo:hover + &__tooltip
         visibility visible
@@ -23,7 +26,7 @@
             color white
 
         &_theme_gray
-            color #e75735
+            color themeColor2
 
     &__profession
         font-size 11px

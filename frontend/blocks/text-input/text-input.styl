@@ -1,0 +1,17 @@
+.text-input
+    display flex
+    width 285px
+    height 30px
+
+    &__validation  
+        visibility hidden
+        margin-left 10px
+        font-size 10px
+        text-transform uppercase
+
+    &__input:valid ~ &__validation_ok
+        visibility visible
+
+    &__input:invalid ~ &__validation_error
+        visibility visible
+

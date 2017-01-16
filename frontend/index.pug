@@ -8,6 +8,8 @@ include blocks/user-profile/user-profile
 include blocks/social/social
 include blocks/drop-down/drop-down
 include blocks/search/search
+include blocks/feedback/feedback
+include blocks/text-input/text-input
 
 html 
     title FlatUI 
@@ -31,3 +33,157 @@ html
         br
         br
         +search({ placeholder: "Search" })
+        br
+        br
+        +text-input({ placeholder: "your name" })
+        br
+        br
+        +arrow-button({ direction: "left", type: "default" })
+        br
+        br
+        +arrow-button({ direction: "right", type: "default" })
+        br
+        br
+        +arrow-button({ direction: "left", type: "disabled" })
+        br
+        br
+        +arrow-button({ direction: "right", type: "disabled" })
+        br
+        br
+        +arrow-button({ direction: "left", type: "primary" })
+        br
+        br
+        +arrow-button({ direction: "right", type: "primary" })
+        +button({ 
+            text: "button", 
+            size: "small", 
+            type: "default", 
+            theme: "primary"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "big", 
+            type: "default", 
+            theme: "primary"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "small", 
+            type: "raised", 
+            theme: "primary"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "big", 
+            type: "raised", 
+            theme: "primary"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "small", 
+            type: "outline", 
+            theme: "primary"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "big", 
+            type: "outline", 
+            theme: "primary"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "small", 
+            type: "default", 
+            theme: "error"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "big", 
+            type: "default", 
+            theme: "error"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "small", 
+            type: "raised", 
+            theme: "error"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "big", 
+            type: "raised", 
+            theme: "error"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "small", 
+            type: "outline", 
+            theme: "error"
+        })
+        br
+        br
+        +button({ 
+            text: "button", 
+            size: "big", 
+            type: "outline", 
+            theme: "error"
+        })
+        br
+        br
+        +news({  
+            image: "news-img.png",
+            title: "It’s all going downhill",
+            date: "24 august 2013",
+            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
+        })
+        br
+        br
+        +event({
+            image: "event-img.png",
+            day: "24",
+            month: "august",
+            title: "this is the title",
+            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }) 
+        br
+        br
+        +tick-box({ enabled: true })
+        br
+        br
+        +tick-box({ enabled: false })
+        br
+        br
+        +tooltip({ theme: "default", arrowLocated: "left" })
+            p 42
+        br
+        br
+        +tooltip({ theme: "default", arrowLocated: "top" })
+            p 42
+        br
+        br
+        +tooltip({ theme: "default", arrowLocated: "right" })
+            p 42
+        br
+        br
+        +tooltip({ theme: "default", arrowLocated: "bottom" })
+            p 42
