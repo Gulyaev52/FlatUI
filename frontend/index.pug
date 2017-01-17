@@ -10,13 +10,17 @@ include blocks/drop-down/drop-down
 include blocks/search/search
 include blocks/feedback/feedback 
 include blocks/validation-input/validation-input
-include blocks/messenger/messenger
-include blocks/chat/chat
-include blocks/message/message
+include blocks/messenger/messenger  
+include blocks/calendar/calendar
 
 html 
     title FlatUI 
     body  
+        br
+        br
+        +calendar() 
+        br
+        br
         -
             messages = [{ 
                 text: "Hey! So are we cool to meet at the art gallery? Say 8pm", 

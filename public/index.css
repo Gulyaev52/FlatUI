@@ -2764,6 +2764,128 @@
     overflow: visible;
     clip: auto
 }
+@font-face {
+  font-family: "LatoRegular";
+  src: url(fonts/LatoRegular/LatoRegular.eot);
+  src: url(fonts/LatoRegular/LatoRegular.eot?#iefix) format("embedded-opentype"), url(fonts/LatoRegular/LatoRegular.woff) format("woff"), url(fonts/LatoRegular/LatoRegular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoBold";
+  src: url(fonts/LatoBold/LatoBold.eot);
+  src: url(fonts/LatoBold/LatoBold.eot?#iefix) format("embedded-opentype"), url(fonts/LatoBold/LatoBold.woff) format("woff"), url(fonts/LatoBold/LatoBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoBlack";
+  src: url(fonts/LatoBlack/LatoBlack.eot);
+  src: url(fonts/LatoBlack/LatoBlack.eot?#iefix) format("embedded-opentype"), url(fonts/LatoBlack/LatoBlack.woff) format("woff"), url(fonts/LatoBlack/LatoBlack.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoItalic";
+  src: url(fonts/LatoItalic/LatoItalic.eot);
+  src: url(fonts/LatoItalic/LatoItalic.eot?#iefix) format("embedded-opentype"), url(fonts/LatoItalic/LatoItalic.woff) format("woff"), url(fonts/LatoItalic/LatoItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoLight";
+  src: url(fonts/LatoLight/LatoLight.eot);
+  src: url(fonts/LatoLight/LatoLight.eot?#iefix) format("embedded-opentype"), url(fonts/LatoLight/LatoLight.woff) format("woff"), url(fonts/LatoLight/LatoLight.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoBoldItalic";
+  src: url(fonts/LatoBoldItalic/LatoBoldItalic.eot);
+  src: url(fonts/LatoBoldItalic/LatoBoldItalic.eot?#iefix) format("embedded-opentype"), url(fonts/LatoBoldItalic/LatoBoldItalic.woff) format("woff"), url(fonts/LatoBoldItalic/LatoBoldItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoLightItalic";
+  src: url(fonts/LatoLightItalic/LatoLightItalic.eot);
+  src: url(fonts/LatoLightItalic/LatoLightItalic.eot?#iefix) format("embedded-opentype"), url(fonts/LatoLightItalic/LatoLightItalic.woff) format("woff"), url(fonts/LatoLightItalic/LatoLightItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SourceSansProRegular";
+  src: url(fonts/SourceSansProRegular/SourceSansProRegular.eot);
+  src: url(fonts/SourceSansProRegular/SourceSansProRegular.eot?#iefix) format("embedded-opentype"), url(fonts/SourceSansProRegular/SourceSansProRegular.woff) format("woff"), url(fonts/SourceSansProRegular/SourceSansProRegular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SourceSansProLight";
+  src: url(fonts/SourceSansProLight/SourceSansProLight.eot);
+  src: url(fonts/SourceSansProLight/SourceSansProLight.eot?#iefix) format("embedded-opentype"), url(fonts/SourceSansProLight/SourceSansProLight.woff) format("woff"), url(fonts/SourceSansProLight/SourceSansProLight.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SourceSansProBold";
+  src: url(fonts/SourceSansProBold/SourceSansProBold.eot);
+  src: url(fonts/SourceSansProBold/SourceSansProBold.eot?#iefix) format("embedded-opentype"), url(fonts/SourceSansProBold/SourceSansProBold.woff) format("woff"), url(fonts/SourceSansProBold/SourceSansProBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 15px;
+}
+.tooltip {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  padding: 6px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  font-family: LatoBlack;
+}
+.tooltip_theme_default {
+  background-color: #4eb7a8;
+  color: #fff;
+}
+.tooltip_theme_gray {
+  background-color: #e5e5e5;
+  color: #000;
+}
+.tooltip_theme_warning {
+  background-color: #e75735;
+  color: #fff;
+}
+.tooltip:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: rotate(45deg);
+  border-bottom-left-radius: 2px;
+  background-color: inherit;
+}
+.tooltip_arrow-located_top:before {
+  top: -0.25em;
+}
+.tooltip_arrow-located_right:before {
+  right: -0.25em;
+}
+.tooltip_arrow-located_bottom:before {
+  bottom: -0.25em;
+}
+.tooltip_arrow-located_left:before {
+  left: -0.25em;
+}
 .arrow-button {
   display: flex;
   justify-content: center;
@@ -2843,6 +2965,45 @@
 .button_theme_error.button_type_raised {
   box-shadow: 0 3px 0 0 #bf3e1f;
 }
+.input {
+  min-height: 28px;
+  width: 100%;
+  margin: 0;
+  padding: 2% 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  color: #888;
+  font-size: 14px;
+  font-family: SourceSansProRegular;
+}
+.social {
+  font-family: FontAwesome;
+  font-size: 25px;
+}
+.social_facebook:before {
+  content: '\F09A';
+}
+.social_twitter:before {
+  content: '\F099';
+}
+.social_dribble:before {
+  content: '\F17D';
+}
+.preview {
+  display: flex;
+  width: 288px;
+  height: 212px;
+  color: #fff;
+}
+.preview__column_left {
+  border-top-left-radius: 2px;
+}
+.preview__column_right {
+  flex-grow: 1;
+  padding: 7.5%;
+  border-top-right-radius: 2px;
+}
 .drop-down {
   position: relative;
   width: 228px;
@@ -2893,18 +3054,23 @@
   margin-top: 15px;
   align-self: center;
 }
-.input {
-  min-height: 28px;
-  width: 100%;
-  margin: 0;
-  padding: 3px 10px;
-  border: none;
-  border-radius: 2px;
-  background-color: #e5e5e5;
-  color: #888;
-  font-size: 14px;
-  font-family: SourceSansProRegular;
-  text-transform: capitalize;
+.feedback {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+}
+.feedback__item {
+  margin-top: 10px;
+}
+.feedback__item:first-child {
+  margin-top: 0;
+}
+.feedback__message {
+  height: 88px;
+  resize: none;
+}
+.feedback__submit {
+  float: right;
 }
 .news__description {
   background-color: #e75735;
@@ -2926,20 +3092,6 @@
   margin-top: 15px;
   text-align: left;
 }
-.preview {
-  display: flex;
-  width: 288px;
-  height: 212px;
-  color: #fff;
-}
-.preview__column_left {
-  border-top-left-radius: 2px;
-}
-.preview__column_right {
-  flex-grow: 1;
-  padding: 7.5%;
-  border-top-right-radius: 2px;
-}
 .search {
   position: relative;
   width: 228px;
@@ -2956,36 +3108,6 @@
   font-family: FontAwesome;
   content: '\F002';
   color: #fff;
-}
-.social {
-  font-family: FontAwesome;
-  font-size: 25px;
-}
-.social_facebook:before {
-  content: '\F09A';
-}
-.social_twitter:before {
-  content: '\F099';
-}
-.social_dribble:before {
-  content: '\F17D';
-}
-.text-input {
-  display: flex;
-  width: 285px;
-  height: 30px;
-}
-.text-input__validation {
-  visibility: hidden;
-  margin-left: 10px;
-  font-size: 10px;
-  text-transform: uppercase;
-}
-.text-input__input:valid ~ .text-input__validation_ok {
-  visibility: visible;
-}
-.text-input__input:invalid ~ .text-input__validation_error {
-  visibility: visible;
 }
 .tick-box {
   display: flex;
@@ -3008,53 +3130,6 @@
   background-color: #e5e5e5;
   color: #c0c0c0;
 }
-.tooltip {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  padding: 6px;
-  border-radius: 5px;
-  justify-content: center;
-  align-items: center;
-  font-family: LatoBlack;
-}
-.tooltip_user-profile {
-  padding: 10px 37px;
-}
-.tooltip_theme_default {
-  background-color: #4eb7a8;
-  color: #fff;
-}
-.tooltip_theme_gray {
-  background-color: #e5e5e5;
-  color: #000;
-}
-.tooltip_theme_warning {
-  background-color: #e75735;
-  color: #fff;
-}
-.tooltip:before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0.5rem;
-  height: 0.5rem;
-  transform: rotate(45deg);
-  border-bottom-left-radius: 2px;
-  background-color: inherit;
-}
-.tooltip_arrow-located_top:before {
-  top: -0.25em;
-}
-.tooltip_arrow-located_right:before {
-  right: -0.25em;
-}
-.tooltip_arrow-located_bottom:before {
-  bottom: -0.25em;
-}
-.tooltip_arrow-located_left:before {
-  left: -0.25em;
-}
 .user-profile {
   display: flex;
   align-items: center;
@@ -3066,12 +3141,12 @@
   margin-right: 10px;
   border: 4px solid #e5e5e5;
 }
-.user-profile__photo:hover + .user-profile__tooltip {
-  visibility: visible;
-}
 .user-profile__tooltip {
-  visibility: hidden;
+  padding: 10px 37px;
   min-width: 175px;
+}
+.user-profile__photo:hover ~ .user-profile__tooltip {
+  display: inline-flex;
 }
 .user-profile__name {
   font-size: 18px;
@@ -3108,93 +3183,105 @@
 .user-profile__social_theme_gray {
   color: #757575;
 }
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.validation-input {
+  display: flex;
+  height: 28px;
 }
-body {
-  padding: 15px;
+.validation-input__input {
+  width: 208px;
 }
-/* font-family: "LatoRegular"; */
-@font-face {
-  font-family: "LatoRegular";
-  src: url(fonts/LatoRegular/LatoRegular.eot);
-  src: url(fonts/LatoRegular/LatoRegular.eot?#iefix) format("embedded-opentype"), url(fonts/LatoRegular/LatoRegular.woff) format("woff"), url(fonts/LatoRegular/LatoRegular.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.validation-input__validation {
+  width: 75px;
+  margin-left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
 }
-/* font-family: "LatoBold"; */
-@font-face {
-  font-family: "LatoBold";
-  src: url(fonts/LatoBold/LatoBold.eot);
-  src: url(fonts/LatoBold/LatoBold.eot?#iefix) format("embedded-opentype"), url(fonts/LatoBold/LatoBold.woff) format("woff"), url(fonts/LatoBold/LatoBold.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.validation-input__input:valid ~ .validation-input__validation_ok {
+  display: inline-flex;
 }
-/* font-family: "LatoBlack"; */
-@font-face {
-  font-family: "LatoBlack";
-  src: url(fonts/LatoBlack/LatoBlack.eot);
-  src: url(fonts/LatoBlack/LatoBlack.eot?#iefix) format("embedded-opentype"), url(fonts/LatoBlack/LatoBlack.woff) format("woff"), url(fonts/LatoBlack/LatoBlack.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.validation-input__input:invalid ~ .validation-input__validation_error {
+  display: inline-flex;
 }
-/* font-family: "LatoItalic"; */
-@font-face {
-  font-family: "LatoItalic";
-  src: url(fonts/LatoItalic/LatoItalic.eot);
-  src: url(fonts/LatoItalic/LatoItalic.eot?#iefix) format("embedded-opentype"), url(fonts/LatoItalic/LatoItalic.woff) format("woff"), url(fonts/LatoItalic/LatoItalic.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.chat {
+  display: inline-block;
+  width: 288px;
+  padding: 10px 25px 25px 25px;
+  background-color: #f2f2f2;
 }
-/* font-family: "LatoLight"; */
-@font-face {
-  font-family: "LatoLight";
-  src: url(fonts/LatoLight/LatoLight.eot);
-  src: url(fonts/LatoLight/LatoLight.eot?#iefix) format("embedded-opentype"), url(fonts/LatoLight/LatoLight.woff) format("woff"), url(fonts/LatoLight/LatoLight.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.chat__item {
+  margin-top: 15px;
 }
-/* font-family: "LatoBoldItalic"; */
-@font-face {
-  font-family: "LatoBoldItalic";
-  src: url(fonts/LatoBoldItalic/LatoBoldItalic.eot);
-  src: url(fonts/LatoBoldItalic/LatoBoldItalic.eot?#iefix) format("embedded-opentype"), url(fonts/LatoBoldItalic/LatoBoldItalic.woff) format("woff"), url(fonts/LatoBoldItalic/LatoBoldItalic.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.chat__message {
+  margin-top: 10px;
 }
-/* font-family: "LatoLightItalic"; */
-@font-face {
-  font-family: "LatoLightItalic";
-  src: url(fonts/LatoLightItalic/LatoLightItalic.eot);
-  src: url(fonts/LatoLightItalic/LatoLightItalic.eot?#iefix) format("embedded-opentype"), url(fonts/LatoLightItalic/LatoLightItalic.woff) format("woff"), url(fonts/LatoLightItalic/LatoLightItalic.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.chat__message_incomming {
+  margin-right: 20px;
 }
-/* font-family: "SourceSansProRegular"; */
-@font-face {
-  font-family: "SourceSansProRegular";
-  src: url(fonts/SourceSansProRegular/SourceSansProRegular.eot);
-  src: url(fonts/SourceSansProRegular/SourceSansProRegular.eot?#iefix) format("embedded-opentype"), url(fonts/SourceSansProRegular/SourceSansProRegular.woff) format("woff"), url(fonts/SourceSansProRegular/SourceSansProRegular.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.chat__message_outgoing {
+  margin-left: 20px;
 }
-/* font-family: "SourceSansProLight"; */
-@font-face {
-  font-family: "SourceSansProLight";
-  src: url(fonts/SourceSansProLight/SourceSansProLight.eot);
-  src: url(fonts/SourceSansProLight/SourceSansProLight.eot?#iefix) format("embedded-opentype"), url(fonts/SourceSansProLight/SourceSansProLight.woff) format("woff"), url(fonts/SourceSansProLight/SourceSansProLight.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.chat__links {
+  display: flex;
+  justify-content: space-between;
 }
-/* font-family: "SourceSansProBold"; */
-@font-face {
-  font-family: "SourceSansProBold";
-  src: url(fonts/SourceSansProBold/SourceSansProBold.eot);
-  src: url(fonts/SourceSansProBold/SourceSansProBold.eot?#iefix) format("embedded-opentype"), url(fonts/SourceSansProBold/SourceSansProBold.woff) format("woff"), url(fonts/SourceSansProBold/SourceSansProBold.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
+.chat__link {
+  font-size: 23px;
+  font-family: FontAwesome;
+  color: #8e8d8d;
+}
+.chat__link_message:before {
+  content: '\F075';
+}
+.chat__link_photo:before {
+  content: '\F030';
+}
+.chat__input {
+  padding: 15px 24px 15px 20px;
+  border: 3px solid #fff;
+  resize: none;
+}
+.chat__reply-btn {
+  width: 100%;
+}
+.messenger {
+  width: 288px;
+}
+.messenger__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 115px;
+  background-color: #4eb7a8;
+}
+.messenger__user-name {
+  margin-top: 15px;
+  font-size: 34px;
+  font-family: SourceSansProLight;
+  color: #fff;
+}
+.messenger__user-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 34px;
+  background-color: #46ab9d;
+}
+.messenger__user-profile .user-profile {
+  top: -50%;
+}
+.message {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 243px;
+  padding: 15px 24px 15px 20px;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  font-family: LatoBold;
+  color: #868686;
+  background-color: #fff;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguY3NzIiwic291cmNlcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Iiwic291cmNlUm9vdCI6IiJ9*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguY3NzIiwic291cmNlcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Iiwic291cmNlUm9vdCI6IiJ9*/

@@ -26,7 +26,10 @@ module.exports = {
             NODE_ENV: JSON.stringify(NODE_ENV)
         }),
         new ExtractTextPlugin('index.css', {allChunks: true}),
-        new HtmlWebpackPlugin({ filename: 'index.html', template: './index.pug' })
+        new HtmlWebpackPlugin({ filename: 'index.html', template: './index.pug' }),
+        new webpack.ProvidePlugin({
+            $: 'jquery'
+        })
     ],
 
     resolve: {
@@ -45,7 +48,10 @@ module.exports = {
         loaders: [{
             test: /\.js$/,
             loader: 'babel',
-            exclude: /node_modules/,
+            exclude: [
+                /node_modules/,
+                /frontend\/plugins\/.*\.js$/
+            ],
             query: {
                 presets: ['es2015']
             }
@@ -57,12 +63,16 @@ module.exports = {
             loader: 'style!css' //!autoprefixer?browsers=last 2 versions'
         }, {
             test: /\.styl$/,
-            loader: ExtractTextPlugin.extract('!css!stylus?resolve url') //!autoprefixer?browsers=last 2 versions'
+            loader: ExtractTextPlugin.extract('css!stylus?resolve url') //!autoprefixer?browsers=last 2 versions'
         }, {
             test: /\.(ico|png|jpg|svg|ttf|eot|woff|woff2)$/,
             loader: 'file?name=[path][name].[ext]'
-        }]
+        }],
 
+        noParse: [
+            /node_modules\/jquery/,
+            /node_modules\/jquery-ui/
+        ]
     },
 
     devServer: {
