@@ -12,10 +12,18 @@ include blocks/feedback/feedback
 include blocks/validation-input/validation-input
 include blocks/messenger/messenger  
 include blocks/calendar/calendar
+include blocks/slider/slider
+include blocks/scale/scale
 
 html 
     title FlatUI 
     body  
+        br
+        br
+        +slider({ value: 0, type: "scaled" })
+        br
+        br
+        +slider({ value: 0, type: "tooltiped" })
         br
         br
         +calendar() 

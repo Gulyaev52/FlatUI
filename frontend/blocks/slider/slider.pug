@@ -1,0 +1,19 @@
+include ../tooltip/tooltip
+include ../scale/scale
+
+
+mixin slider({ value=0, type="tooltiped" })
+    .slider(class = `slider_type_${type}`)(data-type = type)
+        .slider__widget
+            .slider__handle.ui-slider-handle
+                if type == "tooltiped"
+                    +tooltip({ arrowLocated: "bottom" })(class = "slider__tooltip")
+                        = value
+        if type == "scaled"
+            .slider__scale
+                +scale({
+                    min: 0,
+                    step: 25,
+                    max: 100,
+                    value
+                })

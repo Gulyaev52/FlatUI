@@ -69,7 +69,8 @@ module.exports = {
             loader: 'file?name=[path][name].[ext]'
         }],
 
-        noParse: [
+        noParse: [ 
+            /frontend\/plugins\/.*\.js$/,
             /node_modules\/jquery/,
             /node_modules\/jquery-ui/
         ]
