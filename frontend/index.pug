@@ -15,10 +15,19 @@ include blocks/calendar/calendar
 include blocks/slider/slider
 include blocks/toggle/toggle
 include blocks/location/location
+include blocks/pie-chart/pie-chart
 
 html 
     title FlatUI 
     body  
+        br
+        br
+        +pie-chart({ 
+            values: [1, 7, 4, 5],
+            colors: [ '#747474', '#e75735', '#4eb7a8', '#e5e5e5'] 
+        })
+        br
+        br
         +location({ 
             coordinates: [56.4531907, 84.9756513], 
             message: "Meet us!",
