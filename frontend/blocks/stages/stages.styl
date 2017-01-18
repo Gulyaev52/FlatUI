@@ -1,0 +1,43 @@
+@require '../../colors'
+@require '../../mixins'
+
+.stages
+    display flex 
+    align-items center
+    position relative
+    width 590px
+    height 29px
+
+    &__progress-bar 
+        flex-grow 1
+        height 5px
+        background-color themeColor3
+
+    &__progress
+        height 100%
+        width 20%
+        background-color themeColor2
+
+    &__items 
+        display flex
+        justify-content space-between
+        align-items center
+        position absolute  
+        left 0
+        right 0
+
+    &__stage
+        display flex
+        justify-content center
+        align-items center
+        circle(29px)
+        font-size 14px
+        font-family LatoBlack 
+
+        &_uncompleted
+            background-color themeColor3
+            color #888888
+
+        &_completed
+            background-color themeColor2
+            color white

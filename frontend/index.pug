@@ -17,10 +17,23 @@ include blocks/toggle/toggle
 include blocks/location/location
 include blocks/pie-chart/pie-chart
 include blocks/percentage/percentage
+include blocks/stages/stages
 
 html 
     title FlatUI 
     body  
+        br
+        br
+        +stages({ length: 5, progress: 1 })
+        br
+        br
+        +stages({ length: 5, progress: 3 })
+        br
+        br
+        +stages({ length: 5, progress: 5 })
+        br
+        br
+        +stages({ length: 5, progress: 4 })
         br
         br
         +percentage({ value: 62 })

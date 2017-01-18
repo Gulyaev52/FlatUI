@@ -1,12 +1,10 @@
-'use strict';
-
-$(function () {
+$(() => {
 
     $('.calendar').each(function () {
 
-        let $day = $('.calendar__day', $(this));
+        const $day = $(this).find('.calendar__day');
 
-        let $widget = $('.calendar__widget', $(this));
+        const $widget = $(this).find('.calendar__widget'); 
         $widget.datepicker({
             changeYear: false,
             altField: $day,
@@ -15,7 +13,7 @@ $(function () {
             showOtherMonths: true 
         });
 
-        $('.calendar__btn-today', $(this)).on('click', () => {
+        $(this).find('.calendar__btn-today').on('click', () => {
             $widget.datepicker('setDate', new Date());
         })
     });
