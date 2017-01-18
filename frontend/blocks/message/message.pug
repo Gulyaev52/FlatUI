@@ -1,8 +1,0 @@
-include ../tooltip/tooltip
-
-mixin message({ text, type })
-    -const tooltipOptions = { 
-    -    arrowLocated: type == "outgoing" ? "right" : "top" 
-    -}  
-    +tooltip(tooltipOptions).message(class = `message_${type}`) 
-        p= text

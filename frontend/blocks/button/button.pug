@@ -1,7 +1,0 @@
-mixin button({ text, size, type, theme })
-    -const buttonModifiers = [
-    -    `button_size_${size}`,
-    -    `button_type_${type}`,
-    -    `button_theme_${theme}`
-    -]
-    button.button(class = buttonModifiers)&attributes(attributes)= text

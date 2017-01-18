@@ -1,7 +1,0 @@
-include ../preview/preview
-
-mixin news({ image, title, date, info })
-    +preview({ image, blockName: "news" })
-        .news__title= title
-        .news__date= date
-        .news__info= info
