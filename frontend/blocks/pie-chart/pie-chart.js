@@ -1,5 +1,4 @@
 $(() => {
-
     $('.pie-chart').each(function() {
         $(this).find(".pie-chart__items").peity('donut', { 
             radius: 47.5,

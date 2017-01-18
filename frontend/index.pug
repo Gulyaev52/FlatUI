@@ -16,10 +16,20 @@ include blocks/slider/slider
 include blocks/toggle/toggle
 include blocks/location/location
 include blocks/pie-chart/pie-chart
+include blocks/percentage/percentage
 
 html 
     title FlatUI 
     body  
+        br
+        br
+        +percentage({ value: 62 })
+        br
+        br
+        +percentage({ value: 0 })
+        br
+        br
+        +percentage({ value: 100 })
         br
         br
         +pie-chart({ 
