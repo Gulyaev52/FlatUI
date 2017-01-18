@@ -13,13 +13,20 @@ include blocks/validation-input/validation-input
 include blocks/messenger/messenger  
 include blocks/calendar/calendar
 include blocks/slider/slider
-include blocks/scale/scale
+include blocks/toggle/toggle
 
 html 
     title FlatUI 
     body  
-        br
-        br
+        div(style="height: 200px; padding:50px")
+            br
+            br
+            +toggle({ state: "off" })
+            br
+            br
+            +toggle({ state: "on" })
+            br
+            br
         +slider({ value: 0, type: "scaled" })
         br
         br
