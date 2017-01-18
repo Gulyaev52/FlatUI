@@ -1,0 +1,12 @@
+append scripts
+    script(src='https://api-maps.yandex.ru/2.1/?lang=en_US', type='text/javascript')
+
+mixin location({ coordinates=[], message="", address="" })
+    .location(data-coordinates = coordinates)
+        .location__map(id="map")
+        .location__footer
+            .location__message= message
+            .location__address!= address
+            .location__icons
+                span.location__icon.location__icon_crosshairs
+                span.location__icon.location__icon_map-marker

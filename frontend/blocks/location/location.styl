@@ -1,0 +1,41 @@
+@require '../../colors'
+
+codeCrosshairs = '\f05b'
+codeMapMarker = '\f041'
+
+.location
+    width 539px
+
+    &__map
+        height 208px
+
+    &__footer
+        display flex 
+        align-items center
+        padding 0 5%
+        height 69px
+        border-radius 0 0 3px 3px 
+        background-color themeColor2
+        color white
+
+    &__message
+        font-size 30px
+        font-family LatoLight
+
+    &__address 
+        flex-grow 1
+        margin-left 5%
+        font-size 13px
+        font-family LatoBlack
+        text-transform uppercase
+
+    &__icon
+        padding 0 10px
+        font-size 26px
+        font-family FontAwesome
+
+        &_crosshairs:before
+            content codeCrosshairs
+
+        &_map-marker:before
+            content codeMapMarker

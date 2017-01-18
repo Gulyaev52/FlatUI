@@ -14,10 +14,18 @@ include blocks/messenger/messenger
 include blocks/calendar/calendar
 include blocks/slider/slider
 include blocks/toggle/toggle
+include blocks/location/location
 
 html 
     title FlatUI 
     body  
+        +location({ 
+            coordinates: [56.4531907, 84.9756513], 
+            message: "Meet us!",
+            address: "Tomsk, Krasnoarmeyskaya, 147<br/> office 201"
+        })
+        br
+        br
         div(style="height: 200px; padding:50px")
             br
             br
