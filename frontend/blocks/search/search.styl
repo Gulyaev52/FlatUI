@@ -6,6 +6,11 @@ codeSearch = '\f002'
     position relative
     width 228px
 
+    &_error &__input
+        background-color themeColor2
+        color white
+        text-overflow ellipsis
+
     &__button
         border none
         position absolute
@@ -13,6 +18,7 @@ codeSearch = '\f002'
         height 28px
         width 33px
         background-color themeColor2
+        outline none
 
         &:before
             font-family FontAwesome

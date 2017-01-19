@@ -10,10 +10,19 @@ border-bottom-color(color)
 
 type-outline(color-bottom-border, color-font)
     border-bottom-color(color-bottom-border)
-    color color-font
-    border-bottom-style none
+    color color-font 
+
+@keyframes ripple-effect
+    from
+        transform scale(1)
+        opacity 1
+
+    to
+        transform scale(50)
+        opacity 0
 
 .button 
+    position relative
     padding 0px 15px
     border none
     border-radius 3px
@@ -22,6 +31,13 @@ type-outline(color-bottom-border, color-font)
     color white
     font-family LatoBlack
     text-align center
+    outline none
+
+    &__ripple-effect
+        position absolute
+        circle(1px) 
+        background white
+        animation  ripple-effect 1s
 
     &_theme_primary
         background-color primaryColor
@@ -55,3 +71,8 @@ type-outline(color-bottom-border, color-font)
 
     &_theme_error&_type_raised
         border-bottom-color(errorBorderBottomColor) 
+
+    &_state_pressed&_type_outline
+    &_state_pressed&_type_raised
+        transform scaleY(0.95)
+        box-shadow none

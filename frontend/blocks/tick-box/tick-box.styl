@@ -3,21 +3,50 @@
 
 codeCheck = '\f00c'
 
-.tick-box
-    display flex
-    circle(23px) 
-    justify-content center
-    align-items center
+// .tick-box
+//     display flex
+//     circle(23px) 
+//     justify-content center
+//     align-items center
+//     font-family FontAwesome
+//     font-size 0.8em
+
+//     &:before 
+//         content codeCheck
+
+//     &_enabled_true
+//         background-color themeColor1
+//         color white
+
+//     &_enabled_false
+//         background-color themeColor3
+//         color #c0c0c0
+
+.tick-box 
+    display inline-block
     font-family FontAwesome
     font-size 0.8em
+    cursor pointer
 
-    &:before 
+    &__checkbox
+        display none
+
+    &__indicator
+        display inline-flex
+        circle(23px) 
+        justify-content center
+        align-items center
+        background-color themeColor1
+
+    &__indicator:before
         content codeCheck
 
-    &_enabled_true
+    &__checkbox ~ &__indicator
+        background-color themeColor3
+        color #c0c0c0
+
+    &__checkbox:checked ~ &__indicator
         background-color themeColor1
         color white
 
-    &_enabled_false
-        background-color themeColor3
-        color #c0c0c0
+

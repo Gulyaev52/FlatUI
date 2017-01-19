@@ -3,8 +3,11 @@
 
 primaryColor = themeColor1
 disabledColor = themeColor3
+
 codeAngelLeft = "\f104"
 codeAngelRight = "\f105"
+
+angelPadding = 5px
 
 .arrow-button
     display flex  
@@ -13,25 +16,28 @@ codeAngelRight = "\f105"
     circle(50px)
     font-family FontAwesome
     font-size 40px  
+    cursor pointer
 
-    &_left:before
+    &_direction_left:before
+    &_direction_right:before
         display inline-block
-        padding-right 5px
+
+    &_direction_left:before 
+        padding-right angelPadding
         content codeAngelLeft
 
-    &_right:before
-        display inline-block
-        padding-left 5px
+    &_direction_right:before 
+        padding-left angelPadding
         content codeAngelRight
 
-    &_default
+    &_theme_default
         border: 3px solid primaryColor
         color primaryColor
 
-    &_disabled
+    &_theme_disabled
         background-color disabledColor
         color white
 
-    &_primary
+    &_theme_primary
         background-color primaryColor
         color white

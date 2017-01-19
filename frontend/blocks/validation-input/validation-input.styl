@@ -7,14 +7,12 @@
     &__input
         width 208px
 
-    &__validation   
+    &__message 
         width 75px 
         margin-left 10px 
         font-size 10px
         text-transform uppercase
 
-    &__input:valid ~ &__validation_ok
-        display inline-flex
-
-    &__input:invalid ~ &__validation_error
+    &__input:valid ~ &__message_ok
+    &__input:invalid ~ &__message_error
         display inline-flex

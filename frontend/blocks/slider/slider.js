@@ -1,8 +1,8 @@
 $(function () {
 
     $('.slider').each(function () { 
-        let $widget = $('.slider__widget', $(this));
-        let $tooltip = $('.slider__tooltip', $(this))
+        const $widget = $('.slider__widget', $(this));
+        const $tooltip = $('.slider__tooltip', $(this))
 
         $widget.slider({
             animate: true,

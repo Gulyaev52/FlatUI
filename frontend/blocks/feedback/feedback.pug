@@ -12,11 +12,10 @@ mixin feedback()
                     textOk: "thanks!",
                     textError: "error"
                 })
-            .feedback__item.feedback__email
-                -const emailPattern = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+            .feedback__item.feedback__email 
                 +validation-input({ 
                     placeholder: "Your Email",
-                    pattern: emailPattern,
+                    type: "email",
                     textOk: "thanks!",
                     textError: "error"
                 })

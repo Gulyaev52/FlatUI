@@ -4,9 +4,10 @@ codeChevronDown = '\f078'
 
 .drop-down
     position relative
-    width 228px
+    width 228px 
 
     &:before
+        content codeChevronDown
         display flex
         width 33px
         height 28px
@@ -16,6 +17,5 @@ codeChevronDown = '\f078'
         align-items center
         background-color themeColor1
         font-family FontAwesome
-        content codeChevronDown
         color white
         pointer-events none
