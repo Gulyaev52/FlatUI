@@ -1,0 +1,17 @@
+mixin section({ title })
+    .section&attributes(attributes)
+        h2.section__title= title
+        .section__content
+            block
+
+mixin section-row
+    .section__row&attributes(attributes)
+        block
+
+mixin section-column
+    .section__column&attributes(attributes)
+        block
+
+mixin section-item
+    .section__item
+        block

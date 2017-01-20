@@ -1,6 +1,6 @@
-mixin toggle({ state="off" })
+mixin toggle({ on=false })
     label.toggle
-        input(type = "checkbox").toggle__checkbox
+        input(type = "checkbox", checked = on).toggle__checkbox
         .toggle__switcher
             .toggle__slider
                 .toggle__text.toggle__text_on on

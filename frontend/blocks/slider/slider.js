@@ -1,14 +1,19 @@
 $(function () {
 
     $('.slider').each(function () { 
-        const $widget = $('.slider__widget', $(this));
-        const $tooltip = $('.slider__tooltip', $(this))
+        const $slider = $(this);
+
+        const value = $slider.data('value');
+
+        const $widget = $('.slider__widget', $slider);
+        const $tooltip = $('.slider__tooltip', $slider);
 
         $widget.slider({
             animate: true,
             range: "min",
             min: 0,
             max: 100,
+            value,
             slide: (_, ui) => {
                 $tooltip.html(ui.value)
             }

@@ -1,0 +1,40 @@
+include ../section/section
+include ../button/button
+
+mixin standard-buttons
+    .standard-buttons
+        +section({ title: 'standard buttons' })
+            +section-row
+                +section-item
+                    +button({ text: "button", size: "small" })
+                +section-item
+                    +button({ text: "button", size: "big" })
+                +section-item
+                    +button({ text: "button", size: "big", theme: "assertive" })
+                +section-item
+                    +button({ text: "button", size: "small", theme: "assertive" })
+            +section-row 
+                +section-item
+                    +button({ text: "button", size: "small", type: "raised" })
+                +section-item
+                    +button({ text: "button", size: "big", type: "raised" })
+                +section-item
+                    +button({ text: "button", size: "big", theme: "assertive", type: "raised" })
+                +section-item
+                    +button({ text: "button", size: "small", theme: "assertive", type: "raised" })
+            +section-row
+                +section-item
+                    +button({ text: "button", size: "small", type: "outline" })
+                +section-item
+                    +button({ text: "button", size: "big", type: "outline" })
+                +section-item
+                    +button({ text: "button", size: "big", theme: "assertive", type: "outline" })
+                +section-item
+                    +button({ text: "button", size: "small", theme: "assertive", type: "outline" })
+
+            //- +section-row
+            //-     -const text = 'button'
+            //-     -const sizes = ['small', 'big', 'big', 'small']
+            //-     -const themes = ['default', 'default', 'assertive', 'assertive']
+
+    

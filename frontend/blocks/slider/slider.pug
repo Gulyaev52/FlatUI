@@ -3,7 +3,7 @@ include ../scale/scale
 
 
 mixin slider({ value=0, scaleEnabled=false, theme="default" })
-    .slider(class = `slider_${theme}`)
+    .slider(class = `slider_${theme}`, data-value = value)
         .slider__widget
             .slider__handle.ui-slider-handle 
                 +tooltip({ theme, arrowLocated: "bottom" })(class = "slider__tooltip")

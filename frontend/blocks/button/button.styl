@@ -1,9 +1,9 @@
 @require '../../colors'
 
-primaryColor = themeColor1
-errorColor = themeColor2
-primaryBorderBottomColor = #28a290
-errorBorderBottomColor = #bf3e1f
+defaultColor = themeColor1
+defaultBorderBottomColor = #28a290
+assertiveColor = themeColor2
+assertiveBorderBottomColor = #bf3e1f
 
 border-bottom-color(color)
     box-shadow 0 3px 0 0 color
@@ -39,13 +39,13 @@ type-outline(color-bottom-border, color-font)
         background white
         animation  ripple-effect 1s
 
-    &_theme_primary
-        background-color primaryColor
-        border-color primaryColor
+    &_theme_default
+        background-color defaultColor
+        border-color defaultColor
 
-    &_theme_error
-        background-color errorColor 
-        border-color errorColor
+    &_theme_assertive
+        background-color assertiveColor 
+        border-color assertiveColor
 
     &_size_small
         min-height 22px
@@ -60,17 +60,17 @@ type-outline(color-bottom-border, color-font)
         border 1px solid  
         background-color white
 
-    &_theme_primary&_type_outline  
-        type-outline(primaryBorderBottomColor, primaryColor)
+    &_theme_default&_type_outline  
+        type-outline(defaultBorderBottomColor, defaultColor)
 
-    &_theme_error&_type_outline  
-        type-outline(errorBorderBottomColor, errorColor)
+    &_theme_assertive&_type_outline  
+        type-outline(assertiveBorderBottomColor, assertiveColor)
 
-    &_theme_primary&_type_raised
-        border-bottom-color(primaryBorderBottomColor)
+    &_theme_default&_type_raised
+        border-bottom-color(defaultBorderBottomColor)
 
-    &_theme_error&_type_raised
-        border-bottom-color(errorBorderBottomColor) 
+    &_theme_assertive&_type_raised
+        border-bottom-color(assertiveBorderBottomColor) 
 
     &_state_pressed&_type_outline
     &_state_pressed&_type_raised

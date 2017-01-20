@@ -1,0 +1,21 @@
+include ../section/section
+include ../percentage/percentage
+include ../pie-chart/pie-chart
+
+mixin percentages-pie-charts
+    .percentages-pie-charts
+        +section({ title: 'percentages / pie charts' })
+            +section-row
+                +section-item
+                    +percentage({ value: 0 })
+                +section-item
+                    +percentage({ value: 38 })
+                +section-item
+                    +percentage({ value: 62 })
+                +section-item
+                    +percentage({ value: 89 })
+                +section-item
+                    +pie-chart({            
+                        values: [1, 7, 4, 5],
+                        colors: [ '#747474', '#e75735', '#4eb7a8', '#e5e5e5']  
+                    })
