@@ -3,17 +3,15 @@ include ../button/button
 
 mixin event({ image, title, day, month, info })
     +preview({ image, blockName: "event" }) 
-        .event__date
-            span.event__day= day
-            span.event__month= month.slice(0, 3) 
-        .event__title= title
-        .event__info= info
+        +preview-title
+            .event__date
+                span.event__day= day
+                span.event__month= month.slice(0, 3) 
+        +preview-subtitle(class = 'event__title')= title
+        +preview-info(class = 'event__info')= info
         .event__add-event-button
             +button({ 
                 text: "add to calendar",
                 type: "outline",  
                 size: "small"
             })
-
-
-// передавать класс через (class)
