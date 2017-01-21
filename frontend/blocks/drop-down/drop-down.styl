@@ -3,20 +3,12 @@
 codeChevronDown = '\f078'
 
 .drop-down
-    position relative
-    width 300px 
-    height 32px
+    position relative 
 
-    &:before
-        content codeChevronDown
-        display flex
-        width 33px
-        height 100%
-        position absolute
-        right 0
-        justify-content center
-        align-items center
+    &__button
         background-color themeColor1
-        font-family FontAwesome
-        color white
         pointer-events none
+
+        &:before
+            content codeChevronDown
+            pointer-events none
