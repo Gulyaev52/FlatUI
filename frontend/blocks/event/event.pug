@@ -2,7 +2,7 @@ include ../preview/preview
 include ../button/button
 
 mixin event({ image, title, day, month, info })
-    +preview({ image, blockName: "event" }) 
+    +preview({ image })(class = "event")
         +preview-title
             .event__date
                 span.event__day= day

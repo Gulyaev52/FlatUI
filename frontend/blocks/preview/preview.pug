@@ -1,4 +1,5 @@
-mixin preview({ image, blockName })
+mixin preview({ image })
+    -const blockName = attributes.class
     .preview(class=blockName)
         .preview__column.preview__column_left
             img.preview__img(
