@@ -1,0 +1,20 @@
+include ../section/section
+include ../user-profile/user-profile
+
+mixin user-profiles
+    .user-profiles
+        +section({ title: 'user profile' })
+            +section-row()(class = 'section__row_justify-center')
+                +user-profile({ 
+                    theme: "default",
+                    name: "Sarah Brown",
+                    profession: "developer",
+                    photo: "sarah.png"  
+                })
+            +section-row()(class = 'section__row_justify-center')
+                +user-profile({ 
+                    theme: "gray",
+                    name: "John Smith",
+                    profession: "ux designer",
+                    photo: "john.png"  
+                })

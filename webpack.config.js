@@ -1,82 +1,79 @@
-const NODE_ENV = process.env.NODE_ENV || 'development';
-
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+
+const pageList = [
+  'flat-ui'
+];
+
+const entries = {};
+pageList.forEach(page => { 
+  entries[page] = ['babel-polyfill', `./pages/${page}/${page}.js`]; 
+});
+
+const htmlPlugins = [];
+
+pageList.forEach(page => {
+  htmlPlugins.push(new HtmlWebpackPlugin({
+    template: `pages/${page}/${page}.pug`,
+    filename: `${page}.html`,
+    chunks: [page]
+  }));
+});
 
 module.exports = {
-    context: `${__dirname}/frontend`,
+  entry: entries,
 
-    entry: {
-        main: './index.js'
-    },
+  output: {
+    path: path.join(__dirname, 'public'),
+    filename: '[name].bundle.js',
+  },
 
-    output: {
-        path: `${__dirname}/public`,
-        filename: "index.js"
-    },
-
-    devtool: 'cheap-inline-module-source-map',
-
-    watch: true,
-
-    plugins: [
-        new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({
-            NODE_ENV: JSON.stringify(NODE_ENV)
-        }),
-        new ExtractTextPlugin('index.css', {allChunks: true}),
-        new HtmlWebpackPlugin({ filename: 'index.html', template: './index.pug' }),
-        new webpack.ProvidePlugin({
-            $: 'jquery'
-        })
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        include: [ 
+          path.resolve(__dirname, 'web_modules'), 
+          path.resolve(__dirname, 'pages')
+        ],
+        query: { 
+          presets: ['babel-preset-latest'] 
+        },
+      },
+      { 
+        test: /\.pug$/, 
+        loader: 'pug' 
+      }, 
+      { 
+        test: /\.(css|styl)/, 
+        loader: ExtractTextPlugin.extract('css!stylus') 
+      },
+      { 
+        test: /\.(svg|png|ttf|eot|woff|woff2)(\?v=.+)?$/, 
+        loader: 'file?name=[path][name].[ext]' 
+      },
     ],
+  },
 
-    resolve: {
-        modulesDirectories: ['node_modules'],
-        extensions: ['', '.js', '.styl', '.pug']
-    },
+  plugins: [
+    new ExtractTextPlugin('[name].css', { allChunks: true }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
+    ...htmlPlugins,
+  ], 
 
-    resolveLoader: {
-        modulesDirectories: ['node_modules'],
-        modulesTemplates: ['*-loader', '*'],
-        extensions: ['', '.js']
-    },
+  externals: {
+    ymaps: 'ymaps'
+  },
 
-    module: {
+  watch: true,
 
-        loaders: [{
-            test: /\.js$/,
-            loader: 'babel',
-            exclude: [
-                /node_modules/,
-                /frontend\/plugins\/.*\.js$/
-            ],
-            query: {
-                presets: ['es2015']
-            }
-        }, {
-            test: /\.pug$/,
-            loader: 'pug'
-        }, {
-            test: /\.css$/,
-            loader: 'style!css' //!autoprefixer?browsers=last 2 versions'
-        }, {
-            test: /\.styl$/,
-            loader: ExtractTextPlugin.extract('css!stylus?resolve url') //!autoprefixer?browsers=last 2 versions'
-        }, {
-            test: /\.(ico|png|jpg|svg|ttf|eot|woff|woff2)$/,
-            loader: 'file?name=[path][name].[ext]'
-        }],
-
-        noParse: [ 
-            /frontend\/plugins\/.*\.js$/,
-            /node_modules\/jquery/,
-            /node_modules\/jquery-ui/
-        ]
-    },
-
-    devServer: {
-        contentBase: './public',
-    },
+  devServer: {
+      contentBase: './public'
+  }
 };

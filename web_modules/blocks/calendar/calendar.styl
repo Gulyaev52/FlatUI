@@ -1,0 +1,111 @@
+@require '../../colors'
+
+headerFontColor = white
+
+codeAngelLeft = "\f104"
+codeAngelRight = "\f105"
+
+.calendar
+    width 270px
+
+    &__day
+        display block
+        width 100%
+        padding-top 1.2rem
+        border none
+        font-size 80px
+        background-color themeColor2
+        color headerFontColor
+        font-family LatoLight
+        text-align center
+
+    &__btn-today
+        width 100%
+        height 49px
+        padding 15px 20px
+        text-transform uppercase
+        font-family LatoBlack 
+        cursor pointer
+
+    & .ui-datepicker
+        width 100%
+        padding 0
+        border none
+
+        & .ui-datepicker-header 
+            border none
+            border-radius 0
+            padding 0
+            background-color #d54c2c
+            color headerFontColor
+            font-family LatoLight
+            font-size 24px
+
+            & .ui-datepicker-title
+                
+                & .ui-datepicker-year
+                    display none
+
+            & .ui-datepicker-prev
+            & .ui-datepicker-next
+                display flex
+                justify-content center
+                align-items center
+                border none 
+                color headerFontColor
+
+            & .ui-datepicker-prev-hover
+            & .ui-datepicker-next-hover
+                border none
+                border-radius 0
+                background-color inherit
+
+            & .ui-datepicker-prev:before
+            & .ui-datepicker-next:before 
+                display block
+                margin-bottom 5px
+                font-family FontAwesome 
+
+            & .ui-datepicker-prev:before
+                content codeAngelLeft
+
+            & .ui-datepicker-next:before
+                content codeAngelRight
+
+        & .ui-datepicker-calendar
+            margin 0 
+
+            & thead 
+                font-size 12px
+                background-color themeColor2
+                color headerFontColor
+                font-family LatoBlack
+                text-transform uppercase
+                font-weight bold
+
+                & th
+                    width 38px
+                    height 27px
+
+            & tbody
+                background-color #f2f2f2 
+
+                & td 
+                    border 1px solid white
+
+                    & .ui-state-default
+                        text-align center
+                        vertical-align center
+                        color #868686
+                        font-family SourceSansProRegular
+                        font-size 1.4em
+                        border none 
+
+                    & .ui-priority-secondary
+                        color #b5aaaa
+
+                    & .ui-state-highlight
+                    & .ui-state-active
+                        border none
+                        background-color themeColor2
+                        color white 
