@@ -1,5 +1,4 @@
-import '../sitemap/sitemap'
-import '../socials/socials'
-import '../logo/logo' 
+import '../link/link'
+import './footer-logo'
 
 import './footer.styl'

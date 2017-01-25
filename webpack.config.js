@@ -4,13 +4,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 const pageList = [
-  //  'flat-ui',
-  //  'page',
-  // 'messages',
-  // 'contacts',
-    //  'profile',
-    //  'sign-in'
-    'sign-up'
+  'flat-ui', 
+  'messages',
+  'contacts',
+  'profile',
+  'sign-in',
+  'sign-up'
 ];
 
 const entries = {};

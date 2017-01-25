@@ -1,7 +1,3 @@
-.logo {
-  height: 70px;
-  width: 100px;
-}
 .search {
   position: relative;
   display: inline-block;
@@ -54,46 +50,10 @@
   text-decoration: none;
   font-family: LatoLight;
 }
-.sitemap {
-  display: flex;
-  flex-wrap: wrap;
+.link_theme_default {
+  color: #4eb7a8;
 }
-.social {
-  font-family: FontAwesome;
-  font-size: 25px;
-}
-.social_facebook:before {
-  content: '\F09A';
-}
-.social_twitter:before {
-  content: '\F099';
-}
-.social_dribble:before {
-  content: '\F17D';
-}
-.social_github:before {
-  content: '\F09B';
-}
-.socials {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.socials_theme_default {
-  color: #fff;
-}
-.socials_theme_gray {
-  color: #757575;
-}
-.footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 1% 10%;
-  min-height: 100px;
-  max-height: 100px;
-  background-color: #4eb7a8;
-}
-.footer__socials {
+.link_theme_white {
   color: #fff;
 }
 .footer-logo {
@@ -107,6 +67,22 @@
   margin-top: 15px;
   font-family: LatoLight;
   color: #fff;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 10%;
+  min-height: 100px;
+  background-color: #4eb7a8;
+}
+.footer__socials {
+  color: #fff;
+}
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  width: 115px;
+  font-size: 20px;
 }
 * {
   box-sizing: border-box;
@@ -3063,4 +3039,38 @@
     transform: scale(50);
     opacity: 0;
   }
+}
+.guest-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 0;
+}
+.sign-in-form__item {
+  margin-top: 15px;
+}
+.sign-in-form__item_button {
+  display: flex;
+  flex-direction: column;
+}
+.sign-in-form__item:first-child {
+  margin-top: 0;
+}
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sign-in__title {
+  color: #4eb7a8;
+  font-family: LatoLight;
+}
+.sign-in__form {
+  margin-top: 15px;
+}
+.sign-in__links {
+  margin-top: 15px;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
 }

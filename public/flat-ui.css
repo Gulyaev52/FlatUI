@@ -38,33 +38,6 @@
   color: #fff;
   font-family: FontAwesome;
 }
-.social {
-  font-family: FontAwesome;
-  font-size: 25px;
-}
-.social_facebook:before {
-  content: '\F09A';
-}
-.social_twitter:before {
-  content: '\F099';
-}
-.social_dribble:before {
-  content: '\F17D';
-}
-.social_github:before {
-  content: '\F09B';
-}
-.socials {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.socials_theme_default {
-  color: #fff;
-}
-.socials_theme_gray {
-  color: #757575;
-}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -3771,6 +3744,7 @@
   color: #fff;
 }
 .drop-down {
+  display: inline-block;
   position: relative;
 }
 .drop-down__button {
@@ -3821,6 +3795,33 @@
 .user-profile__socials {
   margin-top: 10px;
   width: 100%;
+}
+.social {
+  font-family: FontAwesome;
+  font-size: 25px;
+}
+.social_facebook:before {
+  content: '\F09A';
+}
+.social_twitter:before {
+  content: '\F099';
+}
+.social_dribble:before {
+  content: '\F17D';
+}
+.social_github:before {
+  content: '\F09B';
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socials_theme_default {
+  color: #fff;
+}
+.socials_theme_gray {
+  color: #757575;
 }
 .avatar {
   height: 92px;
