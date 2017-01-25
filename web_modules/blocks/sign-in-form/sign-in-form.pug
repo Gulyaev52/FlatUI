@@ -1,6 +1,7 @@
 include ../input/input
 include ../button/button
 
+
 mixin sign-in-form
     form.sign-in-form
         .sign-in-form__item.sign-in-form__item_input
@@ -14,4 +15,8 @@ mixin sign-in-form
                 type = 'password' 
             ) 
         .sign-in-form__item.sign-in-form__item_button
-            +button({ text: 'Войти', size: 'big' })
+            +button({ 
+                text: 'Войти',
+                size: 'big',
+                type: 'raised' 
+            })

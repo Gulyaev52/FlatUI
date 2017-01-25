@@ -1,5 +1,5 @@
 include ../link/link
-include footer-logo
+include ../logo/logo 
 
 
 mixin footer  
@@ -7,5 +7,8 @@ mixin footer
         .footer__links
             +link({ text: 'about', theme: 'white' })
             +link({ text: 'terms', theme: 'white' })
-        .footer__logo
-            +footer-logo 
+        .footer__logo-container
+            .footer__logo
+                +logo
+            .footer__copyright
+                | Copyright © 2017 Whitesquare

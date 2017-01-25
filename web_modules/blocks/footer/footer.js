@@ -1,4 +1,4 @@
 import '../link/link'
-import './footer-logo'
+import '../logo/logo'
 
 import './footer.styl'

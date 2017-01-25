@@ -1,20 +1,12 @@
 include ../link/link
 include ../icon/icon
 
-mixin menu() 
+
+mixin menu({ items }) 
     .menu 
-        .menu__item
-            +icon({ name: 'profile' })(class = 'menu__icon')
-            +link({ text: 'Профиль' })(class = 'menu__link')
-        .menu__item
-            +icon({ name: 'messages' })(class = 'menu__icon')
-            +link({ text: 'Сообщения' })(class = 'menu__link')
-        .menu__item
-            +icon({ name: 'news' })(class = 'menu__icon')
-            +link({ text: 'Новости' })(class = 'menu__link')
-        .menu__item
-            +icon({ name: 'calendar' })(class = 'menu__icon')
-            +link({ text: 'События' })(class = 'menu__link')
-        .menu__item
-            +icon({ name: 'suitcase' })(class = 'menu__icon')
-            +link({ text: 'Контакты' })(class = 'menu__link')
+        each item in items
+            .menu__item
+                .menu__icon
+                    +icon({ name: item.iconName })
+                .menu__link
+                    +link({ text: item.text, href: item.href }) 

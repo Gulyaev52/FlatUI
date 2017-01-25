@@ -56,18 +56,6 @@
 .link_theme_white {
   color: #fff;
 }
-.footer-logo {
-  display: flex;
-  flex-direction: column;
-}
-.footer-logo__img {
-  align-self: flex-end;
-}
-.footer-logo__copyright {
-  margin-top: 15px;
-  font-family: LatoLight;
-  color: #fff;
-}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -83,6 +71,18 @@
   justify-content: space-between;
   width: 115px;
   font-size: 20px;
+}
+.footer__logo-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer__logo {
+  align-self: flex-end;
+}
+.footer__copyright {
+  margin-top: 15px;
+  font-family: LatoLight;
+  color: #fff;
 }
 * {
   box-sizing: border-box;
@@ -2935,12 +2935,21 @@
   font-style: normal;
   font-weight: normal;
 }
+html,
+body {
+  height: 100%;
+}
 .page {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .page__main {
-  flex-grow: 1;
+  flex: 1 0 auto;
+  display: flex;
+}
+.page__footer {
+  flex: 0 0 auto;
 }
 .button {
   position: relative;
@@ -3044,7 +3053,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1% 0;
+  width: 100%;
 }
 .sign-in-form__item {
   margin-top: 15px;

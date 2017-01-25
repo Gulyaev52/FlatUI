@@ -1,8 +1,37 @@
 extends ../page/page
 
+include ~blocks/menu/menu
+
+
 block main
+    -
+        const menuItems = [
+            { 
+                iconName: 'profile', 
+                text: 'Профиль', 
+                href: './profile.html' 
+            },
+            {
+                iconName: 'messages', 
+                text: 'Сообщения', 
+                href: './messages.html'
+            },
+            {
+                iconName: 'news', 
+                text: 'Новости', 
+            },
+            {
+                iconName: 'calendar', 
+                text: 'События',  
+            },
+            {
+                iconName: 'suitcase', 
+                text: 'Контакты',
+                href: './contacts.html'  
+            }
+        ]
     .user-page
         .user-page__menu
-            block menu
+            +menu({ items: menuItems })
         .user-page__content
             block content

@@ -11,17 +11,15 @@ mixin setting({ title })
         .setting__item.setting__button
             +button({ text: 'Сохранить', size: 'big', type: 'raised' })
 
-mixin setting-input({ type, label, value, name, placeholder })
-    -const id = `setting__input-${name}`
+mixin setting-input({ type, label, value, name, placeholder }) 
     .setting__item
-        label.setting__label(for = id)= label
+        label.setting__label= label
         .setting__input
             if type == 'text'
                 input.input(
                     value = value, 
                     name = name,
-                    placeholder = placeholder, 
-                    id = id
+                    placeholder = placeholder
                 )
             if type == 'drop-down'
                 +drop-down({ values: value })
