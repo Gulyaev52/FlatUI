@@ -8,7 +8,8 @@ const pageList = [
   //  'page',
   // 'messages',
   // 'contacts',
-     'profile' 
+     'profile',
+     'sign-in'
 ];
 
 const entries = {};

@@ -1,0 +1,22 @@
+include ../input/input
+include ../button/button
+
+mixin sign-in-form
+    form.sign-in-form
+        .sign-in-form__item.sign-in-form__item_input
+            input.input(
+                placeholder = 'Логин',
+                type = 'Текст' 
+            )
+        .sign-in-form__item.sign-in-form__item_input
+            input.input(
+                placeholder = 'Пароль'
+                type = 'password' 
+            )
+        .sign-in-form__item.sign-in-form__item_input
+            input.input(
+                placeholder = 'Повторите пароль'
+                type = 'password' 
+            )
+        .sign-in-form__item.sign-in-form__item_button
+            +button({ text: 'Войти', size: 'big' })
