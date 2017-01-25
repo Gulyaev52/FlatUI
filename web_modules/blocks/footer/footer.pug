@@ -1,0 +1,40 @@
+include ../sitemap/sitemap
+include ../socials/socials
+include ../logo/logo 
+ 
+mixin footer
+    -const pages = [
+    -    'Profile',
+    -    'Messages',
+    -    'News',
+    -    'Events',
+    -    'About',
+    -    'Terms'
+    -]
+    -const socialsInfo = [
+    -    { name: 'facebook' },
+    -    { name: 'twitter' },
+    -    { name: 'github' }
+    -]
+    .footer
+        .footer__sitemap 
+            +footer-section('карта сайта')
+                +sitemap({ pages }) 
+        .footer__socials 
+            +footer-section('ссылки')
+                +socials({ socialsInfo })
+        .footer__logo
+            +footer-logo
+
+mixin footer-section(title)
+    .footer-section
+        .footer-section__title= title
+        .footer-section__content
+            block
+
+mixin footer-logo
+    .footer-logo
+        .footer-logo__img
+            +logo
+        .footer-logo__copyright
+            | Copyright © 2017 Whitesquare

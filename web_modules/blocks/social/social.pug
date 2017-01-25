@@ -1,2 +1,2 @@
-mixin social({ name })
-    span.social(class = `social_${name}`)(class = attributes.class)
+mixin social({ name, url })
+    span.social(class = `social_${name}`, url = url)(class = attributes.class)

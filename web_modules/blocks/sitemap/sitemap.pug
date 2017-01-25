@@ -1,0 +1,7 @@
+include ../link/link
+
+mixin sitemap({ pages })
+    .sitemap
+        each page in pages
+            .sitemap__page
+                +link({ text: page })

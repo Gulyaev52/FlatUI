@@ -1,0 +1,30 @@
+extends ../user-page/user-page
+
+include ~blocks/menu/menu
+include ~blocks/feedback/feedback
+include ~blocks/contact-list/contact-list
+include ~blocks/location/location 
+
+
+block menu
+    +menu
+
+block content
+    -
+        const contactsInfo = [
+            { type: 'tel', text: '+8 913-154-18-55' },
+            { type: 'mailto', text: 'gulyaev52@gmail.com' },
+            { type: 'address', text: 'Томск, Красноармейская, 147. Оффис 201' }
+        ]
+    .contacts
+        .contacts__row 
+            .contacts__feedback
+                +feedback 
+            .contacts__info
+                +contact-list({ contactsInfo }) 
+        .contacts__location
+            +location({ 
+                coordinates: [56.4531907, 84.9756513], 
+                message: "Meet us!",
+                address: "Томск, Красноармейская, 147<br/> оффис 201"
+            })

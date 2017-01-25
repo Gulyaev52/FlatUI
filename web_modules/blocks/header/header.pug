@@ -1,0 +1,9 @@
+include ../logo/logo
+include ../search/search
+
+mixin header
+    .header
+        .header__logo
+            +logo
+        .header__search
+            +search({ placeholder: "Найти" })

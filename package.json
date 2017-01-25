@@ -24,7 +24,8 @@
     "pug-loader": "^2.3.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.3.1",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
     "build": "./node_modules/.bin/webpack --optimize-minimize",

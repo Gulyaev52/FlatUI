@@ -1,4 +1,5 @@
 import './user-profile.styl'
 
 import '../tooltip/tooltip'
-import '../social/social'
+import '../socials/socials'
+import '../avatar/avatar'

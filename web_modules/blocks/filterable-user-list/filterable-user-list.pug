@@ -1,0 +1,10 @@
+include ../user-list/user-list
+include ../search/search
+
+mixin filterable-user-list({ users })
+    .filterable-user-list 
+        .filterable-user-list__search
+            +search({ placeholder: 'Введите имя' })
+        .filterable-user-list__user-list
+            +user-list({ users })
+
