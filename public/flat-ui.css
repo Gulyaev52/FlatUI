@@ -3280,6 +3280,7 @@ body {
   top: 0;
 }
 .slider {
+  position: relative;
   width: 260px;
 }
 .slider_default .ui-slider .ui-widget-header,
@@ -3292,7 +3293,7 @@ body {
 .slider__tooltip {
   width: 40px;
   height: 31px;
-  margin-top: -39px;
+  top: -40px;
   margin-left: -10px;
 }
 .slider__scale {

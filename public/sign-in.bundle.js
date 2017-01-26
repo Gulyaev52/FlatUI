@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(416);
+	module.exports = __webpack_require__(418);
 
 
 /***/ },
@@ -18796,18 +18796,20 @@
 /* 413 */,
 /* 414 */,
 /* 415 */,
-/* 416 */
+/* 416 */,
+/* 417 */,
+/* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(417);
-
 	__webpack_require__(419);
+
+	__webpack_require__(421);
 
 	__webpack_require__(311);
 
-	__webpack_require__(421);
+	__webpack_require__(423);
 
 	$('.button').on('click', function () {
 	    window.location = './profile.html';
@@ -18815,30 +18817,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(308)))
 
 /***/ },
-/* 417 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(300);
-
-	__webpack_require__(418);
-
-/***/ },
-/* 418 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
 /* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(306);
-
-	__webpack_require__(330);
+	__webpack_require__(300);
 
 	__webpack_require__(420);
 
@@ -18850,6 +18834,24 @@
 
 /***/ },
 /* 421 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(306);
+
+	__webpack_require__(330);
+
+	__webpack_require__(422);
+
+/***/ },
+/* 422 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 423 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
