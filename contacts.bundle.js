@@ -8196,13 +8196,13 @@
 
 	__webpack_require__(299);
 
-	__webpack_require__(324);
+	__webpack_require__(328);
 
-	__webpack_require__(332);
+	__webpack_require__(336);
 
-	__webpack_require__(335);
+	__webpack_require__(339);
 
-	__webpack_require__(337);
+	__webpack_require__(341);
 
 /***/ },
 /* 299 */
@@ -8212,9 +8212,9 @@
 
 	__webpack_require__(300);
 
-	__webpack_require__(319);
+	__webpack_require__(321);
 
-	__webpack_require__(323);
+	__webpack_require__(327);
 
 /***/ },
 /* 300 */
@@ -8226,9 +8226,9 @@
 
 	__webpack_require__(310);
 
-	__webpack_require__(314);
+	__webpack_require__(316);
 
-	__webpack_require__(318);
+	__webpack_require__(320);
 
 /***/ },
 /* 301 */
@@ -18580,11 +18580,11 @@
 
 	'use strict';
 
-	__webpack_require__(311);
-
 	__webpack_require__(302);
 
-	__webpack_require__(313);
+	__webpack_require__(311);
+
+	__webpack_require__(315);
 
 /***/ },
 /* 311 */
@@ -18594,11 +18594,15 @@
 
 	__webpack_require__(312);
 
+	__webpack_require__(314);
+
 /***/ },
 /* 312 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	__webpack_require__(313);
 
 /***/ },
 /* 313 */
@@ -18608,15 +18612,9 @@
 
 /***/ },
 /* 314 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-
-	__webpack_require__(315);
-
-	__webpack_require__(316);
-
-	__webpack_require__(317);
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 315 */
@@ -18626,9 +18624,15 @@
 
 /***/ },
 /* 316 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	__webpack_require__(317);
+
+	__webpack_require__(318);
+
+	__webpack_require__(319);
 
 /***/ },
 /* 317 */
@@ -18644,35 +18648,35 @@
 
 /***/ },
 /* 319 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-
-	__webpack_require__(311);
-
-	__webpack_require__(320);
-
-	__webpack_require__(322);
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 320 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(321);
+	__webpack_require__(322);
 
-/***/ },
-/* 321 */
-/***/ function(module, exports) {
+	__webpack_require__(324);
 
-	// removed by extract-text-webpack-plugin
+	__webpack_require__(326);
 
 /***/ },
 /* 322 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	__webpack_require__(323);
 
 /***/ },
 /* 323 */
@@ -18688,12 +18692,6 @@
 
 	__webpack_require__(325);
 
-	__webpack_require__(306);
-
-	__webpack_require__(326);
-
-	__webpack_require__(330);
-
 /***/ },
 /* 325 */
 /***/ function(module, exports) {
@@ -18702,15 +18700,9 @@
 
 /***/ },
 /* 326 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-
-	__webpack_require__(327);
-
-	__webpack_require__(306);
-
-	__webpack_require__(328);
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 327 */
@@ -18726,6 +18718,12 @@
 
 	__webpack_require__(329);
 
+	__webpack_require__(306);
+
+	__webpack_require__(330);
+
+	__webpack_require__(334);
+
 /***/ },
 /* 329 */
 /***/ function(module, exports) {
@@ -18738,9 +18736,41 @@
 
 	'use strict';
 
+	__webpack_require__(331);
+
+	__webpack_require__(306);
+
+	__webpack_require__(332);
+
+/***/ },
+/* 331 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 332 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(333);
+
+/***/ },
+/* 333 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 334 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(331);
+	__webpack_require__(335);
 
 	var _jquery = __webpack_require__(308);
 
@@ -18811,26 +18841,26 @@
 	});
 
 /***/ },
-/* 331 */
+/* 335 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 332 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(333);
+	__webpack_require__(337);
 
 	var _jquery = __webpack_require__(308);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _ymaps = __webpack_require__(334);
+	var _ymaps = __webpack_require__(338);
 
 	var _ymaps2 = _interopRequireDefault(_ymaps);
 
@@ -18886,37 +18916,37 @@
 	});
 
 /***/ },
-/* 333 */
+/* 337 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 334 */
+/* 338 */
 /***/ function(module, exports) {
 
 	module.exports = ymaps;
 
 /***/ },
-/* 335 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(320);
+	__webpack_require__(324);
 
-	__webpack_require__(311);
+	__webpack_require__(322);
 
-	__webpack_require__(336);
+	__webpack_require__(340);
 
 /***/ },
-/* 336 */
+/* 340 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 337 */
+/* 341 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

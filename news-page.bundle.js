@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(410);
+	module.exports = __webpack_require__(416);
 
 
 /***/ },
@@ -18700,104 +18700,10 @@
 /* 329 */,
 /* 330 */,
 /* 331 */,
-/* 332 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(333);
-
-/***/ },
-/* 333 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 334 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(335);
-
-	var _jquery = __webpack_require__(308);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var Button = function () {
-	    function Button(_ref) {
-	        var root = _ref.root;
-
-	        _classCallCheck(this, Button);
-
-	        this.$root = (0, _jquery2.default)(root);
-	        this._attachEventHandlers();
-	    }
-
-	    _createClass(Button, [{
-	        key: '_attachEventHandlers',
-	        value: function _attachEventHandlers() {
-	            this.$root.on('mousedown', function () {
-	                (0, _jquery2.default)(this).addClass('button_state_pressed');
-	            }).on('mouseup', function () {
-	                (0, _jquery2.default)(this).removeClass('button_state_pressed');
-	            }).on('click', this._showRippleEffect.bind(this));
-	        }
-	    }, {
-	        key: '_showRippleEffect',
-	        value: function _showRippleEffect(event) {
-	            event.preventDefault();
-
-	            var $button = this.$root;
-
-	            var $ink = (0, _jquery2.default)('<div/>');
-
-	            var buttonOffset = $button.offset();
-
-	            var _findPosInk2 = this._findPosInk(event, buttonOffset),
-	                xPos = _findPosInk2.xPos,
-	                yPos = _findPosInk2.yPos;
-
-	            $ink.addClass('button__ripple-effect').css({ top: yPos, left: xPos }).appendTo($button);
-
-	            window.setTimeout(function () {
-	                $ink.remove();
-	            }, 1000);
-	        }
-	    }, {
-	        key: '_findPosInk',
-	        value: function _findPosInk(event, parentOffset) {
-	            return {
-	                xPos: event.pageX - parentOffset.left,
-	                yPos: event.pageY - parentOffset.top
-	            };
-	        }
-	    }]);
-
-	    return Button;
-	}();
-
-	(0, _jquery2.default)(function () {
-
-	    (0, _jquery2.default)('.button').each(function () {
-	        new Button({ root: this });
-	    });
-	});
-
-/***/ },
-/* 335 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
 /* 336 */,
 /* 337 */,
 /* 338 */,
@@ -18807,8 +18713,20 @@
 /* 342 */,
 /* 343 */,
 /* 344 */,
-/* 345 */,
-/* 346 */,
+/* 345 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(346);
+
+/***/ },
+/* 346 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 347 */,
 /* 348 */,
 /* 349 */,
@@ -18855,152 +18773,56 @@
 /* 390 */,
 /* 391 */,
 /* 392 */,
-/* 393 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(394);
-
-	__webpack_require__(332);
-
-	__webpack_require__(311);
-
-	__webpack_require__(395);
-
-/***/ },
-/* 394 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 395 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(396);
-
-/***/ },
-/* 396 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
 /* 397 */,
-/* 398 */,
-/* 399 */,
+/* 398 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(399);
+
+	__webpack_require__(345);
+
+/***/ },
+/* 399 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 400 */,
-/* 401 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(393);
-
-	__webpack_require__(395);
-
-	__webpack_require__(402);
-
-	__webpack_require__(406);
-
-/***/ },
-/* 402 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(306);
-
-	__webpack_require__(403);
-
-	__webpack_require__(334);
-
-	__webpack_require__(405);
-
-/***/ },
-/* 403 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(332);
-
-	__webpack_require__(404);
-
-/***/ },
-/* 404 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 405 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 406 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
 /* 407 */,
 /* 408 */,
 /* 409 */,
-/* 410 */
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	__webpack_require__(299);
 
-	__webpack_require__(401);
+	__webpack_require__(398);
 
-	__webpack_require__(411);
-
-	__webpack_require__(415);
+	__webpack_require__(417);
 
 /***/ },
-/* 411 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(412);
-
-	__webpack_require__(304);
-
-	__webpack_require__(414);
-
-/***/ },
-/* 412 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(393);
-
-	__webpack_require__(413);
-
-/***/ },
-/* 413 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 414 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 415 */
+/* 417 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
