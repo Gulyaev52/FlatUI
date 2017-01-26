@@ -1,0 +1,22 @@
+extends ../user-page/user-page
+
+include ~blocks/event/event
+include ~blocks/calendar/calendar
+
+block content
+    .events
+        .events__list
+            -
+                let eventInfo = {
+                    image: "event-img.png",
+                    day: "26",
+                    month: "Janury",
+                    title: "this is the title",
+                    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                }
+            -const events = new Array(5).fill(eventInfo);
+            each eventInfo in events
+                .events__item
+                    +event(eventInfo)
+        .events__calendar
+            +calendar
