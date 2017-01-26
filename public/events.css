@@ -45,16 +45,40 @@
   padding: 1% 10%;
   background-color: #4eb7a8;
 }
-.link {
-  color: #28a290;
+.social {
+  font-family: FontAwesome;
+  font-size: 25px;
   text-decoration: none;
-  font-family: LatoLight;
 }
-.link_theme_default {
-  color: #4eb7a8;
+.social_name_facebook:before {
+  content: '\F09A';
 }
-.link_theme_white {
+.social_name_twitter:before {
+  content: '\F099';
+}
+.social_name_dribble:before {
+  content: '\F17D';
+}
+.social_name_github:before {
+  content: '\F09B';
+}
+.social_theme_default {
   color: #fff;
+}
+.social_theme_gray {
+  color: #757575;
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 70px;
+}
+.socials_theme_default {
+  color: #fff;
+}
+.socials_theme_gray {
+  color: #757575;
 }
 .footer {
   display: flex;
@@ -64,9 +88,6 @@
   background-color: #4eb7a8;
 }
 .footer__socials {
-  color: #fff;
-}
-.footer__links {
   display: flex;
   justify-content: space-between;
   width: 115px;
@@ -2951,6 +2972,17 @@ body {
 .page__footer {
   flex: 0 0 auto;
 }
+.link {
+  color: #28a290;
+  text-decoration: none;
+  font-family: LatoLight;
+}
+.link_theme_default {
+  color: #4eb7a8;
+}
+.link_theme_white {
+  color: #fff;
+}
 .icon {
   color: #28a290;
   font-family: FontAwesome;
@@ -3011,6 +3043,104 @@ body {
   margin-left: 5%;
   flex-grow: 3;
 }
+.button {
+  position: relative;
+  padding: 0px 15px;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: LatoBlack;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+.button__ripple-effect {
+  position: absolute;
+  background: #fff;
+  animation: ripple-effect 1s;
+}
+.button_theme_default {
+  background-color: #4eb7a8;
+  border-color: #4eb7a8;
+}
+.button_theme_assertive {
+  background-color: #e75735;
+  border-color: #e75735;
+}
+.button_size_small {
+  min-height: 22px;
+  min-width: 78px;
+  font-size: 0.6em;
+}
+.button_size_big {
+  min-height: 32px;
+  min-width: 118px;
+}
+.button_type_outline {
+  border: 1px solid;
+  background-color: #fff;
+}
+.button_theme_default.button_type_outline {
+  box-shadow: 0 3px 0 0 #28a290;
+  color: #4eb7a8;
+}
+.button_theme_default.button_type_raised {
+  box-shadow: 0 3px 0 0 #28a290;
+}
+.button_theme_assertive.button_type_outline {
+  box-shadow: 0 3px 0 0 #bf3e1f;
+  color: #e75735;
+}
+.button_theme_assertive.button_type_raised {
+  box-shadow: 0 3px 0 0 #bf3e1f;
+}
+.button_state_pressed.button_type_outline,
+.button_state_pressed.button_type_raised {
+  transform: scaleY(0.95);
+  box-shadow: none;
+}
+@-moz-keyframes ripple-effect {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(50);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ripple-effect {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(50);
+    opacity: 0;
+  }
+}
+@-o-keyframes ripple-effect {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(50);
+    opacity: 0;
+  }
+}
+@keyframes ripple-effect {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(50);
+    opacity: 0;
+  }
+}
 .event__description {
   display: flex;
   flex-direction: column;
@@ -3064,104 +3194,6 @@ body {
   text-align: left;
   font-size: 11px;
   font-family: LatoRegular;
-}
-.button {
-  position: relative;
-  padding: 0px 15px;
-  border: none;
-  border-radius: 3px;
-  background: none;
-  text-transform: uppercase;
-  color: #fff;
-  font-family: LatoBlack;
-  text-align: center;
-  outline: none;
-  cursor: pointer;
-}
-.button__ripple-effect {
-  position: absolute;
-  background: #fff;
-  animation: ripple-effect 1s;
-}
-.button_theme_default {
-  background-color: #4eb7a8;
-  border-color: #4eb7a8;
-}
-.button_theme_assertive {
-  background-color: #e75735;
-  border-color: #e75735;
-}
-.button_size_small {
-  min-height: 22px;
-  min-width: 78px;
-  font-size: 0.6em;
-}
-.button_size_big {
-  min-height: 32px;
-  min-width: 118px;
-}
-.button_type_outline {
-  border: 1px solid;
-  background-color: #fff;
-}
-.button_theme_default.button_type_outline {
-  box-shadow: 0 3px 0 0 #28a290;
-  color: #4eb7a8;
-}
-.button_theme_assertive.button_type_outline {
-  box-shadow: 0 3px 0 0 #bf3e1f;
-  color: #e75735;
-}
-.button_theme_default.button_type_raised {
-  box-shadow: 0 3px 0 0 #28a290;
-}
-.button_theme_assertive.button_type_raised {
-  box-shadow: 0 3px 0 0 #bf3e1f;
-}
-.button_state_pressed.button_type_outline,
-.button_state_pressed.button_type_raised {
-  transform: scaleY(0.95);
-  box-shadow: none;
-}
-@-moz-keyframes ripple-effect {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(50);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes ripple-effect {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(50);
-    opacity: 0;
-  }
-}
-@-o-keyframes ripple-effect {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(50);
-    opacity: 0;
-  }
-}
-@keyframes ripple-effect {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(50);
-    opacity: 0;
-  }
 }
 .calendar {
   width: 270px;

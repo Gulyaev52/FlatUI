@@ -18,26 +18,32 @@ angelPadding = 5px
     font-size 40px  
     cursor pointer
 
-    &_direction_left:before
-    &_direction_right:before
-        display inline-block
 
-    &_direction_left:before 
-        padding-right angelPadding
-        content codeAngelLeft
+    &_direction
 
-    &_direction_right:before 
-        padding-left angelPadding
-        content codeAngelRight
+        &_left:before
+        &_right:before
+            display inline-block
 
-    &_theme_default
-        border: 3px solid primaryColor
-        color primaryColor
+        &_left:before 
+            padding-right angelPadding
+            content codeAngelLeft
 
-    &_theme_disabled
-        background-color disabledColor
-        color white
+        &_right:before 
+            padding-left angelPadding
+            content codeAngelRight
 
-    &_theme_primary
-        background-color primaryColor
-        color white
+
+    &_theme
+    
+        &_default
+            border: 3px solid primaryColor
+            color primaryColor
+
+        &_disabled
+            background-color disabledColor
+            color white
+
+        &_primary
+            background-color primaryColor
+            color white

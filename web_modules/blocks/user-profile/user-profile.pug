@@ -14,8 +14,8 @@ mixin user-profile({ name, profession, theme="default", photo="user-icon.png" })
                 .user-profile__profession(class = professionTheme)= profession
                 .user-profile__socials
                     -const socialsInfo = [
-                    -    { name: "facebook" }, 
-                    -    { name: "twitter" }, 
-                    -    { name: "dribble"} 
+                    -    { name: "facebook", theme }, 
+                    -    { name: "twitter", theme }, 
+                    -    { name: "dribble", theme } 
                     -]
-                    +socials({ theme, socialsInfo })
+                    +socials({ socialsInfo })

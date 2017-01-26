@@ -40,22 +40,29 @@ type-outline(color-bottom-border, color-font)
         background white
         animation  ripple-effect 1s
 
-    &_theme_default
-        background-color defaultColor
-        border-color defaultColor
 
-    &_theme_assertive
-        background-color assertiveColor 
-        border-color assertiveColor
+    &_theme
+    
+        &_default
+            background-color defaultColor
+            border-color defaultColor
 
-    &_size_small
-        min-height 22px
-        min-width 78px
-        font-size 0.6em
+        &_assertive
+            background-color assertiveColor 
+            border-color assertiveColor
 
-    &_size_big
-        min-height 32px
-        min-width 118px
+
+    &_size
+    
+        &_small
+            min-height 22px
+            min-width 78px
+            font-size 0.6em
+
+        &_big
+            min-height 32px
+            min-width 118px
+
 
     &_type_outline
         border 1px solid  
@@ -64,14 +71,16 @@ type-outline(color-bottom-border, color-font)
     &_theme_default&_type_outline  
         type-outline(defaultBorderBottomColor, defaultColor)
 
-    &_theme_assertive&_type_outline  
-        type-outline(assertiveBorderBottomColor, assertiveColor)
-
     &_theme_default&_type_raised
         border-bottom-color(defaultBorderBottomColor)
 
+
+    &_theme_assertive&_type_outline  
+        type-outline(assertiveBorderBottomColor, assertiveColor)
+
     &_theme_assertive&_type_raised
         border-bottom-color(assertiveBorderBottomColor) 
+
 
     &_state_pressed&_type_outline
     &_state_pressed&_type_raised

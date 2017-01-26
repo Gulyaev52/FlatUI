@@ -38,6 +38,41 @@
   color: #fff;
   font-family: FontAwesome;
 }
+.social {
+  font-family: FontAwesome;
+  font-size: 25px;
+  text-decoration: none;
+}
+.social_name_facebook:before {
+  content: '\F09A';
+}
+.social_name_twitter:before {
+  content: '\F099';
+}
+.social_name_dribble:before {
+  content: '\F17D';
+}
+.social_name_github:before {
+  content: '\F09B';
+}
+.social_theme_default {
+  color: #fff;
+}
+.social_theme_gray {
+  color: #757575;
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 70px;
+}
+.socials_theme_default {
+  color: #fff;
+}
+.socials_theme_gray {
+  color: #757575;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -3016,12 +3051,12 @@ body {
   box-shadow: 0 3px 0 0 #28a290;
   color: #4eb7a8;
 }
+.button_theme_default.button_type_raised {
+  box-shadow: 0 3px 0 0 #28a290;
+}
 .button_theme_assertive.button_type_outline {
   box-shadow: 0 3px 0 0 #bf3e1f;
   color: #e75735;
-}
-.button_theme_default.button_type_raised {
-  box-shadow: 0 3px 0 0 #28a290;
 }
 .button_theme_assertive.button_type_raised {
   box-shadow: 0 3px 0 0 #bf3e1f;
@@ -3854,33 +3889,6 @@ body {
 .user-profile__socials {
   margin-top: 10px;
   width: 100%;
-}
-.social {
-  font-family: FontAwesome;
-  font-size: 25px;
-}
-.social_facebook:before {
-  content: '\F09A';
-}
-.social_twitter:before {
-  content: '\F099';
-}
-.social_dribble:before {
-  content: '\F17D';
-}
-.social_github:before {
-  content: '\F09B';
-}
-.socials {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.socials_theme_default {
-  color: #fff;
-}
-.socials_theme_gray {
-  color: #757575;
 }
 .avatar {
   height: 92px;

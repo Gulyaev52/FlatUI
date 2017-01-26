@@ -1,7 +1,7 @@
 include ../social/social
 
-mixin socials({ theme='default', socialsInfo })
-    .socials(class = `socials_theme_${theme}`)
+mixin socials({ socialsInfo })
+    .socials
         each socialInfo in socialsInfo
             .socials__item
                 +social(socialInfo)
