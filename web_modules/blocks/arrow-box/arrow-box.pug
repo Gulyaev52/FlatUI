@@ -1,0 +1,8 @@
+mixin arrow-box({ theme='default', arrowPosition='left', type='' })
+    -const modifiers = [
+    -    `arrow-box_theme_${theme}`,
+    -    `arrow-box_arrow-position_${arrowPosition}`,
+    -    `arrow-box_type_${type}`
+    -]
+    .arrow-box(class = modifiers)
+        block

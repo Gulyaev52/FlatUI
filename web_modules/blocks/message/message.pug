@@ -1,8 +1,10 @@
-include ../tooltip/tooltip
+include ../arrow-box/arrow-box
 
 mixin message({ text, type })
-    -const tooltipOptions = { 
-    -    arrowLocated: type == "outgoing" ? "right" : "top" 
-    -}  
-    +tooltip(tooltipOptions).message(class = `message_${type}`) 
+    -const arrowBoxOptions = { 
+    -    arrowPosition: type == "outgoing" ? "right" : "left",
+    -    theme: 'white',
+    -    type: 'message'
+    -}   
+    +arrow-box(arrowBoxOptions)
         p= text

@@ -13,8 +13,9 @@ mixin chat({ messages })
         .chat__item
             textarea.input.chat__input
         .chat__item
-            +button({ 
-                text: "reply",  
-                type: "raised",
-                size: "big" 
-            })(class = "chat__reply-btn")
+            .chat__reply-btn
+                +button({ 
+                    text: "reply",  
+                    type: "raised",
+                    size: "big" 
+                })
