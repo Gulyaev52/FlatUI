@@ -1,4 +1,4 @@
-import './validation-input.styl'
+import './validation-input.styl';
 
-import '../input/input'
-import '../tooltip/tooltip'
+import '../input/input'; 
+import '../arrow-box/arrow-box';

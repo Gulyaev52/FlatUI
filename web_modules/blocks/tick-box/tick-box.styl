@@ -3,29 +3,10 @@
 
 codeCheck = '\f00c'
 
-// .tick-box
-//     display flex
-//     circle(23px) 
-//     justify-content center
-//     align-items center
-//     font-family FontAwesome
-//     font-size 0.8em
-
-//     &:before 
-//         content codeCheck
-
-//     &_enabled_true
-//         background-color themeColor1
-//         color white
-
-//     &_enabled_false
-//         background-color themeColor3
-//         color #c0c0c0
-
 .tick-box 
     display inline-block
     font-family FontAwesome
-    font-size 0.8em
+    font-size 0.8rem
     cursor pointer
 
     &__checkbox
@@ -36,14 +17,11 @@ codeCheck = '\f00c'
         circle(23px) 
         justify-content center
         align-items center
-        background-color themeColor1
-
-    &__indicator:before
-        content codeCheck
-
-    &__checkbox ~ &__indicator
         background-color themeColor3
         color #c0c0c0
+
+        &:before
+            content codeCheck
 
     &__checkbox:checked ~ &__indicator
         background-color themeColor1

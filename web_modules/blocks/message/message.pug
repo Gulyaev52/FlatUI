@@ -6,5 +6,6 @@ mixin message({ text, type })
     -    theme: 'white',
     -    type: 'message'
     -}   
-    +arrow-box(arrowBoxOptions)
-        p= text
+    .message
+        +arrow-box(arrowBoxOptions)
+            p= text

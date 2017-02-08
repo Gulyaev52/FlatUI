@@ -34,13 +34,6 @@ type-outline(color-bottom-border, color-font)
     outline none
     cursor pointer
 
-    &__ripple-effect
-        position absolute
-        circle(1px) 
-        background white
-        animation  ripple-effect 1s
-
-
     &_theme
     
         &_default
@@ -51,38 +44,43 @@ type-outline(color-bottom-border, color-font)
             background-color assertiveColor 
             border-color assertiveColor
 
-
     &_size
     
         &_small
             min-height 22px
             min-width 78px
-            font-size 0.6em
+            font-size 0.6rem
 
         &_big
             min-height 32px
             min-width 118px
 
-
     &_type_outline
         border 1px solid  
         background-color white
 
-    &_theme_default&_type_outline  
+    &_type_outline&_theme_default 
         type-outline(defaultBorderBottomColor, defaultColor)
 
-    &_theme_default&_type_raised
-        border-bottom-color(defaultBorderBottomColor)
-
-
-    &_theme_assertive&_type_outline  
+    &_type_outline&_theme_assertive  
         type-outline(assertiveBorderBottomColor, assertiveColor)
 
-    &_theme_assertive&_type_raised
-        border-bottom-color(assertiveBorderBottomColor) 
-
-
-    &_state_pressed&_type_outline
-    &_state_pressed&_type_raised
+    &_type_outline&_state_pressed
         transform scaleY(0.95)
         box-shadow none
+
+    &_type_raised&_theme_default
+        border-bottom-color(defaultBorderBottomColor)
+
+    &_type_raised&_theme_assertive
+        border-bottom-color(assertiveBorderBottomColor) 
+
+    &_type_raised&_state_pressed
+        transform scaleY(0.95)
+        box-shadow none
+
+    &__ripple-effect
+        position absolute
+        circle(1px) 
+        background white
+        animation  ripple-effect 1s

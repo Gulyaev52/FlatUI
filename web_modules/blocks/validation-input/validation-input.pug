@@ -1,4 +1,4 @@
-include ../tooltip/tooltip
+include ../arrow-box/arrow-box
 
 mixin validation-input({ placeholder, type=null, pattern=null, textOk="ok", textError="error" })
     .validation-input
@@ -6,16 +6,10 @@ mixin validation-input({ placeholder, type=null, pattern=null, textOk="ok", text
             placeholder = placeholder,
             type = type,
             pattern = pattern
-        )
-        -const validationOk = [
-        -    "validation-input__message",
-        -    "validation-input__message_ok"
-        -]
-        -const validationError = [
-        -    "validation-input__message",
-        -    "validation-input__message_error"   
-        -]
-        +tooltip({ theme: "default" })(class = validationOk)
-            p= textOk
-        +tooltip({ theme: "assertive" })(class = validationError)
-            p= textError
+        ) 
+        .validation-input__message.validation-input__message_ok
+            +arrow-box({ theme: "default" })
+                p= textOk
+        .validation-input__message.validation-input__message_error
+            +arrow-box({ theme: "assertive" })
+                p= textError

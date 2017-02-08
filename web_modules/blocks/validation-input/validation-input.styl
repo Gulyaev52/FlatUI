@@ -1,13 +1,13 @@
 @require '../../colors'
 
 .validation-input
-    display flex 
-    height 28px
+    display flex  
 
     &__input
         width 208px
 
     &__message 
+        display none
         width 75px 
         margin-left 10px 
         font-size 10px
@@ -15,4 +15,4 @@
 
     &__input:valid ~ &__message_ok
     &__input:invalid ~ &__message_error
-        display inline-flex
+        display block

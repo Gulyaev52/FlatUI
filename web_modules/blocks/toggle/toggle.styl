@@ -19,6 +19,8 @@
         overflow hidden
         transition background-color 0.2s ease-in
 
+    &__checkbox:checked ~ &__switcher
+        background-color themeColor1
 
     &__slider
         position relative
@@ -37,21 +39,18 @@
             circle(18px)
             background-color white
 
+    &__checkbox:checked ~ &__switcher &__slider
+        margin-left 0
+
     &__text
         width 50%
-        font-size 12px
+        font-size 0.75rem
         font-family LatoBlack
         color white
         text-transform uppercase 
         
         &_off
-            padding-left 2.2em
+            padding-left 26.4px
 
         &_on
-            padding-left 0.5em
-
-    &__checkbox:checked ~ &__switcher
-        background-color themeColor1
-
-    &__checkbox:checked ~ &__switcher &__slider
-        margin-left 0 
+            padding-left 6px 

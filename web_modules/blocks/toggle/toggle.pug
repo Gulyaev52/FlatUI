@@ -1,7 +1,7 @@
 mixin toggle({ on=false })
     label.toggle
         input(type = "checkbox", checked = on).toggle__checkbox
-        .toggle__switcher
-            .toggle__slider
-                .toggle__text.toggle__text_on on
-                .toggle__text.toggle__text_off off
+        span.toggle__switcher
+            span.toggle__slider
+                span.toggle__text.toggle__text_on on
+                span.toggle__text.toggle__text_off off

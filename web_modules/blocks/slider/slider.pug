@@ -1,18 +1,19 @@
-include ../tooltip/tooltip
+include ../arrow-box/arrow-box
 include ../scale/scale
-
 
 mixin slider({ value=0, scaleEnabled=false, theme="default" })
     .slider(class = `slider_${theme}`, data-value = value)
         .slider__widget
             .slider__handle.ui-slider-handle 
-                +tooltip({ theme, arrowLocated: "bottom" })(class = "slider__tooltip")
-                    = value
+                .slider__tooltip
+                    +arrow-box({ 
+                        theme, 
+                        arrowPosition: "bottom", 
+                        type: 'tooltip' })= value
         if scaleEnabled
             .slider__scale
                 +scale({
                     min: 0,
                     step: 25,
-                    max: 100,
-                    value
+                    max: 100
                 })

@@ -14,25 +14,26 @@ angelPadding = 5px
     justify-content center
     align-items center
     circle(50px)
+    margin 0
+    padding 0
+    background none
     font-family FontAwesome
-    font-size 40px  
+    font-size 2.5rem 
     cursor pointer
-
+    outline none
+    border none
 
     &_direction
 
-        &_left:before
-        &_right:before
-            display inline-block
-
         &_left:before 
+            display inline-block
             padding-right angelPadding
             content codeAngelLeft
 
         &_right:before 
+            display inline-block
             padding-left angelPadding
             content codeAngelRight
-
 
     &_theme
     

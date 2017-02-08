@@ -1,7 +1,12 @@
+include ../arrow-box/arrow-box
+
 mixin tooltip({ theme="default", arrowLocated="left" })
-    -const modifiers = [
-    -    `tooltip_theme_${theme}`,
-    -    `tooltip_arrow-located_${arrowLocated}`,
-    -]
-    span.tooltip(class = modifiers)(class = attributes.class)
-        block
+    -
+        const arrowBoxOptions = {
+            theme,
+            arrowPosition: arrowLocated,
+            type: 'tooltip'
+        }
+    .tooltip
+        +arrow-box(arrowBoxOptions)
+            block

@@ -1,4 +1,4 @@
-import '../tooltip/tooltip'
+import '../arrow-box/arrow-box'
 import '../scale/scale'
 
 import $ from 'jquery'
@@ -22,7 +22,7 @@ class Slider {
 
         const $widget = $slider.find('.slider__widget');
 
-        const $tooltip = $slider.find('.slider__tooltip');
+        const $tooltip = $slider.find('.arrow-box');
         
         $widget.slider({
             animate: true,
