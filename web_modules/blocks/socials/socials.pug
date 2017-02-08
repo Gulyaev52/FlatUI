@@ -1,0 +1,7 @@
+include ../social/social
+
+mixin socials({ socialsInfo })
+    .socials
+        each socialInfo in socialsInfo
+            .socials__item
+                +social(socialInfo)

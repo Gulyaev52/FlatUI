@@ -1,0 +1,15 @@
+@require '../../colors'
+
+codeChevronDown = '\f078'
+
+.drop-down
+    display inline-block
+    position relative 
+
+    &__button
+        background-color themeColor1
+        pointer-events none
+
+        &:before
+            content codeChevronDown
+            pointer-events none

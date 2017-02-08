@@ -1,0 +1,48 @@
+@require '../../mixins'
+@require '../../colors'
+
+.user-profile   
+    position relative
+    display inline-flex  
+    align-items center
+
+    &__photo 
+        margin-right 10px 
+
+    &__tooltip    
+        position absolute
+        display inline-flex 
+        left 100%
+        padding 10px 37px
+        min-width 175px
+
+    // &__photo:hover ~ &__tooltip
+    //     display inline-flex
+
+    &__name
+        font-size 18px
+        font-family LatoRegular
+        text-transform capitalize
+
+        &_theme_default
+            color white
+
+        &_theme_gray
+            color themeColor2
+
+    &__profession
+        font-size 11px
+        font-family LatoBlack
+        text-transform uppercase
+
+        &_theme_default
+            color white
+
+        &_theme_gray
+            color #4f4f4f
+
+    &__socials
+        margin-top 10px 
+        width 100%
+
+//тема у social?

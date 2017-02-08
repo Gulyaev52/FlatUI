@@ -1,0 +1,3 @@
+mixin social({ name, href='#', theme='default' })
+    -const modifiers = [`social_name_${name}`, `social_theme_${theme}`]
+    a.social(class = modifiers, href = href)(class = attributes.class)

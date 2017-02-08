@@ -1,0 +1,25 @@
+include ../setting/setting
+
+mixin profile-settings
+    .profile-settings
+        +setting({ title: 'Базовая информация' })
+            +setting-text({ 
+                name: 'name',
+                label: 'Имя',
+                value: 'Кирилл' 
+            })
+            +setting-text({ 
+                name: 'subname',
+                label: 'Фамилия',
+                value: 'Гуляев' 
+            })
+            +setting-text({ 
+                name: 'name',
+                label: 'Имя',
+                value: 'Кирилл' 
+            })
+            +setting-drop-down({ 
+                name: 'sex',
+                label: 'Пол',
+                values: ['Мужской', 'Женский'] 
+            })

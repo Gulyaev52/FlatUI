@@ -1,0 +1,7 @@
+include ../preview/preview
+
+mixin news({ image, title, date, info })
+    +preview({ image })(class = "news")
+        +preview-title(class = 'news__title')= title
+        +preview-subtitle(class = 'news__date')= date
+        +preview-info(class = 'news__info')= info

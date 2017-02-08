@@ -1,0 +1,18 @@
+@require '../../colors'
+
+codeSearch = '\f002'
+
+.search
+    position relative  
+    display inline-block
+
+    &_error &__input
+        background-color themeColor2
+        color white
+        text-overflow ellipsis
+
+    &__button 
+        background-color themeColor2
+
+        &:before 
+            content codeSearch 

@@ -1,0 +1,89 @@
+extends ../user-page/user-page
+ 
+include ~blocks/setting/setting
+
+
+block content
+    .profile
+        .profile__setting
+            +setting({ title: 'Базовая информация' })
+                +setting-input({ 
+                    type: 'text',
+                    name: 'name',
+                    label: 'Имя',
+                    value: 'Кирилл' 
+                })
+                +setting-input({ 
+                    type: 'text',
+                    name: 'subname',
+                    label: 'Фамилия',
+                    value: 'Гуляев' 
+                })
+                +setting-input({ 
+                    type: 'drop-down',
+                    name: 'sex',
+                    label: 'Пол',
+                    value: ['Мужской', 'Женский'] 
+                })
+                +setting-input({ 
+                    type: 'text',
+                    name: 'profession',
+                    label: 'Проффесия',
+                    value: 'Разработчик' 
+                })
+                +setting-input({ 
+                    type: 'text',
+                    name: 'hometown',
+                    label: 'Город',
+                    value: 'Томск' 
+                })
+        .profile__setting
+            +setting({ title: 'Контактная информация' })
+                +setting-input({ 
+                    type: 'text',
+                    name: 'city',
+                    label: 'Город',
+                    value: 'Томск' 
+                })
+                +setting-input({ 
+                    type: 'text',
+                    name: 'mobile',
+                    label: 'Мобильный',
+                    value: '+8913-858-19-44' 
+                })
+                +setting-input({ 
+                    type: 'text',
+                    name: 'skype',
+                    label: 'Skype',
+                    placeholder: 'Skype'
+                })
+                +setting-input({ 
+                    type: 'text',
+                    name: 'website',
+                    label: 'Сайт',
+                    placeholder: 'Сайт'
+                })
+        .profile__setting
+            +setting({ title: 'Настройки профиля' })
+                +setting-input({ 
+                    type: 'tick-box',
+                    label: 'Скрывать подарки' 
+                }) 
+                +setting-input({ 
+                    type: 'tick-box',
+                    label: 'Запретить комментировать стену' 
+                })  
+                +setting-input({ 
+                    type: 'tick-box',
+                    label: 'Показывать мои посты всем' 
+                }) 
+        .profile__setting
+            +setting({ title: 'Уведомления' })
+                +setting-input({ 
+                    type: 'toggle',
+                    label: 'Показывать уведомления' 
+                }) 
+                +setting-input({ 
+                    type: 'toggle',
+                    label: 'Звуковые уведомления' 
+                })   

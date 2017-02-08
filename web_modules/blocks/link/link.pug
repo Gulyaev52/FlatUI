@@ -1,0 +1,3 @@
+mixin link({ text, theme='default', href='#' })
+    -const modifiers = `link_theme_${theme}` 
+    a.link(class = modifiers, href = href)&attributes(attributes)= text

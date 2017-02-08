@@ -1,0 +1,29 @@
+include ../drop-down/drop-down
+include ../input/input
+include ../button/button
+include ../tick-box/tick-box
+include ../toggle/toggle
+
+mixin setting({ title })
+    .setting
+        h3.setting__title= title
+        block
+        .setting__item.setting__button
+            +button({ text: 'Сохранить', size: 'big', type: 'raised' })
+
+mixin setting-input({ type, label, value, name, placeholder }) 
+    .setting__item
+        label.setting__label= label
+        .setting__input
+            if type == 'text'
+                input.input(
+                    value = value, 
+                    name = name,
+                    placeholder = placeholder
+                )
+            if type == 'drop-down'
+                +drop-down({ values: value })
+            if type == 'tick-box'
+                +tick-box({})
+            if type == 'toggle'
+                +toggle({})

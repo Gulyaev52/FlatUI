@@ -1,0 +1,12 @@
+include ../link/link
+include ../icon/icon
+
+
+mixin menu({ items }) 
+    .menu 
+        each item in items
+            .menu__item
+                .menu__icon
+                    +icon({ name: item.iconName })
+                .menu__link
+                    +link({ text: item.text, href: item.href }) 

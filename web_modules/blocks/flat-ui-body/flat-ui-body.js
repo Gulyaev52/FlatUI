@@ -1,0 +1,12 @@
+import './flat-ui-body.styl'
+
+import '../standard-buttons/standard-buttons'
+import '../arrow-buttons/arrow-buttons'
+import '../sliders/sliders' 
+import '../percentages-pie-charts/percentages-pie-charts'
+import '../stages-section/stages-section'
+import '../calendar-section/calendar-section' 
+import '../form-elements/form-elements' 
+import '../news-events/news-events'
+import '../messenger-section/messenger-section'
+import '../location-section/location-section'  

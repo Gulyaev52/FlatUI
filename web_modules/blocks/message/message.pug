@@ -1,0 +1,10 @@
+include ../arrow-box/arrow-box
+
+mixin message({ text, type })
+    -const arrowBoxOptions = { 
+    -    arrowPosition: type == "outgoing" ? "right" : "left",
+    -    theme: 'white',
+    -    type: 'message'
+    -}   
+    +arrow-box(arrowBoxOptions)
+        p= text

@@ -1,0 +1,21 @@
+include ../message/message
+include ../button/button
+
+mixin chat({ messages })
+    .chat
+        .chat__item.chat__links
+            span.chat__link.chat__link_message
+            span.chat__link.chat__link_photo
+        .chat__item.chat__messages
+            each message in messages 
+                .chat__message(class = `chat__message_${message.type}`)
+                    +message(message)
+        .chat__item
+            textarea.input.chat__input
+        .chat__item
+            .chat__reply-btn
+                +button({ 
+                    text: "reply",  
+                    type: "raised",
+                    size: "big" 
+                })

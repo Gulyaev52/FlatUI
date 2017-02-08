@@ -1,0 +1,14 @@
+include ../user-profile/user-profile
+include ../avatar/avatar
+include ../chat/chat
+
+mixin messenger({ messages=[], user={} })
+    .messenger
+        .messenger__header
+            .messenger__user-name= user.name
+            .messenger__user-profile
+                +avatar({ photo: user.photo })
+        .messenger__body 
+            .messenger__chat
+                +chat({ messages })
+

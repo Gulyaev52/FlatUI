@@ -1,0 +1,19 @@
+include ../logo/logo 
+include ../socials/socials
+
+
+mixin footer  
+    .footer  
+        .footer__socials
+            -
+                const socialsInfo = [
+                    { name: 'facebook' },
+                    { name: 'twitter' },
+                    { name: 'github' }
+                ] 
+            +socials({ socialsInfo })
+        .footer__logo-container
+            .footer__logo
+                +logo
+            .footer__copyright
+                | Copyright © 2017 Whitesquare

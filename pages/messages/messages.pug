@@ -1,0 +1,35 @@
+extends ../user-page/user-page
+ 
+include ~blocks/messenger/messenger 
+include ~blocks/filterable-user-list/filterable-user-list  
+
+
+block content 
+    -
+        const user = {  
+            name: "Sarah Brown",
+            profession: "developer",
+            photo: "sarah.png"  
+        } 
+    -
+        const messages = [
+            { text: 'Привеееееееееееееееет!!!', type: 'incomming' }
+        ]
+    -
+        const friends = [
+            {  
+                name: "Sarah Brown",
+                profession: "developer",
+                photo: "sarah.png"  
+            },
+            {  
+                name: "John Smith",
+                profession: "ux designer",
+                photo: "john.png"  
+            }
+        ]
+    .messages
+        .messages__messenger
+            +messenger({ messages, user })
+        .messages__user-list
+            +filterable-user-list({ title: 'Друзья', users: friends })
