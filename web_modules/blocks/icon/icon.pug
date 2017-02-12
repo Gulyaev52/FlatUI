@@ -1,2 +1,7 @@
-mixin icon({ name })
-    span.icon(class = `icon_${name}`)&attributes(attributes)
+mixin icon({ name, size='big', theme='default' })
+    -const modifiers = [
+    -    `icon_name_${name}`,
+    -    `icon_size_${size}`,
+    -    `icon_theme_${theme}`
+    -]
+    span.icon(class = modifiers)

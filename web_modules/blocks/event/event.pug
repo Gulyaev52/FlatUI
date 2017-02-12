@@ -2,16 +2,17 @@ include ../preview/preview
 include ../button/button
 
 mixin event({ image, title, day, month, info })
-    +preview({ image })(class = "event")
-        +preview-title
-            .event__date
-                span.event__day= day
-                span.event__month= month.slice(0, 3) 
-        +preview-subtitle(class = 'event__title')= title
-        +preview-info(class = 'event__info')= info
-        .event__add-event-button
-            +button({ 
-                text: "add to calendar",
-                type: "outline",  
-                size: "small"
-            })
+    .event
+        +preview({ type: 'event', image })
+            +preview-title
+                .event__date
+                    span.event__day= day
+                    span.event__month= month.slice(0, 3) 
+            +preview-subtitle= title
+            +preview-info= info
+            .event__add-event-button
+                +button({ 
+                    text: "add to calendar",
+                    type: "outline",  
+                    size: "small"
+                })

@@ -1,7 +1,7 @@
 include ../user-profile/user-profile
 
 mixin user-list({ users })
-    .user-list
+    ul.user-list
         each user in users
-            .user-list__user
+            li.user-list__user
                 +user-profile(user)

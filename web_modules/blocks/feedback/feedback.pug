@@ -1,10 +1,11 @@
 include ../validation-input/validation-input
 include ../button/button
+include ../textarea/textarea
 
 mixin feedback()
     .feedback
-        .feedback__form
-            .feedback__item.feedback__name
+        form.feedback__form
+            .feedback__name
                 -const namePattern = "^[A-Za-zА-Яа-я ]+$";
                 +validation-input({ 
                     placeholder: "Your Name",
@@ -12,16 +13,16 @@ mixin feedback()
                     textOk: "thanks!",
                     textError: "error"
                 })
-            .feedback__item.feedback__email 
+            .feedback__email 
                 +validation-input({ 
                     placeholder: "Your Email",
                     type: "email",
                     textOk: "thanks!",
                     textError: "error"
                 })
-            .feedback__item
-                textarea.input.feedback__message(placeholder = "Your Message")
-            .feedback__item.feedback__submit
+            .feedback__message 
+                +textarea({ placeholder: "Your Message" })
+            .feedback__submit
                 +button({ 
                     text: "button", 
                     size: "big", 

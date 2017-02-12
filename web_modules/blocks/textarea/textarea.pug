@@ -1,0 +1,6 @@
+mixin textarea({ name, placeholder, type })
+    textarea.textarea(
+        class = type ? `textarea_${type}` : '',
+        name = name, 
+        placeholder = placeholder 
+    )

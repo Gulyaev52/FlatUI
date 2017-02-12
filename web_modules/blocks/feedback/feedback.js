@@ -1,5 +1,5 @@
 import './feedback.styl'
 
-import '../input/input'
+import '../textarea/textarea'
 import '../validation-input/validation-input'
 import '../button/button'

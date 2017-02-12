@@ -3,13 +3,21 @@ extends ../guest-page/guest-page
 include ~blocks/sign-in-form/sign-in-form
 include ~blocks/link/link
 
+block description
+    meta(name="description" content="flat ui")
+
+block keywords
+    meta(name="keywords", content="flat-ui")
+
+block title 
+    | Вход в систему
 
 block content
     .sign-in
         h2.sign-in__title Вход
         .sign-in__form
             +sign-in-form
-        .sign-in__links
+        .sign-in__link
             +link({ 
                 text: 'Регистрация',
                 href: './sign-up.html'

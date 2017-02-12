@@ -1,5 +1,5 @@
-@require '../../mixins'
-@require '../../colors'
+@require '../../theme/mixins'
+@require '../../theme/colors'
 
 .user-profile   
     position relative
@@ -14,22 +14,22 @@
         font-family LatoRegular
         text-transform capitalize
 
-    &_default &__name
-        color white  
+        ^[0]_default &
+            color white  
 
-    &_gray &__name 
-        color themeColor2
+        ^[0]_gray &
+            color theme-color2
 
     &__profession
         font-size 0.68rem
         font-family LatoBlack
         text-transform uppercase
 
-    &_default &__profession
-        color white
+        ^[0]_default &
+            color white
 
-    &_gray &__profession
-        color #4f4f4f
+        ^[0]_gray &
+            color #4f4f4f
 
     &__socials
         margin-top 10px 

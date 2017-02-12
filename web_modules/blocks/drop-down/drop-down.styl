@@ -1,15 +1,34 @@
-@require '../../colors'
+@require '../../theme/colors'
 
-codeChevronDown = '\f078'
+code-chevron-down = '\f078'
 
 .drop-down
     display inline-block
     position relative 
 
     &__button
-        background-color themeColor1
+        height 100%
+        width 33px
+        position absolute
+        right 0
+        border none 
+        background-color theme-color1
         pointer-events none
+        font-family FontAwesome
+        color white
 
         &:before
-            content codeChevronDown
+            content code-chevron-down
             pointer-events none
+
+    &__select
+        height 32px
+        width 300px
+        margin 0
+        padding 2% 10px
+        border none
+        border-radius 3px
+        background-color theme-color3
+        color #888888 
+        font-size 0.875rem
+        font-family SourceSansProRegular 

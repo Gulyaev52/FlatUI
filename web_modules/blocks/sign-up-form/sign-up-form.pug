@@ -4,30 +4,31 @@ include ../button/button
 
 
 mixin sign-up-form
-    form.sign-up-form 
-        .sign-up-form__item.sign-up-form__item_input
-            input.input(
-                placeholder = 'Логин',
-                type = 'Текст' 
-            )
-        .sign-up-form__item.sign-up-form__item_input
+    form.sign-up-form
+        .sign-up-form__login
+            +input({
+                placeholder: 'Логин',
+                type: 'Текст' 
+            })
+        .sign-up-form__email
             +validation-input({ 
                 placeholder: 'Почта',
                 type: 'email'
             })
-        .sign-up-form__item.sign-up-form__item_input
-            input.input(
-                placeholder = 'Пароль'
-                type = 'password' 
-            )
-        .sign-up-form__item.sign-up-form__item_input
-            input.input(
-                placeholder = 'Повторите пароль'
-                type = 'password' 
-            )
-        .sign-up-form__item.sign-up-form__item_button
+        .sign-up-form__password
+            +input({
+                placeholder: 'Пароль',
+                type: 'password' 
+            })
+        .sign-up-form__password-repeat
+            +input({
+                placeholder: 'Повторите пароль',
+                type: 'password' 
+            })
+        .sign-up-form__sign-up
             +button({ 
                 text: 'Зарегистрироваться', 
                 size: 'big',
-                type: 'raised'
+                type: 'raised',
+                isSubmit: true
             })

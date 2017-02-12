@@ -1,6 +1,6 @@
-@require '../../colors'
+@require '../../theme/colors'
 
-arrowOffset = -0.25em 
+arrow-offset = -0.25em 
 
 .arrow-box
     position relative   
@@ -11,6 +11,16 @@ arrowOffset = -0.25em
     justify-content center
     align-items center  
     font-family LatoBlack
+
+    &:before
+        content ''
+        position absolute 
+        display block
+        width 0.5rem
+        height 0.5rem
+        transform rotate(45deg)
+        border-bottom-left-radius 2px
+        background-color inherit 
 
     &_type
 
@@ -27,44 +37,40 @@ arrowOffset = -0.25em
         &_tooltip
             width 40px 
 
+        &_validation-message
+            width 100%
+            height 100%
+            font-size 0.7rem
+            text-transform uppercase
+
     &_theme
 
         &_default
-            background-color themeColor1
+            background-color theme-color1
             color white
 
         &_gray
-            background-color themeColor3
+            background-color theme-color3
             color black 
 
         &_assertive
-            background-color themeColor2
+            background-color theme-color2
             color white
 
         &_white
             background-color white
             color #868686
 
-    &:before
-        content ''
-        position absolute 
-        display block
-        width 0.5rem
-        height 0.5rem
-        transform rotate(45deg)
-        border-bottom-left-radius 2px
-        background-color inherit 
-
     &_arrow-position
     
         &_top:before
-            top arrowOffset
+            top arrow-offset
 
         &_right:before
-            right arrowOffset
+            right arrow-offset
 
         &_bottom:before
-            bottom arrowOffset
+            bottom arrow-offset
 
         &_left:before 
-            left arrowOffset
+            left arrow-offset

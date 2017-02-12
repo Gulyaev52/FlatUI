@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(354);
+	module.exports = __webpack_require__(356);
 
 
 /***/ },
@@ -8189,24 +8189,54 @@
 	};
 
 /***/ },
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */,
+/* 298 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(299);
+
+	__webpack_require__(300);
+
+	__webpack_require__(301);
+
+/***/ },
+/* 299 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 300 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 301 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 302 */,
 /* 303 */,
-/* 304 */
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(305);
+	__webpack_require__(309);
 
-	__webpack_require__(306);
+	__webpack_require__(310);
 
-	var _jquery = __webpack_require__(308);
+	var _jquery = __webpack_require__(312);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -8228,17 +8258,16 @@
 	        key: '_attachEventHandlers',
 	        value: function _attachEventHandlers() {
 	            var $search = this.$root;
-	            var $searchInput = $search.find('.search__input');
+	            var $searchInput = $search.find('.input');
 
-	            $search.find('.search__button').on('click', function (event) {
+	            $search.on('submit', function (event) {
 	                event.preventDefault();
 
 	                if (!$searchInput.val()) return;
 
 	                var errorPlaceholder = 'I\'ve not found what I\'m looking for...';
 	                $search.addClass('search_error');
-	                $searchInput.val('');
-	                $searchInput.attr('placeholder', errorPlaceholder);
+	                $searchInput.val('').attr('placeholder', errorPlaceholder);
 	            });
 
 	            $searchInput.on('focusin', function (event) {
@@ -8261,27 +8290,27 @@
 	});
 
 /***/ },
-/* 305 */
+/* 309 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 306 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(307);
+	__webpack_require__(311);
 
 /***/ },
-/* 307 */
+/* 311 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 308 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -18507,39 +18536,18 @@
 
 
 /***/ },
-/* 309 */,
-/* 310 */,
-/* 311 */
+/* 313 */,
+/* 314 */,
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(312);
+	__webpack_require__(316);
 
-	__webpack_require__(314);
-
-/***/ },
-/* 312 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(313);
+	__webpack_require__(320);
 
 /***/ },
-/* 313 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 314 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 315 */,
 /* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -18549,8 +18557,6 @@
 
 	__webpack_require__(318);
 
-	__webpack_require__(319);
-
 /***/ },
 /* 317 */
 /***/ function(module, exports) {
@@ -18559,9 +18565,11 @@
 
 /***/ },
 /* 318 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	__webpack_require__(319);
 
 /***/ },
 /* 319 */
@@ -18570,7 +18578,12 @@
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 320 */,
+/* 320 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 321 */,
 /* 322 */,
 /* 323 */,
@@ -18585,11 +18598,11 @@
 
 	__webpack_require__(329);
 
-	__webpack_require__(306);
-
 	__webpack_require__(330);
 
-	__webpack_require__(334);
+	__webpack_require__(332);
+
+	__webpack_require__(336);
 
 /***/ },
 /* 329 */
@@ -18605,10 +18618,6 @@
 
 	__webpack_require__(331);
 
-	__webpack_require__(306);
-
-	__webpack_require__(332);
-
 /***/ },
 /* 331 */
 /***/ function(module, exports) {
@@ -18623,6 +18632,10 @@
 
 	__webpack_require__(333);
 
+	__webpack_require__(310);
+
+	__webpack_require__(334);
+
 /***/ },
 /* 333 */
 /***/ function(module, exports) {
@@ -18635,11 +18648,25 @@
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	__webpack_require__(335);
 
-	var _jquery = __webpack_require__(308);
+/***/ },
+/* 335 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 336 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(337);
+
+	var _jquery = __webpack_require__(312);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -18708,26 +18735,28 @@
 	});
 
 /***/ },
-/* 335 */
+/* 337 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 336 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(337);
+	__webpack_require__(339);
 
-	var _jquery = __webpack_require__(308);
+	__webpack_require__(318);
+
+	var _jquery = __webpack_require__(312);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _ymaps = __webpack_require__(338);
+	var _ymaps = __webpack_require__(340);
 
 	var _ymaps2 = _interopRequireDefault(_ymaps);
 
@@ -18783,46 +18812,32 @@
 	});
 
 /***/ },
-/* 337 */
+/* 339 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 338 */
+/* 340 */
 /***/ function(module, exports) {
 
 	module.exports = ymaps;
 
 /***/ },
-/* 339 */,
-/* 340 */,
 /* 341 */,
 /* 342 */,
-/* 343 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(344);
-
-	__webpack_require__(345);
-
-	__webpack_require__(334);
-
-/***/ },
-/* 344 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
+/* 343 */,
+/* 344 */,
 /* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	__webpack_require__(346);
+
+	__webpack_require__(347);
+
+	__webpack_require__(336);
 
 /***/ },
 /* 346 */
@@ -18836,19 +18851,31 @@
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(307);
-
 	__webpack_require__(348);
 
-	var _jquery = __webpack_require__(308);
+/***/ },
+/* 348 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 349 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(350);
+
+	var _jquery = __webpack_require__(312);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	__webpack_require__(349);
+	__webpack_require__(351);
 
-	__webpack_require__(352);
+	__webpack_require__(354);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18901,13 +18928,13 @@
 	});
 
 /***/ },
-/* 348 */
+/* 350 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 349 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// jscs:disable maximumLineLength
@@ -18935,9 +18962,9 @@
 
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-				__webpack_require__(308),
-				__webpack_require__(350),
-				__webpack_require__(351)
+				__webpack_require__(312),
+				__webpack_require__(352),
+				__webpack_require__(353)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -21033,14 +21060,14 @@
 
 
 /***/ },
-/* 350 */
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(308) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(312) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -21056,7 +21083,7 @@
 
 
 /***/ },
-/* 351 */
+/* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -21077,7 +21104,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(308), __webpack_require__(350) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(312), __webpack_require__(352) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -21107,55 +21134,21 @@
 
 
 /***/ },
-/* 352 */
+/* 354 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 353 */,
-/* 354 */
+/* 355 */,
+/* 356 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(316);
-
-	__webpack_require__(355);
-
-/***/ },
-/* 355 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(356);
+	__webpack_require__(298);
 
 	__webpack_require__(357);
-
-	__webpack_require__(360);
-
-	__webpack_require__(363);
-
-	__webpack_require__(374);
-
-	__webpack_require__(380);
-
-	__webpack_require__(383);
-
-	__webpack_require__(384);
-
-	__webpack_require__(397);
-
-	__webpack_require__(400);
-
-	__webpack_require__(409);
-
-/***/ },
-/* 356 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 357 */
@@ -21165,21 +21158,41 @@
 
 	__webpack_require__(358);
 
-	__webpack_require__(334);
+	__webpack_require__(359);
+
+	__webpack_require__(362);
+
+	__webpack_require__(365);
+
+	__webpack_require__(371);
+
+	__webpack_require__(381);
+
+	__webpack_require__(384);
+
+	__webpack_require__(397);
+
+	__webpack_require__(400);
+
+	__webpack_require__(401);
+
+	__webpack_require__(402);
 
 /***/ },
 /* 358 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 359 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(359);
+	__webpack_require__(360);
 
-/***/ },
-/* 359 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
+	__webpack_require__(336);
 
 /***/ },
 /* 360 */
@@ -21187,23 +21200,23 @@
 
 	'use strict';
 
-	__webpack_require__(358);
-
 	__webpack_require__(361);
 
 /***/ },
 /* 361 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 362 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(362);
+	__webpack_require__(360);
 
-/***/ },
-/* 362 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
+	__webpack_require__(363);
 
 /***/ },
 /* 363 */
@@ -21212,10 +21225,6 @@
 	'use strict';
 
 	__webpack_require__(364);
-
-	__webpack_require__(358);
-
-	__webpack_require__(365);
 
 /***/ },
 /* 364 */
@@ -21229,21 +21238,546 @@
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(332);
+	__webpack_require__(360);
 
 	__webpack_require__(366);
 
-	var _jquery = __webpack_require__(308);
+	__webpack_require__(369);
+
+/***/ },
+/* 366 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(367);
+
+	var _jquery = __webpack_require__(312);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	__webpack_require__(368);
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Percentage = function () {
+	    function Percentage(_ref) {
+	        var root = _ref.root;
+
+	        _classCallCheck(this, Percentage);
+
+	        this.$root = (0, _jquery2.default)(root);
+	        this.render();
+	    }
+
+	    _createClass(Percentage, [{
+	        key: 'render',
+	        value: function render() {
+	            var color = this.$root.data('color');
+
+	            this.$root.find('.percentage__chart').peity('donut', {
+	                fill: [color, 'white'],
+	                radius: 50,
+	                innerRadius: 45
+	            });
+	        }
+	    }]);
+
+	    return Percentage;
+	}();
+
+	(0, _jquery2.default)(function () {
+	    (0, _jquery2.default)('.percentage').each(function () {
+	        new Percentage({ root: this });
+	    });
+	});
+
+/***/ },
+/* 367 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 368 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(jQuery) {// Peity jQuery plugin version 3.2.1
+	// (c) 2016 Ben Pickles
+	//
+	// http://benpickles.github.io/peity
+	//
+	// Released under MIT license.
+	(function($, document, Math, undefined) {
+	  var peity = $.fn.peity = function(type, options) {
+	    if (svgSupported) {
+	      this.each(function() {
+	        var $this = $(this)
+	        var chart = $this.data('_peity')
+
+	        if (chart) {
+	          if (type) chart.type = type
+	          $.extend(chart.opts, options)
+	        } else {
+	          chart = new Peity(
+	            $this,
+	            type,
+	            $.extend({},
+	              peity.defaults[type],
+	              $this.data('peity'),
+	              options)
+	          )
+
+	          $this
+	            .change(function() { chart.draw() })
+	            .data('_peity', chart)
+	        }
+
+	        chart.draw()
+	      });
+	    }
+
+	    return this;
+	  };
+
+	  var Peity = function($el, type, opts) {
+	    this.$el = $el
+	    this.type = type
+	    this.opts = opts
+	  }
+
+	  var PeityPrototype = Peity.prototype
+
+	  var svgElement = PeityPrototype.svgElement = function(tag, attrs) {
+	    return $(
+	      document.createElementNS('http://www.w3.org/2000/svg', tag)
+	    ).attr(attrs)
+	  }
+
+	  // https://gist.github.com/madrobby/3201472
+	  var svgSupported = 'createElementNS' in document && svgElement('svg', {})[0].createSVGRect
+
+	  PeityPrototype.draw = function() {
+	    var opts = this.opts
+	    peity.graphers[this.type].call(this, opts)
+	    if (opts.after) opts.after.call(this, opts)
+	  }
+
+	  PeityPrototype.fill = function() {
+	    var fill = this.opts.fill
+
+	    return $.isFunction(fill)
+	      ? fill
+	      : function(_, i) { return fill[i % fill.length] }
+	  }
+
+	  PeityPrototype.prepare = function(width, height) {
+	    if (!this.$svg) {
+	      this.$el.hide().after(
+	        this.$svg = svgElement('svg', {
+	          "class": "peity"
+	        })
+	      )
+	    }
+
+	    return this.$svg
+	      .empty()
+	      .data('peity', this)
+	      .attr({
+	        height: height,
+	        width: width
+	      })
+	  }
+
+	  PeityPrototype.values = function() {
+	    return $.map(this.$el.text().split(this.opts.delimiter), function(value) {
+	      return parseFloat(value)
+	    })
+	  }
+
+	  peity.defaults = {}
+	  peity.graphers = {}
+
+	  peity.register = function(type, defaults, grapher) {
+	    this.defaults[type] = defaults
+	    this.graphers[type] = grapher
+	  }
+
+	  peity.register(
+	    'pie',
+	    {
+	      fill: ['#ff9900', '#fff4dd', '#ffc66e'],
+	      radius: 8
+	    },
+	    function(opts) {
+	      if (!opts.delimiter) {
+	        var delimiter = this.$el.text().match(/[^0-9\.]/)
+	        opts.delimiter = delimiter ? delimiter[0] : ","
+	      }
+
+	      var values = $.map(this.values(), function(n) {
+	        return n > 0 ? n : 0
+	      })
+
+	      if (opts.delimiter == "/") {
+	        var v1 = values[0]
+	        var v2 = values[1]
+	        values = [v1, Math.max(0, v2 - v1)]
+	      }
+
+	      var i = 0
+	      var length = values.length
+	      var sum = 0
+
+	      for (; i < length; i++) {
+	        sum += values[i]
+	      }
+
+	      if (!sum) {
+	        length = 2
+	        sum = 1
+	        values = [0, 1]
+	      }
+
+	      var diameter = opts.radius * 2
+
+	      var $svg = this.prepare(
+	        opts.width || diameter,
+	        opts.height || diameter
+	      )
+
+	      var width = $svg.width()
+	        , height = $svg.height()
+	        , cx = width / 2
+	        , cy = height / 2
+
+	      var radius = Math.min(cx, cy)
+	        , innerRadius = opts.innerRadius
+
+	      if (this.type == 'donut' && !innerRadius) {
+	        innerRadius = radius * 0.5
+	      }
+
+	      var pi = Math.PI
+	      var fill = this.fill()
+
+	      var scale = this.scale = function(value, radius) {
+	        var radians = value / sum * pi * 2 - pi / 2
+
+	        return [
+	          radius * Math.cos(radians) + cx,
+	          radius * Math.sin(radians) + cy
+	        ]
+	      }
+
+	      var cumulative = 0
+
+	      for (i = 0; i < length; i++) {
+	        var value = values[i]
+	          , portion = value / sum
+	          , $node
+
+	        if (portion == 0) continue
+
+	        if (portion == 1) {
+	          if (innerRadius) {
+	            var x2 = cx - 0.01
+	              , y1 = cy - radius
+	              , y2 = cy - innerRadius
+
+	            $node = svgElement('path', {
+	              d: [
+	                'M', cx, y1,
+	                'A', radius, radius, 0, 1, 1, x2, y1,
+	                'L', x2, y2,
+	                'A', innerRadius, innerRadius, 0, 1, 0, cx, y2
+	              ].join(' ')
+	            })
+	          } else {
+	            $node = svgElement('circle', {
+	              cx: cx,
+	              cy: cy,
+	              r: radius
+	            })
+	          }
+	        } else {
+	          var cumulativePlusValue = cumulative + value
+
+	          var d = ['M'].concat(
+	            scale(cumulative, radius),
+	            'A', radius, radius, 0, portion > 0.5 ? 1 : 0, 1,
+	            scale(cumulativePlusValue, radius),
+	            'L'
+	          )
+
+	          if (innerRadius) {
+	            d = d.concat(
+	              scale(cumulativePlusValue, innerRadius),
+	              'A', innerRadius, innerRadius, 0, portion > 0.5 ? 1 : 0, 0,
+	              scale(cumulative, innerRadius)
+	            )
+	          } else {
+	            d.push(cx, cy)
+	          }
+
+	          cumulative += value
+
+	          $node = svgElement('path', {
+	            d: d.join(" ")
+	          })
+	        }
+
+	        $node.attr('fill', fill.call(this, value, i, values))
+
+	        $svg.append($node)
+	      }
+	    }
+	  )
+
+	  peity.register(
+	    'donut',
+	    $.extend(true, {}, peity.defaults.pie),
+	    function(opts) {
+	      peity.graphers.pie.call(this, opts)
+	    }
+	  )
+
+	  peity.register(
+	    "line",
+	    {
+	      delimiter: ",",
+	      fill: "#c6d9fd",
+	      height: 16,
+	      min: 0,
+	      stroke: "#4d89f9",
+	      strokeWidth: 1,
+	      width: 32
+	    },
+	    function(opts) {
+	      var values = this.values()
+	      if (values.length == 1) values.push(values[0])
+	      var max = Math.max.apply(Math, opts.max == undefined ? values : values.concat(opts.max))
+	        , min = Math.min.apply(Math, opts.min == undefined ? values : values.concat(opts.min))
+
+	      var $svg = this.prepare(opts.width, opts.height)
+	        , strokeWidth = opts.strokeWidth
+	        , width = $svg.width()
+	        , height = $svg.height() - strokeWidth
+	        , diff = max - min
+
+	      var xScale = this.x = function(input) {
+	        return input * (width / (values.length - 1))
+	      }
+
+	      var yScale = this.y = function(input) {
+	        var y = height
+
+	        if (diff) {
+	          y -= ((input - min) / diff) * height
+	        }
+
+	        return y + strokeWidth / 2
+	      }
+
+	      var zero = yScale(Math.max(min, 0))
+	        , coords = [0, zero]
+
+	      for (var i = 0; i < values.length; i++) {
+	        coords.push(
+	          xScale(i),
+	          yScale(values[i])
+	        )
+	      }
+
+	      coords.push(width, zero)
+
+	      if (opts.fill) {
+	        $svg.append(
+	          svgElement('polygon', {
+	            fill: opts.fill,
+	            points: coords.join(' ')
+	          })
+	        )
+	      }
+
+	      if (strokeWidth) {
+	        $svg.append(
+	          svgElement('polyline', {
+	            fill: 'none',
+	            points: coords.slice(2, coords.length - 2).join(' '),
+	            stroke: opts.stroke,
+	            'stroke-width': strokeWidth,
+	            'stroke-linecap': 'square'
+	          })
+	        )
+	      }
+	    }
+	  );
+
+	  peity.register(
+	    'bar',
+	    {
+	      delimiter: ",",
+	      fill: ["#4D89F9"],
+	      height: 16,
+	      min: 0,
+	      padding: 0.1,
+	      width: 32
+	    },
+	    function(opts) {
+	      var values = this.values()
+	        , max = Math.max.apply(Math, opts.max == undefined ? values : values.concat(opts.max))
+	        , min = Math.min.apply(Math, opts.min == undefined ? values : values.concat(opts.min))
+
+	      var $svg = this.prepare(opts.width, opts.height)
+	        , width = $svg.width()
+	        , height = $svg.height()
+	        , diff = max - min
+	        , padding = opts.padding
+	        , fill = this.fill()
+
+	      var xScale = this.x = function(input) {
+	        return input * width / values.length
+	      }
+
+	      var yScale = this.y = function(input) {
+	        return height - (
+	          diff
+	            ? ((input - min) / diff) * height
+	            : 1
+	        )
+	      }
+
+	      for (var i = 0; i < values.length; i++) {
+	        var x = xScale(i + padding)
+	          , w = xScale(i + 1 - padding) - x
+	          , value = values[i]
+	          , valueY = yScale(value)
+	          , y1 = valueY
+	          , y2 = valueY
+	          , h
+
+	        if (!diff) {
+	          h = 1
+	        } else if (value < 0) {
+	          y1 = yScale(Math.min(max, 0))
+	        } else {
+	          y2 = yScale(Math.max(min, 0))
+	        }
+
+	        h = y2 - y1
+
+	        if (h == 0) {
+	          h = 1
+	          if (max > 0 && diff) y1--
+	        }
+
+	        $svg.append(
+	          svgElement('rect', {
+	            fill: fill.call(this, value, i, values),
+	            x: x,
+	            y: y1,
+	            width: w,
+	            height: h
+	          })
+	        )
+	      }
+	    }
+	  );
+	})(jQuery, document, Math);
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(312)))
+
+/***/ },
+/* 369 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(370);
+
+	var _jquery = __webpack_require__(312);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	__webpack_require__(368);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var PieChart = function () {
+	    function PieChart(_ref) {
+	        var root = _ref.root;
+
+	        _classCallCheck(this, PieChart);
+
+	        this.$root = (0, _jquery2.default)(root);
+	        this.render();
+	    }
+
+	    _createClass(PieChart, [{
+	        key: 'render',
+	        value: function render() {
+	            this.$root.find(".pie-chart__items").peity('donut', {
+	                radius: 47.5,
+	                innerRadius: 30.5
+	            });
+	        }
+	    }]);
+
+	    return PieChart;
+	}();
+
+	(0, _jquery2.default)(function () {
+	    (0, _jquery2.default)('.pie-chart').each(function () {
+	        new PieChart({ root: this });
+	    });
+	});
+
+/***/ },
+/* 370 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 371 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(360);
+
 	__webpack_require__(372);
 
+/***/ },
+/* 372 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(334);
+
 	__webpack_require__(373);
+
+	var _jquery = __webpack_require__(312);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	__webpack_require__(375);
+
+	__webpack_require__(379);
+
+	__webpack_require__(380);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21268,7 +21802,7 @@
 
 	            var $widget = $slider.find('.slider__widget');
 
-	            var $tooltip = $slider.find('.slider__tooltip');
+	            var $tooltip = $slider.find('.arrow-box');
 
 	            $widget.slider({
 	                animate: true,
@@ -21294,21 +21828,21 @@
 	});
 
 /***/ },
-/* 366 */
+/* 373 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(367);
+	__webpack_require__(374);
 
 /***/ },
-/* 367 */
+/* 374 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 368 */
+/* 375 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -21334,11 +21868,11 @@
 
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-				__webpack_require__(308),
-				__webpack_require__(369),
-				__webpack_require__(351),
-				__webpack_require__(350),
-				__webpack_require__(371)
+				__webpack_require__(312),
+				__webpack_require__(376),
+				__webpack_require__(353),
+				__webpack_require__(352),
+				__webpack_require__(378)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -22066,7 +22600,7 @@
 
 
 /***/ },
-/* 369 */
+/* 376 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22088,10 +22622,10 @@
 
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-				__webpack_require__(308),
-				__webpack_require__(370),
-				__webpack_require__(350),
-				__webpack_require__(371)
+				__webpack_require__(312),
+				__webpack_require__(377),
+				__webpack_require__(352),
+				__webpack_require__(378)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -22298,14 +22832,14 @@
 
 
 /***/ },
-/* 370 */
+/* 377 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(308), __webpack_require__(350) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(312), __webpack_require__(352) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -22319,7 +22853,7 @@
 
 
 /***/ },
-/* 371 */
+/* 378 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22341,7 +22875,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(308), __webpack_require__(350) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(312), __webpack_require__(352) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -23058,527 +23592,6 @@
 
 
 /***/ },
-/* 372 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 373 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 374 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(358);
-
-	__webpack_require__(375);
-
-	__webpack_require__(378);
-
-/***/ },
-/* 375 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(376);
-
-	var _jquery = __webpack_require__(308);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	__webpack_require__(377);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var Percentage = function () {
-	    function Percentage(_ref) {
-	        var root = _ref.root;
-
-	        _classCallCheck(this, Percentage);
-
-	        this.$root = (0, _jquery2.default)(root);
-	        this.render();
-	    }
-
-	    _createClass(Percentage, [{
-	        key: 'render',
-	        value: function render() {
-	            var color = this.$root.data('color');
-
-	            this.$root.find('.percentage__chart').peity('donut', {
-	                fill: [color, 'white'],
-	                radius: 50,
-	                innerRadius: 45
-	            });
-	        }
-	    }]);
-
-	    return Percentage;
-	}();
-
-	(0, _jquery2.default)(function () {
-	    (0, _jquery2.default)('.percentage').each(function () {
-	        new Percentage({ root: this });
-	    });
-	});
-
-/***/ },
-/* 376 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 377 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(jQuery) {// Peity jQuery plugin version 3.2.1
-	// (c) 2016 Ben Pickles
-	//
-	// http://benpickles.github.io/peity
-	//
-	// Released under MIT license.
-	(function($, document, Math, undefined) {
-	  var peity = $.fn.peity = function(type, options) {
-	    if (svgSupported) {
-	      this.each(function() {
-	        var $this = $(this)
-	        var chart = $this.data('_peity')
-
-	        if (chart) {
-	          if (type) chart.type = type
-	          $.extend(chart.opts, options)
-	        } else {
-	          chart = new Peity(
-	            $this,
-	            type,
-	            $.extend({},
-	              peity.defaults[type],
-	              $this.data('peity'),
-	              options)
-	          )
-
-	          $this
-	            .change(function() { chart.draw() })
-	            .data('_peity', chart)
-	        }
-
-	        chart.draw()
-	      });
-	    }
-
-	    return this;
-	  };
-
-	  var Peity = function($el, type, opts) {
-	    this.$el = $el
-	    this.type = type
-	    this.opts = opts
-	  }
-
-	  var PeityPrototype = Peity.prototype
-
-	  var svgElement = PeityPrototype.svgElement = function(tag, attrs) {
-	    return $(
-	      document.createElementNS('http://www.w3.org/2000/svg', tag)
-	    ).attr(attrs)
-	  }
-
-	  // https://gist.github.com/madrobby/3201472
-	  var svgSupported = 'createElementNS' in document && svgElement('svg', {})[0].createSVGRect
-
-	  PeityPrototype.draw = function() {
-	    var opts = this.opts
-	    peity.graphers[this.type].call(this, opts)
-	    if (opts.after) opts.after.call(this, opts)
-	  }
-
-	  PeityPrototype.fill = function() {
-	    var fill = this.opts.fill
-
-	    return $.isFunction(fill)
-	      ? fill
-	      : function(_, i) { return fill[i % fill.length] }
-	  }
-
-	  PeityPrototype.prepare = function(width, height) {
-	    if (!this.$svg) {
-	      this.$el.hide().after(
-	        this.$svg = svgElement('svg', {
-	          "class": "peity"
-	        })
-	      )
-	    }
-
-	    return this.$svg
-	      .empty()
-	      .data('peity', this)
-	      .attr({
-	        height: height,
-	        width: width
-	      })
-	  }
-
-	  PeityPrototype.values = function() {
-	    return $.map(this.$el.text().split(this.opts.delimiter), function(value) {
-	      return parseFloat(value)
-	    })
-	  }
-
-	  peity.defaults = {}
-	  peity.graphers = {}
-
-	  peity.register = function(type, defaults, grapher) {
-	    this.defaults[type] = defaults
-	    this.graphers[type] = grapher
-	  }
-
-	  peity.register(
-	    'pie',
-	    {
-	      fill: ['#ff9900', '#fff4dd', '#ffc66e'],
-	      radius: 8
-	    },
-	    function(opts) {
-	      if (!opts.delimiter) {
-	        var delimiter = this.$el.text().match(/[^0-9\.]/)
-	        opts.delimiter = delimiter ? delimiter[0] : ","
-	      }
-
-	      var values = $.map(this.values(), function(n) {
-	        return n > 0 ? n : 0
-	      })
-
-	      if (opts.delimiter == "/") {
-	        var v1 = values[0]
-	        var v2 = values[1]
-	        values = [v1, Math.max(0, v2 - v1)]
-	      }
-
-	      var i = 0
-	      var length = values.length
-	      var sum = 0
-
-	      for (; i < length; i++) {
-	        sum += values[i]
-	      }
-
-	      if (!sum) {
-	        length = 2
-	        sum = 1
-	        values = [0, 1]
-	      }
-
-	      var diameter = opts.radius * 2
-
-	      var $svg = this.prepare(
-	        opts.width || diameter,
-	        opts.height || diameter
-	      )
-
-	      var width = $svg.width()
-	        , height = $svg.height()
-	        , cx = width / 2
-	        , cy = height / 2
-
-	      var radius = Math.min(cx, cy)
-	        , innerRadius = opts.innerRadius
-
-	      if (this.type == 'donut' && !innerRadius) {
-	        innerRadius = radius * 0.5
-	      }
-
-	      var pi = Math.PI
-	      var fill = this.fill()
-
-	      var scale = this.scale = function(value, radius) {
-	        var radians = value / sum * pi * 2 - pi / 2
-
-	        return [
-	          radius * Math.cos(radians) + cx,
-	          radius * Math.sin(radians) + cy
-	        ]
-	      }
-
-	      var cumulative = 0
-
-	      for (i = 0; i < length; i++) {
-	        var value = values[i]
-	          , portion = value / sum
-	          , $node
-
-	        if (portion == 0) continue
-
-	        if (portion == 1) {
-	          if (innerRadius) {
-	            var x2 = cx - 0.01
-	              , y1 = cy - radius
-	              , y2 = cy - innerRadius
-
-	            $node = svgElement('path', {
-	              d: [
-	                'M', cx, y1,
-	                'A', radius, radius, 0, 1, 1, x2, y1,
-	                'L', x2, y2,
-	                'A', innerRadius, innerRadius, 0, 1, 0, cx, y2
-	              ].join(' ')
-	            })
-	          } else {
-	            $node = svgElement('circle', {
-	              cx: cx,
-	              cy: cy,
-	              r: radius
-	            })
-	          }
-	        } else {
-	          var cumulativePlusValue = cumulative + value
-
-	          var d = ['M'].concat(
-	            scale(cumulative, radius),
-	            'A', radius, radius, 0, portion > 0.5 ? 1 : 0, 1,
-	            scale(cumulativePlusValue, radius),
-	            'L'
-	          )
-
-	          if (innerRadius) {
-	            d = d.concat(
-	              scale(cumulativePlusValue, innerRadius),
-	              'A', innerRadius, innerRadius, 0, portion > 0.5 ? 1 : 0, 0,
-	              scale(cumulative, innerRadius)
-	            )
-	          } else {
-	            d.push(cx, cy)
-	          }
-
-	          cumulative += value
-
-	          $node = svgElement('path', {
-	            d: d.join(" ")
-	          })
-	        }
-
-	        $node.attr('fill', fill.call(this, value, i, values))
-
-	        $svg.append($node)
-	      }
-	    }
-	  )
-
-	  peity.register(
-	    'donut',
-	    $.extend(true, {}, peity.defaults.pie),
-	    function(opts) {
-	      peity.graphers.pie.call(this, opts)
-	    }
-	  )
-
-	  peity.register(
-	    "line",
-	    {
-	      delimiter: ",",
-	      fill: "#c6d9fd",
-	      height: 16,
-	      min: 0,
-	      stroke: "#4d89f9",
-	      strokeWidth: 1,
-	      width: 32
-	    },
-	    function(opts) {
-	      var values = this.values()
-	      if (values.length == 1) values.push(values[0])
-	      var max = Math.max.apply(Math, opts.max == undefined ? values : values.concat(opts.max))
-	        , min = Math.min.apply(Math, opts.min == undefined ? values : values.concat(opts.min))
-
-	      var $svg = this.prepare(opts.width, opts.height)
-	        , strokeWidth = opts.strokeWidth
-	        , width = $svg.width()
-	        , height = $svg.height() - strokeWidth
-	        , diff = max - min
-
-	      var xScale = this.x = function(input) {
-	        return input * (width / (values.length - 1))
-	      }
-
-	      var yScale = this.y = function(input) {
-	        var y = height
-
-	        if (diff) {
-	          y -= ((input - min) / diff) * height
-	        }
-
-	        return y + strokeWidth / 2
-	      }
-
-	      var zero = yScale(Math.max(min, 0))
-	        , coords = [0, zero]
-
-	      for (var i = 0; i < values.length; i++) {
-	        coords.push(
-	          xScale(i),
-	          yScale(values[i])
-	        )
-	      }
-
-	      coords.push(width, zero)
-
-	      if (opts.fill) {
-	        $svg.append(
-	          svgElement('polygon', {
-	            fill: opts.fill,
-	            points: coords.join(' ')
-	          })
-	        )
-	      }
-
-	      if (strokeWidth) {
-	        $svg.append(
-	          svgElement('polyline', {
-	            fill: 'none',
-	            points: coords.slice(2, coords.length - 2).join(' '),
-	            stroke: opts.stroke,
-	            'stroke-width': strokeWidth,
-	            'stroke-linecap': 'square'
-	          })
-	        )
-	      }
-	    }
-	  );
-
-	  peity.register(
-	    'bar',
-	    {
-	      delimiter: ",",
-	      fill: ["#4D89F9"],
-	      height: 16,
-	      min: 0,
-	      padding: 0.1,
-	      width: 32
-	    },
-	    function(opts) {
-	      var values = this.values()
-	        , max = Math.max.apply(Math, opts.max == undefined ? values : values.concat(opts.max))
-	        , min = Math.min.apply(Math, opts.min == undefined ? values : values.concat(opts.min))
-
-	      var $svg = this.prepare(opts.width, opts.height)
-	        , width = $svg.width()
-	        , height = $svg.height()
-	        , diff = max - min
-	        , padding = opts.padding
-	        , fill = this.fill()
-
-	      var xScale = this.x = function(input) {
-	        return input * width / values.length
-	      }
-
-	      var yScale = this.y = function(input) {
-	        return height - (
-	          diff
-	            ? ((input - min) / diff) * height
-	            : 1
-	        )
-	      }
-
-	      for (var i = 0; i < values.length; i++) {
-	        var x = xScale(i + padding)
-	          , w = xScale(i + 1 - padding) - x
-	          , value = values[i]
-	          , valueY = yScale(value)
-	          , y1 = valueY
-	          , y2 = valueY
-	          , h
-
-	        if (!diff) {
-	          h = 1
-	        } else if (value < 0) {
-	          y1 = yScale(Math.min(max, 0))
-	        } else {
-	          y2 = yScale(Math.max(min, 0))
-	        }
-
-	        h = y2 - y1
-
-	        if (h == 0) {
-	          h = 1
-	          if (max > 0 && diff) y1--
-	        }
-
-	        $svg.append(
-	          svgElement('rect', {
-	            fill: fill.call(this, value, i, values),
-	            x: x,
-	            y: y1,
-	            width: w,
-	            height: h
-	          })
-	        )
-	      }
-	    }
-	  );
-	})(jQuery, document, Math);
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(308)))
-
-/***/ },
-/* 378 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(379);
-
-	var _jquery = __webpack_require__(308);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	__webpack_require__(377);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var PieChart = function () {
-	    function PieChart(_ref) {
-	        var root = _ref.root;
-
-	        _classCallCheck(this, PieChart);
-
-	        this.$root = (0, _jquery2.default)(root);
-	        this.render();
-	    }
-
-	    _createClass(PieChart, [{
-	        key: 'render',
-	        value: function render() {
-	            this.$root.find(".pie-chart__items").peity('donut', {
-	                radius: 47.5,
-	                innerRadius: 30.5
-	            });
-	        }
-	    }]);
-
-	    return PieChart;
-	}();
-
-	(0, _jquery2.default)(function () {
-	    (0, _jquery2.default)('.pie-chart').each(function () {
-	        new PieChart({ root: this });
-	    });
-	});
-
-/***/ },
 /* 379 */
 /***/ function(module, exports) {
 
@@ -23586,11 +23599,9 @@
 
 /***/ },
 /* 380 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-
-	__webpack_require__(381);
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 381 */
@@ -23598,11 +23609,19 @@
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	__webpack_require__(382);
 
-	var _jquery = __webpack_require__(308);
+/***/ },
+/* 382 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(383);
+
+	var _jquery = __webpack_require__(312);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -23651,18 +23670,10 @@
 	});
 
 /***/ },
-/* 382 */
+/* 383 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 383 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(347);
 
 /***/ },
 /* 384 */
@@ -23670,7 +23681,7 @@
 
 	'use strict';
 
-	__webpack_require__(358);
+	__webpack_require__(360);
 
 	__webpack_require__(328);
 
@@ -23716,9 +23727,9 @@
 
 	'use strict';
 
-	__webpack_require__(358);
+	__webpack_require__(360);
 
-	__webpack_require__(304);
+	__webpack_require__(308);
 
 	__webpack_require__(390);
 
@@ -23729,8 +23740,6 @@
 	'use strict';
 
 	__webpack_require__(391);
-
-	__webpack_require__(306);
 
 /***/ },
 /* 391 */
@@ -23744,7 +23753,7 @@
 
 	'use strict';
 
-	__webpack_require__(358);
+	__webpack_require__(360);
 
 	__webpack_require__(393);
 
@@ -23756,9 +23765,9 @@
 
 	__webpack_require__(394);
 
-	__webpack_require__(332);
+	__webpack_require__(334);
 
-	__webpack_require__(311);
+	__webpack_require__(315);
 
 	__webpack_require__(395);
 
@@ -23788,11 +23797,11 @@
 
 	'use strict';
 
-	__webpack_require__(358);
+	__webpack_require__(360);
 
 	__webpack_require__(398);
 
-	__webpack_require__(343);
+	__webpack_require__(345);
 
 /***/ },
 /* 398 */
@@ -23802,7 +23811,7 @@
 
 	__webpack_require__(399);
 
-	__webpack_require__(345);
+	__webpack_require__(347);
 
 /***/ },
 /* 399 */
@@ -23816,12 +23825,30 @@
 
 	'use strict';
 
-	__webpack_require__(358);
+	__webpack_require__(360);
 
-	__webpack_require__(401);
+	__webpack_require__(338);
 
 /***/ },
 /* 401 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(349);
+
+/***/ },
+/* 402 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(360);
+
+	__webpack_require__(403);
+
+/***/ },
+/* 403 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23830,33 +23857,9 @@
 
 	__webpack_require__(395);
 
-	__webpack_require__(402);
-
-	__webpack_require__(408);
-
-/***/ },
-/* 402 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(306);
-
-	__webpack_require__(403);
-
-	__webpack_require__(334);
-
-	__webpack_require__(407);
-
-/***/ },
-/* 403 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
 	__webpack_require__(404);
 
-	__webpack_require__(406);
+	__webpack_require__(408);
 
 /***/ },
 /* 404 */
@@ -23864,13 +23867,25 @@
 
 	'use strict';
 
+	__webpack_require__(310);
+
 	__webpack_require__(405);
+
+	__webpack_require__(330);
+
+	__webpack_require__(336);
+
+	__webpack_require__(407);
 
 /***/ },
 /* 405 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	__webpack_require__(334);
+
+	__webpack_require__(406);
 
 /***/ },
 /* 406 */
@@ -23889,16 +23904,6 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 409 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(358);
-
-	__webpack_require__(336);
 
 /***/ }
 /******/ ]);

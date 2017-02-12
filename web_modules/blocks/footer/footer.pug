@@ -7,9 +7,9 @@ mixin footer
         .footer__socials
             -
                 const socialsInfo = [
-                    { name: 'facebook' },
-                    { name: 'twitter' },
-                    { name: 'github' }
+                    { name: 'facebook', href: 'www.facebook.com', theme: 'white' },
+                    { name: 'twitter', href: 'www.twitter.com', theme: 'white' },
+                    { name: 'github', href: 'www.github.com', theme: 'white' }
                 ] 
             +socials({ socialsInfo })
         .footer__logo-container

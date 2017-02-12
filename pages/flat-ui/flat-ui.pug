@@ -2,8 +2,14 @@ extends ../base-page/base-page
 
 include ~blocks/flat-ui-body/flat-ui-body
 
+block description
+    meta(name="description" content="flat ui")
+
+block keywords
+    meta(name="keywords", content="flat-ui")
+
 block title 
-  | UI kit
+    | UI kit
     
 block body
-  +flat-ui-body
+    +flat-ui-body

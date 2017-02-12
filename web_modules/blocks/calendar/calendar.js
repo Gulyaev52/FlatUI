@@ -1,4 +1,3 @@
-import '../input/input.styl'
 import './calendar.styl'
 
 import $ from 'jquery'

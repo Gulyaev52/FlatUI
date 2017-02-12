@@ -1,0 +1,32 @@
+include ../section/section
+include ../button/button
+
+mixin section-standard-buttons
+    .section-standard-buttons
+        +section({ title: 'standard buttons' })
+            -
+                const groupsOfButtons = [
+                    [
+                        { text: "button", size: "small" },
+                        { text: "button", size: "big" },
+                        { text: "button", size: "big", theme: "assertive" },
+                        { text: "button", size: "small", theme: "assertive" }
+                    ],
+                    [
+                        { text: "button", size: "small", type: "raised" },
+                        { text: "button", size: "big", type: "raised" },
+                        { text: "button", size: "big", theme: "assertive", type: "raised" },
+                        { text: "button", size: "small", theme: "assertive", type: "raised" }
+                    ],
+                    [
+                        { text: "button", size: "small", type: "outline" },
+                        { text: "button", size: "big", type: "outline" },
+                        { text: "button", size: "big", theme: "assertive", type: "outline" },
+                        { text: "button", size: "small", theme: "assertive", type: "outline" }
+                    ]
+                ];   
+            each groupOfButtons in groupsOfButtons
+                +section-row({ align: 'center', verticalAlign: 'bottom' })
+                    each button in groupOfButtons
+                        +section-item
+                            +button(button)

@@ -1,2 +1,3 @@
 mixin avatar({ photo })
-    img.avatar(src = `blocks/user-profile/user-photos/${photo}`)
+    -const src = `blocks/user-profile/user-photos/${photo}`
+    img.avatar(src = src, alt = "avatar image")

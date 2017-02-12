@@ -1,4 +1,5 @@
 import './location.styl';
+import '../icon/icon'
 
 import $ from 'jquery'
 import ymaps from 'ymaps'

@@ -1,0 +1,33 @@
+include ../section/section
+include ../feedback/feedback
+include ../toggle/toggle
+include ../tick-box/tick-box
+include ../section-search-and-drop-down/section-search-and-drop-down
+include ../section-user-profile/section-user-profile
+
+mixin section-form-elements
+    .section-form-elements
+        +section({ title: 'form elements' })
+            +section-row
+                +section-column 
+                    +feedback
+                +section-column 
+                    +section-row({ align: 'center' })
+                        +section({ title: 'toggles' }) 
+                            +section-row({ align: 'center' })
+                                +section-item
+                                    +toggle({ on: false }) 
+                                +section-item
+                                    +toggle({ on: true }) 
+                    +section-row({ align: 'center' })
+                        +section({ title: 'tick boxes' }) 
+                            +section-row({ align: 'center' })
+                                +section-item
+                                    +tick-box({ enabled: false }) 
+                                +section-item
+                                    +tick-box({ enabled: true })
+            +section-row
+                +section-column
+                    +section-search-and-drop-down
+                +section-column
+                    +section-user-profile 

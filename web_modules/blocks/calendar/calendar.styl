@@ -1,9 +1,9 @@
-@require '../../colors'
+@require '../../theme/colors'
 
-headerFontColor = white
+header-font-color = white
 
-codeAngelLeft = "\f104"
-codeAngelRight = "\f105"
+code-angel-left = "\f104"
+code-angel-right = "\f105"
 
 .calendar
     width 270px
@@ -14,8 +14,8 @@ codeAngelRight = "\f105"
         padding-top 1.2rem
         border none
         font-size 5rem
-        background-color themeColor2
-        color headerFontColor
+        background-color theme-color2
+        color header-font-color
         font-family LatoLight
         text-align center
 
@@ -29,7 +29,7 @@ codeAngelRight = "\f105"
             border-radius 0
             padding 0
             background-color #d54c2c
-            color headerFontColor
+            color header-font-color
             font-family LatoLight
             font-size 1.5rem
 
@@ -44,7 +44,7 @@ codeAngelRight = "\f105"
                 justify-content center
                 align-items center
                 border none 
-                color headerFontColor
+                color header-font-color
 
             & .ui-datepicker-prev-hover
             & .ui-datepicker-next-hover
@@ -59,18 +59,18 @@ codeAngelRight = "\f105"
                 font-family FontAwesome 
 
             & .ui-datepicker-prev:before
-                content codeAngelLeft
+                content code-angel-left
 
             & .ui-datepicker-next:before
-                content codeAngelRight
+                content code-angel-right
 
         & .ui-datepicker-calendar
             margin 0 
 
             & thead 
                 font-size 0.75rem
-                background-color themeColor2
-                color headerFontColor
+                background-color theme-color2
+                color header-font-color
                 font-family LatoBlack
                 text-transform uppercase
                 font-weight bold
@@ -99,7 +99,7 @@ codeAngelRight = "\f105"
                     & .ui-state-highlight
                     & .ui-state-active
                         border none
-                        background-color themeColor2
+                        background-color theme-color2
                         color white 
 
     &__btn-today
@@ -107,5 +107,8 @@ codeAngelRight = "\f105"
         height 49px
         padding 15px 20px
         text-transform uppercase
-        font-family LatoBlack 
+        font-family LatoBlack
+        text-align left 
         cursor pointer
+        border none
+        color #888888

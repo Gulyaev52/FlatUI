@@ -1,36 +1,93 @@
-codeProfile = '\f007'
-codeNews = '\f1ea'
-codeMessages = '\f086'
-codeCalendar = '\f073'
-codeSuitcase = '\f0f2'
-codeEmail = '\f003'
-codePhone = '\f095'
-codeHome = '\f015'
+@require '../../theme/colors'
+
+code-profile = '\f007'
+code-news = '\f1ea'
+code-messages = '\f086'
+code-calendar = '\f073'
+code-suitcase = '\f0f2'
+code-email = '\f003'
+code-phone = '\f095'
+code-home = '\f015'
+code-cross-hairs = '\f05b'
+code-map-marker = '\f041'
+code-facebook = '\f09a'
+code-twitter = '\f099'
+code-dribble = '\f17d'
+code-github = '\f09b'
+code-message = '\f075'
+code-photo = '\f030'
 
 .icon
-    color #28a290
     font-family FontAwesome
 
-    &_profile:before
-        content codeProfile
+    &_size
 
-    &_news:before
-        content codeNews
+        &_small
+            font-size 1rem
 
-    &_messages:before
-        content codeMessages
+        &_big
+            font-size 1.6rem
 
-    &_calendar:before
-        content codeCalendar
+    &_theme
 
-    &_suitcase:before
-        content codeSuitcase
+        &_default
+            color white
 
-    &_email:before
-        content codeEmail
+        &_primary
+            color theme-color1
 
-    &_phone:before
-        content codePhone
+        &_white
+            color white
 
-    &_home:before
-        content codeHome
+        &_gray
+            color #757575
+
+    &_name
+
+        &_profile:before
+            content code-profile
+
+        &_news:before
+            content code-news
+
+        &_messages:before
+            content code-messages
+
+        &_calendar:before
+            content code-calendar
+
+        &_suitcase:before
+            content code-suitcase
+
+        &_email:before
+            content code-email
+
+        &_phone:before
+            content code-phone
+
+        &_home:before
+            content code-home
+
+        &_crosshairs:before
+            content code-cross-hairs
+
+        &_map-marker:before
+            content code-map-marker
+
+        &_facebook:before
+            content code-facebook
+
+        &_twitter:before
+            content code-twitter
+
+        &_dribble:before
+            content code-dribble
+
+        &_github:before
+            content code-github
+
+        &_message:before
+            content code-message
+
+        &_photo:before
+            content code-photo

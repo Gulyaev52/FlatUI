@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(430);
+	module.exports = __webpack_require__(429);
 
 
 /***/ },
@@ -8189,60 +8189,90 @@
 	};
 
 /***/ },
-/* 298 */,
-/* 299 */,
-/* 300 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	__webpack_require__(299);
+
+	__webpack_require__(300);
 
 	__webpack_require__(301);
 
-	__webpack_require__(310);
-
-	__webpack_require__(316);
-
-	__webpack_require__(320);
-
 /***/ },
-/* 301 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(302);
-
-	__webpack_require__(304);
-
-	__webpack_require__(309);
-
-/***/ },
-/* 302 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(303);
-
-/***/ },
-/* 303 */
+/* 299 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
+/* 300 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 301 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 302 */,
+/* 303 */,
 /* 304 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(305);
+
+	__webpack_require__(314);
+
+	__webpack_require__(298);
+
+	__webpack_require__(322);
+
+/***/ },
+/* 305 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(306);
+
+	__webpack_require__(308);
+
+	__webpack_require__(313);
+
+/***/ },
+/* 306 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(307);
+
+/***/ },
+/* 307 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	__webpack_require__(305);
+	__webpack_require__(309);
 
-	__webpack_require__(306);
+	__webpack_require__(310);
 
-	var _jquery = __webpack_require__(308);
+	var _jquery = __webpack_require__(312);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -8264,17 +8294,16 @@
 	        key: '_attachEventHandlers',
 	        value: function _attachEventHandlers() {
 	            var $search = this.$root;
-	            var $searchInput = $search.find('.search__input');
+	            var $searchInput = $search.find('.input');
 
-	            $search.find('.search__button').on('click', function (event) {
+	            $search.on('submit', function (event) {
 	                event.preventDefault();
 
 	                if (!$searchInput.val()) return;
 
 	                var errorPlaceholder = 'I\'ve not found what I\'m looking for...';
 	                $search.addClass('search_error');
-	                $searchInput.val('');
-	                $searchInput.attr('placeholder', errorPlaceholder);
+	                $searchInput.val('').attr('placeholder', errorPlaceholder);
 	            });
 
 	            $searchInput.on('focusin', function (event) {
@@ -8297,27 +8326,27 @@
 	});
 
 /***/ },
-/* 305 */
+/* 309 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 306 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(307);
+	__webpack_require__(311);
 
 /***/ },
-/* 307 */
+/* 311 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 308 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -18543,42 +18572,6 @@
 
 
 /***/ },
-/* 309 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 310 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(302);
-
-	__webpack_require__(311);
-
-	__webpack_require__(315);
-
-/***/ },
-/* 311 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(312);
-
-	__webpack_require__(314);
-
-/***/ },
-/* 312 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(313);
-
-/***/ },
 /* 313 */
 /***/ function(module, exports) {
 
@@ -18586,15 +18579,25 @@
 
 /***/ },
 /* 314 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	__webpack_require__(306);
+
+	__webpack_require__(315);
+
+	__webpack_require__(321);
 
 /***/ },
 /* 315 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	__webpack_require__(316);
+
+	__webpack_require__(320);
 
 /***/ },
 /* 316 */
@@ -18606,8 +18609,6 @@
 
 	__webpack_require__(318);
 
-	__webpack_require__(319);
-
 /***/ },
 /* 317 */
 /***/ function(module, exports) {
@@ -18616,9 +18617,11 @@
 
 /***/ },
 /* 318 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	__webpack_require__(319);
 
 /***/ },
 /* 319 */
@@ -18633,8 +18636,18 @@
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 321 */,
-/* 322 */,
+/* 321 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 322 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 323 */,
 /* 324 */,
 /* 325 */,
@@ -18642,30 +18655,18 @@
 /* 327 */,
 /* 328 */,
 /* 329 */,
-/* 330 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(331);
-
-	__webpack_require__(306);
-
-	__webpack_require__(332);
-
-/***/ },
-/* 331 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
+/* 330 */,
+/* 331 */,
 /* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	__webpack_require__(333);
+
+	__webpack_require__(310);
+
+	__webpack_require__(334);
 
 /***/ },
 /* 333 */
@@ -18679,11 +18680,25 @@
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	__webpack_require__(335);
 
-	var _jquery = __webpack_require__(308);
+/***/ },
+/* 335 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 336 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(337);
+
+	var _jquery = __webpack_require__(312);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -18752,14 +18767,12 @@
 	});
 
 /***/ },
-/* 335 */
+/* 337 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 336 */,
-/* 337 */,
 /* 338 */,
 /* 339 */,
 /* 340 */,
@@ -18846,69 +18859,58 @@
 /* 421 */,
 /* 422 */,
 /* 423 */,
-/* 424 */,
-/* 425 */
+/* 424 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(300);
+	__webpack_require__(304);
 
-	__webpack_require__(426);
+	__webpack_require__(425);
 
 /***/ },
-/* 426 */
+/* 425 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
+/* 426 */,
 /* 427 */,
 /* 428 */,
-/* 429 */,
+/* 429 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(424);
+
+	__webpack_require__(430);
+
+	__webpack_require__(432);
+
+/***/ },
 /* 430 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(425);
+	__webpack_require__(310);
+
+	__webpack_require__(332);
+
+	__webpack_require__(336);
 
 	__webpack_require__(431);
 
-	__webpack_require__(433);
-
-	var _jquery = __webpack_require__(308);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	(0, _jquery2.default)('.button').on('click', function () {
-	    window.location = './profile.html';
-	});
-
 /***/ },
 /* 431 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(306);
-
-	__webpack_require__(330);
-
-	__webpack_require__(334);
-
-	__webpack_require__(432);
-
-/***/ },
-/* 432 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 433 */
+/* 432 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

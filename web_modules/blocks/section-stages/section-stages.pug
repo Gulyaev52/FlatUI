@@ -1,0 +1,8 @@
+include ../section/section
+include ../stages/stages
+
+mixin section-stages
+    .section-stages
+        +section({ title: 'stages' })
+            +section-row 
+                +stages({ length: 5, progress: 3 })

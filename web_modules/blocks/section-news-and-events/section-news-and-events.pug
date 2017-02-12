@@ -1,0 +1,21 @@
+include ../section/section
+include ../news/news
+include ../event/event
+
+mixin section-news-and-events
+    .section-news-and-events
+        +section({ title: 'news & events' })
+            +section-row({ align: 'space-between' })
+                +news({  
+                    image: "news-img.png",
+                    title: "It’s all going downhill",
+                    date: "24 august 2013",
+                    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
+                }) 
+                +event({
+                    image: "event-img.png",
+                    day: "24",
+                    month: "august",
+                    title: "this is the title",
+                    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                }) 

@@ -1,34 +1,34 @@
-include ../standard-buttons/standard-buttons
-include ../arrow-buttons/arrow-buttons
-include ../sliders/sliders
-include ../percentages-pie-charts/percentages-pie-charts
-include ../stages-section/stages-section
-include ../form-elements/form-elements 
-include ../news-events/news-events 
-include ../location-section/location-section 
-include ../calendar-section/calendar-section
-include ../messenger-section/messenger-section   
+include ../section-standard-buttons/section-standard-buttons
+include ../section-arrow-buttons/section-arrow-buttons
+include ../section-percentages-and-pie-charts/section-percentages-and-pie-charts
+include ../section-sliders/section-sliders
+include ../section-stages/section-stages
+include ../section-form-elements/section-form-elements 
+include ../section-news-and-events/section-news-and-events 
+include ../section-location/section-location 
+include ../section-calendar/section-calendar
+include ../section-messenger/section-messenger   
 
 mixin flat-ui-body
     .flat-ui-body  
         .flat-ui-body__line
-            +standard-buttons
+            +section-standard-buttons
         .flat-ui-body__line
-            +arrow-buttons
+            +section-arrow-buttons
         .flat-ui-body__line
-            +sliders 
+            +section-percentages-and-pie-charts
         .flat-ui-body__line
-            +percentages-pie-charts
+            +section-sliders 
         .flat-ui-body__line
-            +stages-section    
+            +section-stages    
         .flat-ui-body__line
-            +form-elements
+            +section-form-elements
         .flat-ui-body__line
-            +news-events 
+            +section-news-and-events 
         .flat-ui-body__line
-            +location-section 
+            +section-location 
         .flat-ui-body__line
             .flat-ui-body__column.flat-ui-body__column_left
-                +calendar-section
+                +section-calendar
             .flat-ui-body__column.flat-ui-body__column_right
-                +messenger-section
+                +section-messenger

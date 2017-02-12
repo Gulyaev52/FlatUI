@@ -1,7 +1,9 @@
-messageMargin = 20px 
+@require '../../theme/colors'
 
-codeMessage = '\f075'
-codePhoto = '\f030'
+message-margin-value = 20px 
+margin-top-value = 15px
+code-message = '\f075'
+code-photo = '\f030'
 
 .chat
     display inline-block
@@ -9,45 +11,30 @@ codePhoto = '\f030'
     padding 10px 25px 25px 25px
     background-color #f2f2f2
 
-    &__item
-        margin-top 15px
+    &__links
+        display flex
+        justify-content space-between
+        margin-top margin-top-value
 
     &__messages
+        margin-top margin-top-value
         min-height 132px
 
     &__message
         margin-top 10px
 
         &_incomming
-            margin-right messageMargin
+            margin-right message-margin-value
 
         &_outgoing
-            margin-left messageMargin
-
-    &__links
-        display flex
-        justify-content space-between
-
-    &__link
-        font-size 23px
-        font-family FontAwesome
-        color #8e8d8d
-
-        &_message:before
-            content codeMessage
-
-        &_photo:before
-            content codePhoto
+            margin-left message-margin-value 
 
     &__input 
-        height 70px
-        width 100%
-        padding 15px 24px 15px 20px
-        border 3px solid white  
-        resize none
-
+        margin-top margin-top-value
+    
     &__reply-btn
         display flex
         flex-direction column
+        margin-top margin-top-value
 
 

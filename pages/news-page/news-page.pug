@@ -2,18 +2,26 @@ extends ../user-page/user-page
 
 include ~blocks/news/news
 
+block description
+    meta(name="description" content="flat ui")
+
+block keywords
+    meta(name="keywords", content="flat-ui")
+
+block title 
+    | Новости
 
 block content
     .news-page
-        .news-page__list
-            -
-                let newsInfo = {  
-                    image: "news-img.png",
-                    title: "It’s all going downhill",
-                    date: "24 august 2013",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
-                }
-            -const newsList = new Array(7).fill(newsInfo)
+        -
+            let newsInfo = {  
+                image: "news-img.png",
+                title: "It’s all going downhill",
+                date: "24 august 2013",
+                info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
+            }
+        -const newsList = new Array(7).fill(newsInfo)
+        ul.news-page__list
             each newsInfo in newsList
-                .news-page__item
+                li.news-page__item
                     +news(newsInfo)

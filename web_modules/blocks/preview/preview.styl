@@ -1,3 +1,5 @@
+@require '../../theme/colors'
+
 border-side-radius = 2px
 
 .preview
@@ -12,18 +14,47 @@ border-side-radius = 2px
             border-top-left-radius border-side-radius 
 
         &_right
+            display flex
             flex-grow 1 
-            padding 7.5%
             border-top-right-radius border-side-radius 
+
+    &__description
+        padding 7.5%
+        display flex
+        flex-direction column
+        justify-content center
+
+        ^[0]_news & 
+            background-color theme-color2
+
+        ^[0]_event &
+            background-color theme-color1
 
     &__title
         font-family LatoLight
+
+        ^[0]_news &
+            font-size 1.75rem
+            line-height 26px
 
     &__subtitle
         font-family LatoBlack
         text-transform uppercase
 
+        ^[0]_news &
+            font-size 0.68rem
+            margin-top 10px
+
+        ^[0]_event &
+             font-size 0.81rem
+
     &__info
         text-align left
         font-size 0.68rem
         font-family LatoRegular
+
+        ^[0]_news &
+            margin-top 15px
+
+        ^[0]_event &
+            margin-top 5px 

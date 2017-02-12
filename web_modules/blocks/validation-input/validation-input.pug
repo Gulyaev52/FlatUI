@@ -1,15 +1,12 @@
+include ../input/input
 include ../arrow-box/arrow-box
 
 mixin validation-input({ placeholder, type=null, pattern=null, textOk="ok", textError="error" })
-    .validation-input
-        input.input.validation-input__input(
-            placeholder = placeholder,
-            type = type,
-            pattern = pattern
-        ) 
+    .validation-input 
+        +input({ placeholder, type, pattern })
         .validation-input__message.validation-input__message_ok
-            +arrow-box({ theme: "default" })
+            +arrow-box({ theme: "default", type: 'validation-message' })
                 p= textOk
         .validation-input__message.validation-input__message_error
-            +arrow-box({ theme: "assertive" })
+            +arrow-box({ theme: "assertive", type: 'validation-message' })
                 p= textError

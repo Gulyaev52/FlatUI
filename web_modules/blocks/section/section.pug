@@ -4,12 +4,19 @@ mixin section({ title })
         .section__content
             block
 
-mixin section-row
-    .section__row&attributes(attributes)
+mixin section-row(options)
+    -const { type, align, verticalAlign } = options || {};
+    - 
+        const modifiers = [
+            type ? `section__row_type_${type}` : '',
+            type ? `section__row_align_${align}` : '',
+            type ? `section__row_vertical-align_${verticalAlign}` : ''
+        ]
+    .section__row(class = modifiers)
         block
 
 mixin section-column
-    .section__column&attributes(attributes)
+    .section__column
         block
 
 mixin section-item

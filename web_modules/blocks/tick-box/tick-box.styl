@@ -1,7 +1,7 @@
-@require '../../mixins'
-@require '../../colors'
+@require '../../theme/mixins'
+@require '../../theme/colors'
 
-codeCheck = '\f00c'
+code-check = '\f00c'
 
 .tick-box 
     display inline-block
@@ -17,14 +17,14 @@ codeCheck = '\f00c'
         circle(23px) 
         justify-content center
         align-items center
-        background-color themeColor3
+        background-color theme-color3
         color #c0c0c0
 
         &:before
-            content codeCheck
+            content code-check
 
-    &__checkbox:checked ~ &__indicator
-        background-color themeColor1
-        color white
+        ^[0]__checkbox:checked ~ &
+            background-color theme-color1
+            color white
 
 

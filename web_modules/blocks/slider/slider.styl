@@ -1,7 +1,7 @@
-@require '../../colors'
+@require '../../theme/colors'
 
-defaultColor = themeColor1
-assertiveColor = themeColor2
+default-color = theme-color1
+assertive-color = theme-color2
 
 .slider 
     position relative
@@ -11,12 +11,12 @@ assertiveColor = themeColor2
 
         .ui-slider .ui-widget-header
         .ui-slider .ui-slider-handle 
-            background-color defaultColor
+            background-color default-color
 
     &_assertive
 
         .ui-slider .ui-slider-handle 
-            background-color assertiveColor
+            background-color assertive-color
 
     & .ui-slider
         height 5px

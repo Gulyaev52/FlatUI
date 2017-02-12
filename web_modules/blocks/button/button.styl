@@ -1,9 +1,9 @@
-@require '../../colors'
+@require '../../theme/colors'
 
-defaultColor = themeColor1
-defaultBorderBottomColor = #28a290
-assertiveColor = themeColor2
-assertiveBorderBottomColor = #bf3e1f
+default-color = theme-color1
+default-border-bottom-color = #28a290
+assertive-color = theme-color2
+assertive-border-bottom-color = #bf3e1f
 
 border-bottom-color(color)
     box-shadow 0 3px 0 0 color
@@ -37,12 +37,12 @@ type-outline(color-bottom-border, color-font)
     &_theme
     
         &_default
-            background-color defaultColor
-            border-color defaultColor
+            background-color default-color
+            border-color default-color
 
         &_assertive
-            background-color assertiveColor 
-            border-color assertiveColor
+            background-color assertive-color 
+            border-color assertive-color
 
     &_size
     
@@ -55,29 +55,37 @@ type-outline(color-bottom-border, color-font)
             min-height 32px
             min-width 118px
 
-    &_type_outline
-        border 1px solid  
-        background-color white
+    &_type
+    
+        &_outline
+            border 1px solid  
+            background-color white
 
-    &_type_outline&_theme_default 
-        type-outline(defaultBorderBottomColor, defaultColor)
+            &^[0]_theme
+            
+                &_default
+                    type-outline(default-border-bottom-color, default-color)
 
-    &_type_outline&_theme_assertive  
-        type-outline(assertiveBorderBottomColor, assertiveColor)
+                &_assertive  
+                    type-outline(assertive-border-bottom-color, assertive-color)
 
-    &_type_outline&_state_pressed
-        transform scaleY(0.95)
-        box-shadow none
+            &^[0]_state_pressed
+                transform scaleY(0.95)
+                box-shadow none
 
-    &_type_raised&_theme_default
-        border-bottom-color(defaultBorderBottomColor)
+        &_raised
 
-    &_type_raised&_theme_assertive
-        border-bottom-color(assertiveBorderBottomColor) 
+            &^[0]_theme
+        
+                &_default
+                    border-bottom-color(default-border-bottom-color)
 
-    &_type_raised&_state_pressed
-        transform scaleY(0.95)
-        box-shadow none
+                &_assertive
+                    border-bottom-color(assertive-border-bottom-color) 
+
+            &^[0]_state_pressed
+                transform scaleY(0.95)
+                box-shadow none
 
     &__ripple-effect
         position absolute

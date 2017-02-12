@@ -1,0 +1,17 @@
+include ../section/section 
+include ../search/search
+include ../drop-down/drop-down
+
+mixin section-search-and-drop-down
+    .section-search-and-drop-down
+        +section({ title: 'search / drop down' })
+            +section-row 
+                +search({ placeholder: "Search" })
+            +section-row 
+                -const values = [
+                -    "Choose An Option",
+                -    "First option",
+                -    "Second option"
+                -]
+                +drop-down({ values })
+        

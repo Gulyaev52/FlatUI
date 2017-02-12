@@ -1,22 +1,22 @@
-mixin preview({ image })
-    -const blockName = attributes.class
-    .preview(class=blockName)
+mixin preview({ type, image }) 
+    .preview(class = `preview_${type}`)
         .preview__column.preview__column_left
             img.preview__img(
                 src = `blocks/${blockName}/img/${image}`,
-                alt = 'news image'
+                alt = "preview image"
             )
-        .preview__column.preview__column_right(class = `${blockName}__description`)
-            block
+        .preview__column.preview__column_right
+            .preview__description
+                block
 
 mixin preview-title
-    .preview__title&attributes(attributes)
+    .preview__title
         block
 
 mixin preview-subtitle
-    .preview__subtitle&attributes(attributes)
+    .preview__subtitle
         block
 
 mixin preview-info
-    .preview__info&attributes(attributes)
+    .preview__info
         block

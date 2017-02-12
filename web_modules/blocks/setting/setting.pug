@@ -6,10 +6,16 @@ include ../toggle/toggle
 
 mixin setting({ title })
     .setting
-        h3.setting__title= title
-        block
-        .setting__item.setting__button
-            +button({ text: 'Сохранить', size: 'big', type: 'raised' })
+        form.setting__form
+            h2.setting__title= title
+            block
+            .setting__button
+                +button({ 
+                    text: 'Сохранить', 
+                    size: 'big',
+                    type: 'raised',
+                    isSubmit: true
+                })
 
 mixin setting-input({ type, label, value, name, placeholder }) 
     .setting__item

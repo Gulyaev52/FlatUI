@@ -12,9 +12,9 @@ class Search {
 
     _attachEventHandlers() {
         const $search = this.$root;
-        const $searchInput = $search.find('.search__input'); 
+        const $searchInput = $search.find('.input'); 
 
-        $search.find('.search__button').on('click', event => { 
+        $search.on('submit', (event) => {  
             event.preventDefault();
 
             if (!$searchInput.val()) 
@@ -22,8 +22,7 @@ class Search {
             
             const errorPlaceholder = 'I\'ve not found what I\'m looking for...';
             $search.addClass('search_error');
-            $searchInput.val('');
-            $searchInput.attr('placeholder', errorPlaceholder);
+            $searchInput.val('').attr('placeholder', errorPlaceholder);
         });
 
         $searchInput.on('focusin', function (event) {

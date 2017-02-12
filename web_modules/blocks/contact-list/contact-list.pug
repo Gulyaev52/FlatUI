@@ -1,23 +1,6 @@
-include ../icon/icon
-include ../link/link
-
+include ../contact/contact
 
 mixin contact-list({ contactsInfo })
-    .contact-list
+    ul.contact-list
         each contactInfo in contactsInfo
-            +contact(contactInfo)
-
-
-mixin contact({ type, text })
-    -const iconNames = {
-    -    tel: 'phone',
-    -    mailto: 'email',
-    -    address: 'home'
-    -}
-    -const iconName = iconNames[type]
-    .contact
-        .contact__icon
-            +icon({ name: iconName })
-        .contact__link
-            +link({ text })
-
+            li: +contact(contactInfo)

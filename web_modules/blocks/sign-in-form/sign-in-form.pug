@@ -1,22 +1,22 @@
 include ../input/input
 include ../button/button
 
-
 mixin sign-in-form
     form.sign-in-form
-        .sign-in-form__item.sign-in-form__item_input
-            input.input(
-                placeholder = 'Логин',
-                type = 'Текст' 
-            )
-        .sign-in-form__item.sign-in-form__item_input
-            input.input(
-                placeholder = 'Пароль'
-                type = 'password' 
-            ) 
-        .sign-in-form__item.sign-in-form__item_button
+        .sign-in-form__login
+            +input({
+                placeholder: 'Логин',
+                type: 'Текст' 
+            })
+        .sign-in-form__password
+            +input({
+                placeholder: 'Пароль',
+                type: 'password' 
+            }) 
+        .sign-in-form__button
             +button({ 
                 text: 'Войти',
                 size: 'big',
-                type: 'raised' 
+                type: 'raised',
+                isSubmit: true
             })

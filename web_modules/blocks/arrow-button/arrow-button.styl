@@ -1,13 +1,13 @@
-@require '../../mixins'
-@require '../../colors'
+@require '../../theme/mixins'
+@require '../../theme/colors'
 
-primaryColor = themeColor1
-disabledColor = themeColor3
+primary-color = theme-color1
+disabled-color = theme-color3
 
-codeAngelLeft = "\f104"
-codeAngelRight = "\f105"
+code-angel-left = "\f104"
+code-angel-right = "\f105"
 
-angelPadding = 5px
+angel-padding = 5px
 
 .arrow-button
     display flex  
@@ -27,24 +27,24 @@ angelPadding = 5px
 
         &_left:before 
             display inline-block
-            padding-right angelPadding
-            content codeAngelLeft
+            padding-right angel-padding
+            content code-angel-left
 
         &_right:before 
             display inline-block
-            padding-left angelPadding
-            content codeAngelRight
+            padding-left angel-padding
+            content code-angel-right
 
     &_theme
     
         &_default
-            border: 3px solid primaryColor
-            color primaryColor
+            border: 3px solid primary-color
+            color primary-color
 
         &_disabled
-            background-color disabledColor
+            background-color disabled-color
             color white
 
         &_primary
-            background-color primaryColor
+            background-color primary-color
             color white

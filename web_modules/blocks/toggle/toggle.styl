@@ -1,5 +1,5 @@
-@require '../../colors'
-@require '../../mixins'
+@require '../../theme/colors'
+@require '../../theme/mixins'
 
 .toggle
 
@@ -14,13 +14,13 @@
         align-items center
         border-radius 20px
         user-select none
-        background-color themeColor3
+        background-color theme-color3
         cursor pointer
         overflow hidden
         transition background-color 0.2s ease-in
 
-    &__checkbox:checked ~ &__switcher
-        background-color themeColor1
+        ^[0]__checkbox:checked ~ &
+            background-color theme-color1
 
     &__slider
         position relative
@@ -39,8 +39,8 @@
             circle(18px)
             background-color white
 
-    &__checkbox:checked ~ &__switcher &__slider
-        margin-left 0
+        ^[0]__checkbox:checked ~ ^[0]__switcher &
+            margin-left 0
 
     &__text
         width 50%

@@ -1,0 +1,8 @@
+include ../section/section
+include ../calendar/calendar
+
+mixin section-calendar
+    .section-calendar
+        +section({ title: 'calendar' })
+            +section-row
+                +calendar()

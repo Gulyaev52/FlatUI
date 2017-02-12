@@ -3,10 +3,10 @@ include ../icon/icon
 
 
 mixin menu({ items }) 
-    .menu 
+    ul.menu 
         each item in items
-            .menu__item
+            li.menu__item
                 .menu__icon
-                    +icon({ name: item.iconName })
+                    +icon({ name: item.iconName, theme: 'primary' })
                 .menu__link
                     +link({ text: item.text, href: item.href }) 

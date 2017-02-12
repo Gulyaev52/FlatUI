@@ -1,0 +1,15 @@
+include ../icon/icon
+include ../link/link
+
+mixin contact({ type, text })
+    -const iconNames = {
+    -    tel: 'phone',
+    -    mailto: 'email',
+    -    address: 'home'
+    -}
+    -const iconName = iconNames[type]
+    .contact
+        .contact__icon
+            +icon({ name: iconName, theme: 'primary', size: 'small' })
+        .contact__link
+            +link({ text })

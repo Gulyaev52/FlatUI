@@ -1,7 +1,10 @@
-mixin button({ text, size="small", type="default", theme="default" })
-    -const buttonModifiers = [
+mixin button({ text, size="small", type="default", theme="default", isSubmit=false })
+    -const modifiers = [
     -    `button_size_${size}`,
     -    `button_type_${type}`,
     -    `button_theme_${theme}`
     -]
-    button.button(class = buttonModifiers)&attributes(attributes)= text
+    button.button(
+        class = modifiers,
+        type = isSubmit ? 'submit' : ''
+    )= text

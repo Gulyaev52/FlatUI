@@ -1,7 +1,8 @@
 include ../preview/preview
 
 mixin news({ image, title, date, info })
-    +preview({ image })(class = "news")
-        +preview-title(class = 'news__title')= title
-        +preview-subtitle(class = 'news__date')= date
-        +preview-info(class = 'news__info')= info
+    .news
+        +preview({ type: 'news', image })
+            +preview-title= title
+            +preview-subtitle= date
+            +preview-info= info

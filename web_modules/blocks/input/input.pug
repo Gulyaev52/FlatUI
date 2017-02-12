@@ -1,7 +1,8 @@
-mixin input({ label, name, placeholder, value })
-    input.input(
-        label = label,
+mixin input({ name, placeholder, value, type, pattern })
+    input.input( 
         name = name,
         placeholder = placeholder,
-        value = value
+        value = value,
+        type = type,
+        pattern = pattern
     )

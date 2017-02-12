@@ -1,18 +1,25 @@
-@require '../../colors'
+@require '../../theme/colors'
 
-codeSearch = '\f002'
+code-search = '\f002'
 
 .search
     position relative  
     display inline-block
 
-    &_error &__input
-        background-color themeColor2
+    &_error .input
+        background-color theme-color2
         color white
         text-overflow ellipsis
 
     &__button 
-        background-color themeColor2
+        height 100%
+        width 33px
+        position absolute
+        right 0
+        border none
+        font-family FontAwesome 
+        background-color theme-color2
+        color white
 
         &:before 
-            content codeSearch 
+            content code-search 

@@ -1,1 +1,2 @@
-import './social.styl'
+import './social.styl';
+import '../icon/icon';

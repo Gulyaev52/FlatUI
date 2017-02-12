@@ -1,4 +1,3 @@
-import '../icon/icon'
-import '../link/link'
+import '../contact/contact'
 
 import './contact-list.styl'

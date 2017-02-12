@@ -3,20 +3,29 @@ extends ../user-page/user-page
 include ~blocks/event/event
 include ~blocks/calendar/calendar
 
+block description
+    meta(name="description" content="flat ui")
+
+block keywords
+    meta(name="keywords", content="flat-ui")
+
+block title 
+    | События
+
 block content
     .events
-        .events__list
-            -
-                let eventInfo = {
-                    image: "event-img.png",
-                    day: "26",
-                    month: "Janury",
-                    title: "this is the title",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                }
-            -const events = new Array(5).fill(eventInfo);
+        -
+            let eventInfo = {
+                image: "event-img.png",
+                day: "26",
+                month: "Janury",
+                title: "this is the title",
+                info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            }
+        -const events = new Array(5).fill(eventInfo);
+        ul.events__list
             each eventInfo in events
-                .events__item
+                li.events__item
                     +event(eventInfo)
         .events__calendar
             +calendar

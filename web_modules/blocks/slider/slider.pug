@@ -9,7 +9,8 @@ mixin slider({ value=0, scaleEnabled=false, theme="default" })
                     +arrow-box({ 
                         theme, 
                         arrowPosition: "bottom", 
-                        type: 'tooltip' })= value
+                        type: 'tooltip' 
+                    })= value
         if scaleEnabled
             .slider__scale
                 +scale({
