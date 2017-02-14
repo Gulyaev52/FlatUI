@@ -3,35 +3,48 @@
 code-cross-hairs = '\f05b'
 code-map-marker = '\f041'
 
+breakpoint-value = 718px
+
 .location
     width 100%
+    min-width 16.125rem
+    max-width 38.75rem
 
     &__map
-        height 208px
+        height 13rem
 
     &__footer
         display flex 
         width 100%
-        align-items center
-        padding 0 5%
-        height 69px
-        border-radius 0 0 3px 3px 
+        align-items center 
+        padding 3%
+        border-radius 0 0 0.1875rem 0.1875rem
         background-color theme-color2
         color white
 
+        @media screen and (max-width breakpoint-value) 
+            flex-direction column
+            padding 5%
+
     &__message
-        font-size 30px
+        font-size 1.875rem
         font-family LatoLight
 
     &__address 
         flex-grow 1
         margin-left 5%
-        font-size 13px
+        font-size 0.8125rem
         font-family LatoBlack
         text-transform uppercase
 
+        @media screen and (max-width breakpoint-value)
+            margin 0.3125rem
+
     &__icons
-        flex-grow 0.1
+        align-items flex-end
         display flex
-        justify-content space-between
+        justify-content space-between 
+        margin 0 0.3125rem
           
+    &__icon
+        margin 0 0.3125rem

@@ -10,5 +10,7 @@ mixin location({ message, address, coordinates=[] })
             span.location__message= message
             span.location__address!= address
             .location__icons
-                +icon({ name: "crosshairs", theme: "white", size: "big" })
-                +icon({ name: "map-marker", theme: "white", size: "big" })
+                .location__icon
+                    +icon({ name: "crosshairs", theme: "white", size: "big" })
+                .location__icon
+                    +icon({ name: "map-marker", theme: "white", size: "big" })

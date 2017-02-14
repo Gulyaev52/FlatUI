@@ -9,8 +9,8 @@ mixin section-row(options)
     - 
         const modifiers = [
             type ? `section__row_type_${type}` : '',
-            type ? `section__row_align_${align}` : '',
-            type ? `section__row_vertical-align_${verticalAlign}` : ''
+            align ? `section__row_align_${align}` : '',
+            verticalAlign ? `section__row_vertical-align_${verticalAlign}` : ''
         ]
     .section__row(class = modifiers)
         block

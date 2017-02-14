@@ -1,14 +1,13 @@
 @require '../../theme/colors'
 
-message-margin-value = 20px 
-margin-top-value = 15px
+message-margin-value = 1.25rem
+margin-top-value = 0.9375rem
 code-message = '\f075'
 code-photo = '\f030'
 
-.chat
-    display inline-block
+.chat 
     width 100%  
-    padding 10px 25px 25px 25px
+    padding 0.625rem 1.56rem 1.56rem 1.56rem
     background-color #f2f2f2
 
     &__links
@@ -18,10 +17,13 @@ code-photo = '\f030'
 
     &__messages
         margin-top margin-top-value
-        min-height 132px
+        height 10.5rem
+        padding 0 3%
+        overflow-x hidden
+        overflow-y scroll
 
     &__message
-        margin-top 10px
+        margin-top 0.625rem
 
         &_incomming
             margin-right message-margin-value
