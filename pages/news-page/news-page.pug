@@ -2,6 +2,9 @@ extends ../user-page/user-page
 
 include ~blocks/news/news
 
+block data
+    include ./news-page-data.pug
+
 block description
     meta(name="description" content="flat ui")
 
@@ -13,15 +16,7 @@ block title
 
 block content
     .news-page
-        -
-            let newsInfo = {  
-                image: "news-img.png",
-                title: "It’s all going downhill",
-                date: "24 august 2013",
-                info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
-            }
-        -const newsList = new Array(7).fill(newsInfo)
         ul.news-page__list
-            each newsInfo in newsList
+            each newsInfo in locals.newsList
                 li.news-page__item
                     +news(newsInfo)

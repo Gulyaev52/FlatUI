@@ -6,14 +6,14 @@ const webpack = require('webpack');
 const pageList = [
   'index',
   'flat-ui', 
-  'base-page',
-  'messages',
-  'contacts',
-  'profile',
-  'sign-in',
-  'sign-up',
-  'events',
-  'news-page'
+  // 'base-page',
+  // 'messages',
+  // 'contacts',
+  // 'profile',
+  // 'sign-in',
+  // 'sign-up',
+  // 'events',
+  // 'news-page'
 ];
 
 const entries = {};

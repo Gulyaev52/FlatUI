@@ -2907,11 +2907,17 @@ body {
 .icon {
   font-family: FontAwesome;
 }
+.icon_size_small {
+  font-size: 1rem;
+}
 .icon_size_big {
   font-size: 1.6rem;
 }
 .icon_theme_default {
-  color: color-theme1;
+  color: #fff;
+}
+.icon_theme_primary {
+  color: #4eb7a8;
 }
 .icon_theme_white {
   color: #fff;
@@ -3119,8 +3125,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+.news-page__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 .news-page__item {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .news-page__item:first-child {
   margin-top: 0;

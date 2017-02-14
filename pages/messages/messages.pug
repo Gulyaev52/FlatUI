@@ -3,6 +3,9 @@ extends ../user-page/user-page
 include ~blocks/messenger/messenger 
 include ~blocks/filterable-user-list/filterable-user-list  
 
+block data
+    include ./messages-data.pug
+
 block description
     meta(name="description" content="flat ui")
 
@@ -13,31 +16,8 @@ block title
     | Сообщения
 
 block content 
-    -
-        const user = {  
-            name: "Sarah Brown",
-            profession: "developer",
-            photo: "sarah.png"  
-        } 
-    -
-        const messages = [
-            { text: 'Привеееееееееееееееет!!!', type: 'incomming' }
-        ]
-    -
-        const friends = [
-            {  
-                name: "Sarah Brown",
-                profession: "developer",
-                photo: "sarah.png"  
-            },
-            {  
-                name: "John Smith",
-                profession: "ux designer",
-                photo: "john.png"  
-            }
-        ]
     .messages
         .messages__messenger
-            +messenger({ messages, user })
+            +messenger(locals.messengerData)
         .messages__user-list
-            +filterable-user-list({ title: 'Друзья', users: friends })
+            +filterable-user-list({ title: 'Друзья', users: locals.friends })

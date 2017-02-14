@@ -1,1 +1,35 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0, width=device-width"><title></title><script src="https://api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script><link href="contacts.css" rel="stylesheet"></head><body><div class="page"><div class="page__header"><div class="header"><div class="header__logo"><div class="logo"><img class="logo" src="web_modules/blocks/logo/img/logo.png" alt="logo"></div></div><div class="header__search"><div class="search"><form class="search__form"><input class="input" placeholder="Найти"><button class="search__button" type="submit"></button></form></div></div></div></div><div class="page__main"><div class="user-page"><div class="user-page__menu"><ul class="menu"> <li class="menu__item"><div class="menu__icon"><span class="icon icon_name_profile icon_size_undefined icon_theme_default"></span></div><div class="menu__link"><a class="link link_theme_default" href="./profile.html">Профиль</a></div></li><li class="menu__item"><div class="menu__icon"><span class="icon icon_name_messages icon_size_undefined icon_theme_default"></span></div><div class="menu__link"><a class="link link_theme_default" href="./messages.html">Сообщения</a></div></li><li class="menu__item"><div class="menu__icon"><span class="icon icon_name_news icon_size_undefined icon_theme_default"></span></div><div class="menu__link"><a class="link link_theme_default" href="./news-page.html">Новости</a></div></li><li class="menu__item"><div class="menu__icon"><span class="icon icon_name_calendar icon_size_undefined icon_theme_default"></span></div><div class="menu__link"><a class="link link_theme_default" href="./events.html">События</a></div></li><li class="menu__item"><div class="menu__icon"><span class="icon icon_name_suitcase icon_size_undefined icon_theme_default"></span></div><div class="menu__link"><a class="link link_theme_default" href="./contacts.html">Контакты</a></div></li></ul></div><div class="user-page__content"><div class="contacts"><div class="contacts__row"> <div class="contacts__feedback"><div class="feedback"><form class="feedback__form"><div class="feedback__name"><div class="validation-input"> <input class="input" placeholder="Your Name" pattern="^[A-Za-zА-Яа-я ]+$"><div class="validation-input__message validation-input__message_ok"><div class="arrow-box arrow-box_theme_default arrow-box_arrow-position_left arrow-box_type_validation-message"><p>thanks!</p></div></div><div class="validation-input__message validation-input__message_error"><div class="arrow-box arrow-box_theme_assertive arrow-box_arrow-position_left arrow-box_type_validation-message"><p>error</p></div></div></div></div><div class="feedback__email"> <div class="validation-input"> <input class="input" placeholder="Your Email" type="email"><div class="validation-input__message validation-input__message_ok"><div class="arrow-box arrow-box_theme_default arrow-box_arrow-position_left arrow-box_type_validation-message"><p>thanks!</p></div></div><div class="validation-input__message validation-input__message_error"><div class="arrow-box arrow-box_theme_assertive arrow-box_arrow-position_left arrow-box_type_validation-message"><p>error</p></div></div></div></div><div class="feedback__message"> <textarea class="textarea textarea_undefined" placeholder="Your Message"></textarea></div><div class="feedback__submit"><button class="button button_size_big button_type_raised button_theme_default" type="">button</button></div></form></div></div><div class="contacts__info"><ul class="contact-list"><li><div class="contact"><div class="contact__icon"><span class="icon icon_name_phone icon_size_undefined icon_theme_default"></span></div><div class="contact__link"><a class="link link_theme_default">+8 913-154-18-55</a></div></div></li><li><div class="contact"><div class="contact__icon"><span class="icon icon_name_email icon_size_undefined icon_theme_default"></span></div><div class="contact__link"><a class="link link_theme_default">gulyaev52@gmail.com</a></div></div></li><li><div class="contact"><div class="contact__icon"><span class="icon icon_name_home icon_size_undefined icon_theme_default"></span></div><div class="contact__link"><a class="link link_theme_default">Томск, Красноармейская, 147. Оффис 201</a></div></div></li></ul></div></div><div class="contacts__location"><div class="location" data-coordinates="[56.4531907,84.9756513]"><div class="location__map" id="map"></div><div class="location__footer"><span class="location__message">Meet us!</span><span class="location__address">Томск, Красноармейская, 147<br/> оффис 201</span><div class="location__icons"><span class="icon icon_name_crosshairs icon_size_big icon_theme_white"></span><span class="icon icon_name_map-marker icon_size_big icon_theme_white"></span></div></div></div></div></div></div></div></div><div class="page__footer"><div class="footer"> <div class="footer__socials"><div class="socials"><div class="socials__item"><a class="social" href="www.facebook.com"><span class="icon icon_name_facebook icon_size_big icon_theme_default"></span></a></div><div class="socials__item"><a class="social" href="www.twitter.com"><span class="icon icon_name_twitter icon_size_big icon_theme_default"></span></a></div><div class="socials__item"><a class="social" href="www.github.com"><span class="icon icon_name_github icon_size_big icon_theme_default"></span></a></div></div></div><div class="footer__logo-container"><div class="footer__logo"><div class="logo"><img class="logo" src="web_modules/blocks/logo/img/logo.png" alt="logo"></div></div><div class="footer__copyright">Copyright © 2017 Whitesquare</div></div></div></div></div><script type="text/javascript" src="contacts.bundle.js"></script></body></html>
+Html Webpack Plugin:
+<pre>
+  TypeError: Cannot match against 'undefined' or 'null'.
+  
+  - contacts.pug:209 Object.pug_interp [as menu]
+    C:/Users/OEM/Desktop/frontend development/Учебные макеты/FlatUI/pages/contac    ts/contacts.pug:209:44
+  
+  - contacts.pug:333 template
+    C:/Users/OEM/Desktop/frontend development/Учебные макеты/FlatUI/pages/contac    ts/contacts.pug:333:20
+  
+  - index.js:265 
+    [FlatUI]/[html-webpack-plugin]/index.js:265:16
+  
+  - util.js:16 tryCatcher
+    [FlatUI]/[bluebird]/js/release/util.js:16:23
+  
+  - promise.js:510 Promise._settlePromiseFromHandler
+    [FlatUI]/[bluebird]/js/release/promise.js:510:31
+  
+  - promise.js:567 Promise._settlePromise
+    [FlatUI]/[bluebird]/js/release/promise.js:567:18
+  
+  - promise.js:604 Promise._settlePromiseCtx
+    [FlatUI]/[bluebird]/js/release/promise.js:604:10
+  
+  - async.js:138 Async._drainQueue
+    [FlatUI]/[bluebird]/js/release/async.js:138:12
+  
+  - async.js:143 Async._drainQueues
+    [FlatUI]/[bluebird]/js/release/async.js:143:10
+  
+  - async.js:17 Immediate.Async.drainQueues
+    [FlatUI]/[bluebird]/js/release/async.js:17:14
+  
+</pre>

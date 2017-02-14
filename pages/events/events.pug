@@ -3,6 +3,9 @@ extends ../user-page/user-page
 include ~blocks/event/event
 include ~blocks/calendar/calendar
 
+block data
+    include ./events-data
+
 block description
     meta(name="description" content="flat ui")
 
@@ -13,18 +16,9 @@ block title
     | События
 
 block content
-    .events
-        -
-            let eventInfo = {
-                image: "event-img.png",
-                day: "26",
-                month: "Janury",
-                title: "this is the title",
-                info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            }
-        -const events = new Array(5).fill(eventInfo);
+    .events 
         ul.events__list
-            each eventInfo in events
+            each eventInfo in locals.events
                 li.events__item
                     +event(eventInfo)
         .events__calendar

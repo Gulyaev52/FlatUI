@@ -2900,11 +2900,17 @@ body {
 .icon {
   font-family: FontAwesome;
 }
+.icon_size_small {
+  font-size: 1rem;
+}
 .icon_size_big {
   font-size: 1.6rem;
 }
 .icon_theme_default {
-  color: color-theme1;
+  color: #fff;
+}
+.icon_theme_primary {
+  color: #4eb7a8;
 }
 .icon_theme_white {
   color: #fff;
@@ -3027,6 +3033,16 @@ body {
   align-items: center;
   font-family: LatoBlack;
 }
+.arrow-box:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: rotate(45deg);
+  border-bottom-left-radius: 2px;
+  background-color: inherit;
+}
 .arrow-box_type_message {
   max-width: 243px;
   padding: 15px 24px 15px 20px;
@@ -3061,16 +3077,6 @@ body {
 .arrow-box_theme_white {
   background-color: #fff;
   color: #868686;
-}
-.arrow-box:before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0.5rem;
-  height: 0.5rem;
-  transform: rotate(45deg);
-  border-bottom-left-radius: 2px;
-  background-color: inherit;
 }
 .arrow-box_arrow-position_top:before {
   top: -0.25em;

@@ -2,38 +2,12 @@ extends ../page/page
 
 include ~blocks/menu/menu
 
+block data
+    include ./user-page-data.pug
 
-block main
-    -
-        const menuItems = [
-            { 
-                iconName: 'profile', 
-                text: 'Профиль', 
-                href: './profile.html'
-            },
-            {
-                iconName: 'messages', 
-                text: 'Сообщения', 
-                href: './messages.html'
-            },
-            {
-                iconName: 'news', 
-                text: 'Новости', 
-                href: './news-page.html'
-            },
-            {
-                iconName: 'calendar', 
-                text: 'События',  
-                href: './events.html'
-            },
-            {
-                iconName: 'suitcase', 
-                text: 'Контакты',
-                href: './contacts.html'  
-            }
-        ]
+block main 
     .user-page
         .user-page__menu
-            +menu({ items: menuItems })
+            +menu(locals.menuData)
         .user-page__content
             block content
