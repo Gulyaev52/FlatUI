@@ -14,12 +14,11 @@
             display flex
             flex-direction column 
 
-    &__column 
-        flex-grow 1
+    &__columns
+        margin-top 10%
+        display flex
+        justify-content space-between
 
-        &_left
-            float left
-
-        &_right
-            float right
-    
+        @media screen and (max-width 676px)
+            flex-direction column
+            align-items center

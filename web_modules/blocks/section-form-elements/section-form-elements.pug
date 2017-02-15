@@ -8,10 +8,10 @@ include ../section-user-profile/section-user-profile
 mixin section-form-elements
     .section-form-elements
         +section({ title: 'form elements' })
-            +section-row
-                +section-column 
+            +section-row({ type: 'form-elements' })
+                +section-column({ type: 'form-elements' })
                     +feedback
-                +section-column 
+                +section-column({ type: 'form-elements' })
                     +section-row({ align: 'center' })
                         +section({ title: 'toggles' }) 
                             +section-row({ align: 'center' })
@@ -26,8 +26,8 @@ mixin section-form-elements
                                     +tick-box({ enabled: false }) 
                                 +section-item
                                     +tick-box({ enabled: true })
-            +section-row
-                +section-column
+            +section-row({ type: 'form-elements' })
+                +section-column({ type: 'form-elements' })
                     +section-search-and-drop-down
-                +section-column
+                +section-column({ type: 'form-elements' })
                     +section-user-profile 

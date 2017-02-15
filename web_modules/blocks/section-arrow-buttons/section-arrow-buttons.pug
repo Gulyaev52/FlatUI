@@ -4,7 +4,7 @@ include ../arrow-button/arrow-button
 mixin section-arrow-buttons
     .section-arrow-buttons
         +section({ title: 'arrow buttons' })
-            +section-row({ align: 'center' })
+            +section-row({ type: 'buttons' })
                 -const directions = ['left', 'right']
                 -const themes = ['default', 'disabled', 'primary']
                 each direction in directions

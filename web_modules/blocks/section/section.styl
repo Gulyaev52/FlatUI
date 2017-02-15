@@ -28,6 +28,34 @@
                 justify-content center
                 align-items flex-end 
 
+            &_charts
+                justify-content center
+                flex-wrap wrap
+
+            &_sliders
+                justify-content space-between 
+
+                @media (max-width 637px)
+                    align-items center
+                    flex-direction column
+                    height 115px
+                    padding-top 20px
+
+            &_form-elements
+                justify-content center
+
+                @media (max-width 720px)
+                    flex-direction column
+                    align-items center
+
+            &_previews
+                justify-content space-between
+                
+                @media (max-width 712px)
+                    flex-direction column
+                    align-items center
+
+
         &_vertical-align
 
             &_bottom
@@ -52,8 +80,23 @@
         flex-direction column   
         flex-grow 1
 
+        &_type
+
+            &_form-elements        
+
+                @media (max-width 720px)
+                    margin-top 1.875rem
+
     &__item
         margin-left 15px
 
         &:first-child
             margin-left 0
+        
+        &_type
+
+            &_preview
+                margin-left 0
+
+                @media (max-width 712px)
+                    margin-top 15px

@@ -15,10 +15,20 @@ mixin section-row(options)
     .section__row(class = modifiers)
         block
 
-mixin section-column
-    .section__column
+mixin section-column(options)
+    -const { type } = options || {};
+    - 
+        const modifiers = [
+            type ? `section__column_type_${type}` : ''
+        ]
+    .section__column(class = modifiers)
         block
 
-mixin section-item
-    .section__item
+mixin section-item(options)
+    -const { type } = options || {};
+    - 
+        const modifiers = [
+            type ? `section__item_type_${type}` : ''
+        ]
+    .section__item(class = modifiers)
         block

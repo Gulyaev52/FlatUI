@@ -26,7 +26,7 @@ mixin section-standard-buttons
                     ]
                 ];   
             each groupOfButtons in groupsOfButtons
-                +section-row({ align: 'center', verticalAlign: 'bottom' })
+                +section-row({ type: 'buttons' })
                     each button in groupOfButtons
                         +section-item
                             +button(button)
