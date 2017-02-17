@@ -4,11 +4,14 @@ code-chevron-down = '\f078'
 
 .drop-down
     display inline-block
-    position relative 
+    position relative  
+    max-width 18.75rem
+    min-width 9.8125rem
+    width 100%
 
     &__button
         height 100%
-        width 33px
+        width 2.0625rem
         position absolute
         right 0
         border none 
@@ -22,12 +25,12 @@ code-chevron-down = '\f078'
             pointer-events none
 
     &__select
-        height 32px
-        width 300px
+        height 2rem
+        width 100% 
         margin 0
-        padding 2% 10px
+        padding 2% 0.625rem
         border none
-        border-radius 3px
+        border-radius 0.1875rem
         background-color theme-color3
         color #888888 
         font-size 0.875rem

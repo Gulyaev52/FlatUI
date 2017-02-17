@@ -7,13 +7,13 @@ const pageList = [
   'index',
   'flat-ui', 
   // 'base-page',
-  // 'messages',
-  // 'contacts',
+  'messages',
+  'contacts',
   // 'profile',
   // 'sign-in',
   // 'sign-up',
-  // 'events',
-  // 'news-page'
+  'events',
+  'news-page'
 ];
 
 const entries = {};

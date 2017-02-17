@@ -1,11 +1,16 @@
 .user-page
     display flex
     width 100%
-    padding 1% 10%
+    padding 1.25rem 10%
 
-    &__menu
-        flex-grow 0.25
+    @media (max-width 697px)
+        flex-direction column
+        align-content center
+        justify-content center
 
     &__content 
-        margin-left 5%
-        flex-grow 3
+        margin-left 5% 
+        flex-grow 1
+
+        @media (max-width 697px)
+            margin-top 1.56rem
