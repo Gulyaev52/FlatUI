@@ -1,8 +1,18 @@
-mixin input({ name, placeholder, value, type, pattern })
-    input.input( 
+mixin input(options)
+    - 
+        const {
+            name, 
+            placeholder,
+            value,
+            type,
+            pattern,
+            tabindex = false
+        } = options || {};
+    input.input.js-input( 
         name = name,
         placeholder = placeholder,
         value = value,
         type = type,
-        pattern = pattern
+        pattern = pattern,
+        tabindex = tabindex
     )

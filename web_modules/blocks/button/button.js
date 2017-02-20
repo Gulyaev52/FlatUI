@@ -50,7 +50,7 @@ class Button {
  
 $(() => {
 
-    $('.button').each(function() {
+    $('.js-button').each(function() {
         new Button({ root: this })
     });
 });

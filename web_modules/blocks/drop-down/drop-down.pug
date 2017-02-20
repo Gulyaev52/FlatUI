@@ -1,6 +1,6 @@
-mixin drop-down({ values })
-    .drop-down
-        button.drop-down__button
+mixin drop-down({ values, tabindex=false })
+    .drop-down(tabindex = tabindex)
+        button.drop-down__button(tabindex = -1)
         select.drop-down__select
             each value in values
                 option.drop-down__item= value

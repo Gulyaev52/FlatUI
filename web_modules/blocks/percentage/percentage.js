@@ -13,7 +13,7 @@ class Percentage {
     render() {
         const color = this.$root.data('color');
 
-        this.$root.find('.percentage__chart').peity('donut', {
+        this.$root.find('.js-percentage__chart').peity('donut', {
             fill: [color, 'white'],
             radius: 50,
             innerRadius: 45
@@ -22,7 +22,7 @@ class Percentage {
 }
 
 $(() => {
-    $('.percentage').each(function() { 
+    $('.js-percentage').each(function() { 
         new Percentage({ root: this });
     });
 });

@@ -20,9 +20,9 @@ class Slider {
 
         const value = $slider.data('value');
 
-        const $widget = $slider.find('.slider__widget');
+        const $widget = $slider.find('.js-slider__widget');
 
-        const $tooltip = $slider.find('.arrow-box');
+        const $tooltip = $slider.find('.js-arrow-box');
         
         $widget.slider({
             animate: true,
@@ -39,7 +39,7 @@ class Slider {
 
 $(() => {
 
-    $('.slider').each(function () { 
+    $('.js-slider').each(function () { 
         new Slider({ root: this });
     });
 

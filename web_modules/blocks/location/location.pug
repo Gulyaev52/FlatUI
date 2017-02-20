@@ -4,8 +4,8 @@ append scripts
     script(src='https://api-maps.yandex.ru/2.1/?lang=en_US', type='text/javascript')
 
 mixin location({ message, address, coordinates=[] })
-    .location(data-coordinates = coordinates)
-        .location__map(id = "map")
+    .location.js-location(data-coordinates = coordinates)
+        .location__map.js-location__map(id = "map")
         .location__footer
             span.location__message= message
             span.location__address!= address

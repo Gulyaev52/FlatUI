@@ -1,9 +1,18 @@
 include ../input/input
 include ../arrow-box/arrow-box
 
-mixin validation-input({ placeholder, type=null, pattern=null, textOk="ok", textError="error" })
+mixin validation-input(options)
+    -
+        const {
+            placeholder,
+            type = null,
+            pattern = null,
+            textOk = 'ok',
+            textError = 'error',
+            tabindex = false
+        } = options || {};
     .validation-input 
-        +input({ placeholder, type, pattern })
+        +input({ placeholder, type, pattern, tabindex })
         .validation-input__message.validation-input__message_ok
             +arrow-box({ theme: "default", type: 'validation-message' })
                 p= textOk

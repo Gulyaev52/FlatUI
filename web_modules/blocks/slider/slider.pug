@@ -2,8 +2,8 @@ include ../arrow-box/arrow-box
 include ../scale/scale
 
 mixin slider({ value=0, scaleEnabled=false, theme="default" })
-    .slider(class = `slider_${theme}`, data-value = value)
-        .slider__widget
+    .slider.js-slider(class = `slider_${theme}`, data-value = value)
+        .slider__widget.js-slider__widget
             .slider__handle.ui-slider-handle 
                 .slider__tooltip
                     +arrow-box({ 

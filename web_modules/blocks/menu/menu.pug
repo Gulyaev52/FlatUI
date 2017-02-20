@@ -6,7 +6,7 @@ mixin menu({ items })
     ul.menu 
         each item in items
             li.menu__item
-                .menu__icon
+                span.menu__icon
                     +icon({ name: item.iconName, theme: 'primary' })
-                .menu__link
+                span.menu__link
                     +link({ text: item.text, href: item.href }) 

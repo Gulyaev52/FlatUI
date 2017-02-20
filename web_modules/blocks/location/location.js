@@ -15,7 +15,7 @@ class Location {
         const coordinates = this.$root.data('coordinates');
 
         ymaps.ready(() => {
-            const locationMapId = this.$root.find(".location__map").prop("id"); 
+            const locationMapId = this.$root.find(".js-location__map").prop("id"); 
 
             const map = new ymaps.Map(locationMapId, {
                 center: coordinates,
@@ -25,7 +25,7 @@ class Location {
 
             const placemark = new ymaps.Placemark(coordinates, {}, {
                 iconLayout: 'default#image',
-                iconImageHref: './blocks/location/img/marker.png',
+                iconImageHref: require('./img/marker.png'),
                 iconImageSize: [56, 60]
             })
 
@@ -36,7 +36,7 @@ class Location {
 
 $(() => {
 
-    $('.location').each(function() {
+    $('.js-location').each(function() {
         new Location({ root: this });
     });
 });

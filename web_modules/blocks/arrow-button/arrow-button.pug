@@ -1,6 +1,6 @@
-mixin arrow-button({ direction='left', theme='default' })
+mixin arrow-button({ direction='left', theme='default', tabindex=false })
     -const modifiers = [
     -    `arrow-button_direction_${direction}`,
     -    `arrow-button_theme_${theme}`
     -]
-    button.arrow-button(class = modifiers)
+    button.arrow-button(class = modifiers, tabindex = tabindex)

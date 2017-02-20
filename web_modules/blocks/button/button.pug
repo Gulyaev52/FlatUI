@@ -1,10 +1,20 @@
-mixin button({ text, size="small", type="default", theme="default", isSubmit=false })
+mixin button(options)
+    -
+        const {
+            text,
+            size = 'small',
+            type = 'default',
+            theme = 'default',
+            isSubmit = false,
+            tabindex = false
+        } = options || {};
     -const modifiers = [
     -    `button_size_${size}`,
     -    `button_type_${type}`,
     -    `button_theme_${theme}`
     -]
-    button.button(
+    button.button.js-button(
         class = modifiers,
-        type = isSubmit ? 'submit' : ''
+        type = isSubmit ? 'submit' : '',
+        tabindex = tabindex
     )= text

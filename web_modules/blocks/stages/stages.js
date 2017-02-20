@@ -14,22 +14,12 @@ class Stages {
 
         const progressPercent = `${100 * (stagesProgress - 1) / (stagesLength - 1)}%`;
 
-        this.$root.find('.stages__progress').css('width', progressPercent)
-    }  
-
-    nextStage() {
-
-    }
+        this.$root.find('.js-stages__progress').css('width', progressPercent)
+    }   
 }
 
 $(() => {
-
-    $('.stages').each(function() {
-        const stagesLength = $(this).data('length');
-        const stagesProgress = $(this).data('progress');
-
-        const progressPercent = `${100 * (stagesProgress - 1) / (stagesLength - 1)}%`;
-
-        $(this).find('.stages__progress').css('width', progressPercent)
+    $('.js-stages').each(function() {
+        new Stages({ root: this });
     });
 });

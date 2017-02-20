@@ -5,12 +5,12 @@ include ../button/button
 
 mixin chat({ messages })
     .chat
-        .chat__links
+        .chat__icons
             +icon({ name: 'message', size: 'big', theme: 'gray' })
             +icon({ name: 'photo', size: 'big', theme: 'gray' })
-        .chat__messages
+        ul.chat__messages
             each message in messages 
-                .chat__message(class = `chat__message_${message.type}`)
+                li.chat__message(class = `chat__message_${message.type}`)
                     +message(message)
         .chat__input
             +textarea({ type: 'chat' })

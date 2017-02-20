@@ -1,5 +1,6 @@
 mixin calendar()
-  .calendar
-    input.calendar__day(readonly = true)
-    .calendar__widget
-    button.calendar__btn-today today
+  .calendar.js-calendar
+    input.calendar__day.js-calendar__day(readonly = true)
+    .calendar__widget.js-calendar__widget.js-calendar__day
+    button.calendar__btn-today.js-calendar__btn-today 
+      | today

@@ -1,3 +1,8 @@
-mixin link({ text, href='/mock-address', theme='default' })
+mixin link({ text, href='/mock-address', theme='default', target='' })
     -const modifiers = `link_theme_${theme}` 
-    a.link(class = modifiers, href = href)= text
+    a.link(
+        class = modifiers, 
+        href = href,
+        target = target,
+        rel = target == '_blank' ? 'noopener noreferrer' : ''
+    )= text

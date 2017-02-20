@@ -1,22 +1,25 @@
 @require '../../theme/colors'
 
-border-side-radius = 2px
+border-side-radius = 0.125rem
 
 .preview
     display flex
-    width 288px
-    height 212px 
+    max-width 18rem
+    min-width 2rem
+    width 100%
+    min-height 13.25rem
     color white
 
     &__column
 
         &_left  
+            width 30%
             border-top-left-radius border-side-radius 
 
         &_right
+            width 70%
             display flex
-            flex-grow 1 
-            border-top-right-radius border-side-radius 
+            border-top-right-radius border-side-radius  
 
     &__description
         padding 7.5%
@@ -31,19 +34,19 @@ border-side-radius = 2px
             background-color theme-color1
 
     &__title
-        font-family LatoLight
+        font-family lato-light
 
         ^[0]_news &
             font-size 1.75rem
-            line-height 26px
+            line-height 1.625rem
 
     &__subtitle
-        font-family LatoBlack
+        font-family lato-bold
         text-transform uppercase
 
         ^[0]_news &
             font-size 0.68rem
-            margin-top 10px
+            margin-top 0.625rem
 
         ^[0]_event &
              font-size 0.81rem
@@ -51,10 +54,10 @@ border-side-radius = 2px
     &__info
         text-align left
         font-size 0.68rem
-        font-family LatoRegular
+        font-family lato-regular
 
         ^[0]_news &
-            margin-top 15px
+            margin-top 0.9375rem
 
         ^[0]_event &
-            margin-top 5px 
+            margin-top 0.3125rem

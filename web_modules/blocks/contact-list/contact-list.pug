@@ -3,4 +3,5 @@ include ../contact/contact
 mixin contact-list({ contactsInfo })
     ul.contact-list
         each contactInfo in contactsInfo
-            li: +contact(contactInfo)
+            li.contact-list__item
+                +contact(contactInfo)

@@ -1,7 +1,7 @@
 include ../input/input
 
-mixin search({ placeholder="Search" })
-    .search
+mixin search({ placeholder="Search", tabindex=false })
+    .search.js-search
         form.search__form
-            +input({ placeholder })
+            +input({ placeholder, tabindex, type: 'text' })
             button(type = "submit").search__button

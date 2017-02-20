@@ -1,7 +1,7 @@
 include ../preview/preview
 include ../button/button
 
-mixin event({ image, title, day, month, info })
+mixin event({ image='default.jpg', title, day, month, info })
     .event
         +preview({ type: 'event', image })
             +preview-title

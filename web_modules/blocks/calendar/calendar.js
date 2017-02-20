@@ -8,12 +8,13 @@ import 'jquery-ui/themes/base/datepicker.css';
 class Calendar {
     constructor({ root }) {
         this.$root = $(root);
-        this.$widget = this.$root.find('.calendar__widget'); 
+        this.$widget = this.$root.find('.js-calendar__widget'); 
+
         this.render();
     }
 
     render() {
-        const $day = this.$root.find('.calendar__day');
+        const $day = this.$root.find('.js-calendar__day');
 
         this.$widget.datepicker({
             changeYear: false,
@@ -27,14 +28,14 @@ class Calendar {
     }
 
     setTodayDate() {
-        this.$root.find('.calendar__btn-today').on('click', () => {
+        this.$root.find('.js-calendar__btn-today').on('click', () => {
             this.$widget.datepicker('setDate', new Date());
         })
     }
 }
 
 $(() => { 
-    $('.calendar').each(function () {
+    $('.js-calendar').each(function () {
         new Calendar({ root: this });
     });
 });

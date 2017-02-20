@@ -1,8 +1,8 @@
 mixin stages({ length=1, progress=1 })
-    .stages(data-length = length, data-progress = progress)
+    .stages.js-stages(data-length = length, data-progress = progress)
         .stages__progress-bar
-            .stages__progress
+            .stages__progress.js-stages__progress
         .stages__items
             -for (let stage = 1; stage <= length; stage += 1)
                 -stageState = stage <= progress ? 'completed' : 'uncompleted'
-                .stages__stage(class = `stages__stage_${stageState}`)= stage
+                span.stages__stage(class = `stages__stage_${stageState}`)= stage

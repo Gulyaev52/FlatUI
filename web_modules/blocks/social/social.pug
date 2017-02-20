@@ -1,6 +1,10 @@
 include ../icon/icon
 
-mixin social({ name, href, theme='default' })
+mixin social({ name, theme='default', href='/mock-address' })
     -const modifiers = [`social_name_${name}`, `social_theme_${theme}`]
-    a.social(href = href)
+    a.social(
+        href = href, 
+        target = '_blank',
+        rel = 'noopener noreferrer'
+    )
         +icon({ name, theme, size: 'big' })

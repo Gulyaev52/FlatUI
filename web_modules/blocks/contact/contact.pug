@@ -9,7 +9,7 @@ mixin contact({ type, text })
     -}
     -const iconName = iconNames[type]
     .contact
-        .contact__icon
+        span.contact__icon
             +icon({ name: iconName, theme: 'primary', size: 'small' })
-        .contact__link
+        span.contact__link
             +link({ text })

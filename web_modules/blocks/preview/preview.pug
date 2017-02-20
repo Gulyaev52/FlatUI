@@ -2,7 +2,7 @@ mixin preview({ type, image })
     .preview(class = `preview_${type}`)
         .preview__column.preview__column_left
             img.preview__img(
-                src = `blocks/${blockName}/img/${image}`,
+                src = `../blocks/${blockName}/img/${image}`,
                 alt = "preview image"
             )
         .preview__column.preview__column_right

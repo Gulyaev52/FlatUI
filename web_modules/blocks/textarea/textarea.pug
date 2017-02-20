@@ -1,6 +1,7 @@
-mixin textarea({ name, placeholder, type })
+mixin textarea({ name, placeholder, type, tabindex=false })
     textarea.textarea(
         class = type ? `textarea_${type}` : '',
         name = name, 
-        placeholder = placeholder 
+        placeholder = placeholder,
+        tabindex = tabindex
     )

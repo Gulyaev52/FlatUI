@@ -2,12 +2,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 html {
   background-color: #fff;
   color: #000;
   font-size: 16px;
-  font-family: LatoRegular;
+  font-family: lato-regular;
 }
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2775,81 +2776,64 @@ html {
     overflow: visible;
     clip: auto
 }
-/* font-family: "LatoRegular"; */
 @font-face {
-  font-family: "LatoRegular";
+  font-family: "lato-regular";
   src: url(web_modules/theme/fonts/LatoRegular/LatoRegular.eot);
   src: url(web_modules/theme/fonts/LatoRegular/LatoRegular.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/LatoRegular/LatoRegular.woff) format("woff"), url(web_modules/theme/fonts/LatoRegular/LatoRegular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* font-family: "LatoBold"; */
 @font-face {
-  font-family: "LatoBold";
+  font-family: "lato-bold";
   src: url(web_modules/theme/fonts/LatoBold/LatoBold.eot);
   src: url(web_modules/theme/fonts/LatoBold/LatoBold.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/LatoBold/LatoBold.woff) format("woff"), url(web_modules/theme/fonts/LatoBold/LatoBold.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* font-family: "LatoBlack"; */
 @font-face {
-  font-family: "LatoBlack";
+  font-family: "lato-black";
   src: url(web_modules/theme/fonts/LatoBlack/LatoBlack.eot);
   src: url(web_modules/theme/fonts/LatoBlack/LatoBlack.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/LatoBlack/LatoBlack.woff) format("woff"), url(web_modules/theme/fonts/LatoBlack/LatoBlack.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* font-family: "LatoItalic"; */
 @font-face {
-  font-family: "LatoItalic";
+  font-family: "lato-italic";
   src: url(web_modules/theme/fonts/LatoItalic/LatoItalic.eot);
   src: url(web_modules/theme/fonts/LatoItalic/LatoItalic.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/LatoItalic/LatoItalic.woff) format("woff"), url(web_modules/theme/fonts/LatoItalic/LatoItalic.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* font-family: "LatoLight"; */
 @font-face {
-  font-family: "LatoLight";
+  font-family: "lato-light";
   src: url(web_modules/theme/fonts/LatoLight/LatoLight.eot);
   src: url(web_modules/theme/fonts/LatoLight/LatoLight.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/LatoLight/LatoLight.woff) format("woff"), url(web_modules/theme/fonts/LatoLight/LatoLight.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* font-family: "LatoBoldItalic"; */
 @font-face {
-  font-family: "LatoBoldItalic";
-  src: url(web_modules/theme/fonts/LatoBoldItalic/LatoBoldItalic.eot);
-  src: url(web_modules/theme/fonts/LatoBoldItalic/LatoBoldItalic.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/LatoBoldItalic/LatoBoldItalic.woff) format("woff"), url(web_modules/theme/fonts/LatoBoldItalic/LatoBoldItalic.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-/* font-family: "LatoLightItalic"; */
-@font-face {
-  font-family: "LatoLightItalic";
+  font-family: "lato-light-italic";
   src: url(web_modules/theme/fonts/LatoLightItalic/LatoLightItalic.eot);
   src: url(web_modules/theme/fonts/LatoLightItalic/LatoLightItalic.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/LatoLightItalic/LatoLightItalic.woff) format("woff"), url(web_modules/theme/fonts/LatoLightItalic/LatoLightItalic.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* font-family: "SourceSansProRegular"; */
 @font-face {
-  font-family: "SourceSansProRegular";
+  font-family: "source-sans-pro-regular";
   src: url(web_modules/theme/fonts/SourceSansProRegular/SourceSansProRegular.eot);
   src: url(web_modules/theme/fonts/SourceSansProRegular/SourceSansProRegular.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/SourceSansProRegular/SourceSansProRegular.woff) format("woff"), url(web_modules/theme/fonts/SourceSansProRegular/SourceSansProRegular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* font-family: "SourceSansProLight"; */
 @font-face {
-  font-family: "SourceSansProLight";
+  font-family: "source-sans-pro-light";
   src: url(web_modules/theme/fonts/SourceSansProLight/SourceSansProLight.eot);
   src: url(web_modules/theme/fonts/SourceSansProLight/SourceSansProLight.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/SourceSansProLight/SourceSansProLight.woff) format("woff"), url(web_modules/theme/fonts/SourceSansProLight/SourceSansProLight.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* font-family: "SourceSansProBold"; */
 @font-face {
-  font-family: "SourceSansProBold";
+  font-family: "source-sans-pro-bold";
   src: url(web_modules/theme/fonts/SourceSansProBold/SourceSansProBold.eot);
   src: url(web_modules/theme/fonts/SourceSansProBold/SourceSansProBold.eot?#iefix) format("embedded-opentype"), url(web_modules/theme/fonts/SourceSansProBold/SourceSansProBold.woff) format("woff"), url(web_modules/theme/fonts/SourceSansProBold/SourceSansProBold.ttf) format("truetype");
   font-style: normal;

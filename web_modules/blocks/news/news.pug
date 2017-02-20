@@ -1,6 +1,6 @@
 include ../preview/preview
 
-mixin news({ image, title, date, info })
+mixin news({ image='default.jpg', title, date, info })
     .news
         +preview({ type: 'news', image })
             +preview-title= title

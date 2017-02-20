@@ -32,3 +32,8 @@ mixin section-item(options)
         ]
     .section__item(class = modifiers)
         block
+
+mixin section-form(options)
+    -const { action='', method='' } = options || {};
+    form.section__form(action = action, method = method)
+        block

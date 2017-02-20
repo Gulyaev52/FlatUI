@@ -12,7 +12,7 @@ class Search {
 
     _attachEventHandlers() {
         const $search = this.$root;
-        const $searchInput = $search.find('.input'); 
+        const $searchInput = $search.find('.js-input'); 
 
         $search.on('submit', (event) => {  
             event.preventDefault();
@@ -25,19 +25,26 @@ class Search {
             $searchInput.val('').attr('placeholder', errorPlaceholder);
         });
 
-        $searchInput.on('focusin', function (event) {
-            if (!$search.hasClass('search_error')) 
-                return;
+        $searchInput
+            .on('focusin', () => {
+                if (!$search.hasClass('search_error')) 
+                    return;
 
-            $search.removeClass('search_error');
-            $searchInput.attr('placeholder', 'Search');
-        });
+                $search.removeClass('search_error');
+                $searchInput.attr('placeholder', 'Search');
+            })
+            .on('focusout', () => { 
+                if ($search.hasClass('search_error')) {
+                    $search.removeClass('search_error');
+                    $searchInput.attr('placeholder', 'Search');
+                }
+            });
     }
 }
 
 $(() => {
 
-    $('.search').each(function() {
+    $('.js-search').each(function() {
         new Search({ root: this });
     });
 });

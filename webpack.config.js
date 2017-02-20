@@ -6,14 +6,14 @@ const webpack = require('webpack');
 const pageList = [
   'index',
   'flat-ui', 
-  // 'base-page',
-  'messages',
-  'contacts',
+  'base-page',
+  // 'messages',
+  // 'contacts',
   // 'profile',
   // 'sign-in',
   // 'sign-up',
-  'events',
-  'news-page'
+  // 'events',
+  // 'news-page'
 ];
 
 const entries = {};
@@ -37,9 +37,23 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public'),
     filename: '[name].bundle.js',
+  },  
+
+  eslint: {
+    configFile: './.eslintrc.yml'
   },
 
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/, 
+        loader: "eslint-loader", 
+        include: [ 
+          path.resolve(__dirname, 'web_modules'), 
+          path.resolve(__dirname, 'pages')
+        ]
+      }
+    ],  
     loaders: [
       {
         test: /\.js$/,

@@ -1,4 +1,4 @@
 mixin percentage({ value=0, color="#e75735" })
-    .percentage(data-color = color)
-        .percentage__chart= `${value}/100`
+    .percentage.js-percentage(data-color = color)
+        .percentage__chart.js-percentage__chart= `${value}/100`
         span.percentage__value= value

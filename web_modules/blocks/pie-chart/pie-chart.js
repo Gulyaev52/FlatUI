@@ -11,7 +11,7 @@ class PieChart {
     }
 
     render() {  
-        this.$root.find(".pie-chart__items").peity('donut', { 
+        this.$root.find(".js-pie-chart__items").peity('donut', { 
             radius: 47.5,
             innerRadius: 30.5
         });
@@ -19,7 +19,7 @@ class PieChart {
 }
 
 $(() => {
-    $('.pie-chart').each(function() {
+    $('.js-pie-chart').each(function() {
         new PieChart({ root: this });
     });
 });
